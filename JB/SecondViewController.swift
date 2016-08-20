@@ -16,12 +16,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
-        let game1 = GameStats(dl: "10/26/16 vs. Nets", p: 12, r: 2, a: 3, s: 4, b: 5, tSF: "6/10", tSP: 0.44, tPSF: "3/5", tPSP: 0.33, thPSF: "1/4", thPSP: 0.25, fTF: "10/11", turn: 3, scr: "W: 90-83", min: 22)
-        games.append(game1)
         
         let game2 = GameStats(dl: "10/27/16 @ Bulls", p: 10, r: 5, a: 3, s: 1, b: 2, tSF: "3/6", tSP: 0.5, tPSF: "2/3", tPSP: 0.66, thPSF: "1/3", thPSP: 0.33, fTF: "3/5", turn: 2, scr: "W: 100-98", min: 18)
         games.append(game2)
+
+        let game1 = GameStats(dl: "10/26/16 vs. Nets", p: 12, r: 2, a: 3, s: 4, b: 5, tSF: "6/10", tSP: 0.44, tPSF: "3/5", tPSP: 0.33, thPSF: "1/4", thPSP: 0.25, fTF: "10/11", turn: 3, scr: "W: 90-83", min: 22)
+        games.append(game1)
         
         let game3 = GameStats(dl: "10/27/16 @ Bulls", p: 10, r: 5, a: 3, s: 1, b: 2, tSF: "3/6", tSP: 0.5, tPSF: "2/3", tPSP: 0.66, thPSF: "1/3", thPSP: 0.33, fTF: "3/5", turn: 2, scr: "W: 100-98", min: 18)
         games.append(game3)
