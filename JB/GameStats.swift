@@ -9,29 +9,57 @@
 import UIKit
 class GameStats {
     
+    var label: String
     var dateLocation: String
+    var gameNumber: String
+    var score: String
     
-    var totalPoints: Int
-    var totalRebounds: Int
-    var totalAssists: Int
-    var totalSteals: Int
-    var totalBlocks: Int
+    var backgroundRed: CGFloat
+    var backgroundGreen: CGFloat
+    var backgroundBlue: CGFloat
+    var backgroundAlpha: CGFloat
+    
+    var totalPoints: String
+    var totalRebounds: String
+    var totalAssists: String
+    var totalSteals: String
+    var totalBlocks: String
     
     var totalShootingFraction: String
-    var totalShootingPercentage: Double
+    var totalShootingPercentage: String
     var twoPointShootingFraction: String
-    var twoPointShootingPercentage: Double
+    var twoPointShootingPercentage: String
     var threePointShootingFraction: String
-    var threePointShootingPercentage: Double
+    var threePointShootingPercentage: String
     
     var freeThrowFraction: String
-    var turnovers: Int
-    var score: String
-    var minutes: Int
+    var turnovers: String
+    var minutes: String
+    var fouls: String
     
-    init(dl: String, p: Int, r: Int, a: Int, s: Int, b: Int, tSF: String, tSP: Double, tPSF: String, tPSP: Double, thPSF: String, thPSP: Double, fTF: String, turn: Int, scr: String, min: Int) {
+    var shotClose: String
+    var shotMedium: String
+    
+    var openMidrange: String
+    var semiContestedMidrange: String
+    var contestedMidrange: String
+    var open3PT: String
+    var semiContestedThree: String
+    var contestedThree: String
+    
+    var dunks: String
+
+    init(label: String, dl: String, gN: String, scr: String, bgR: CGFloat, bgG: CGFloat, bgB: CGFloat, bgA: CGFloat, p: String, r: String, a: String, s: String, b: String, tSF: String, tSP: String, tPSF: String, tPSP: String, thPSF: String, thPSP: String, fTF: String, turn: String, min: String, foul: String, shotClose: String, shotMedium: String, oMid: String, sMid: String, cMid: String, oThree: String, sThree: String, cThree: String, dunks: String) {
         
+        self.label = label
         dateLocation = dl
+        gameNumber = gN
+        score = scr
+        
+        backgroundRed = bgR
+        backgroundGreen = bgG
+        backgroundBlue = bgB
+        backgroundAlpha = bgA
         
         totalPoints = p
         totalRebounds = r
@@ -48,29 +76,145 @@ class GameStats {
         
         freeThrowFraction = fTF
         turnovers = turn
-        score = scr
         minutes = min
+        fouls = foul
+        
+        self.shotClose = shotClose
+        self.shotMedium = shotMedium
+        
+        openMidrange = oMid
+        semiContestedMidrange = sMid
+        contestedMidrange = cMid
+        open3PT = oThree
+        semiContestedThree = sThree
+        contestedThree = cThree
+        
+        self.dunks = dunks
     }
     
     init() {
-        dateLocation = "1/1/1"
+        label = ""
+        dateLocation = ""
+        gameNumber = ""
+        score = ""
         
-        totalPoints = 0
-        totalRebounds = 0
-        totalAssists = 0
-        totalSteals = 0
-        totalBlocks = 0
+        backgroundRed = 0
+        backgroundGreen = 0
+        backgroundBlue = 0
+        backgroundAlpha = 0.9
         
-        totalShootingFraction = "0"
-        totalShootingPercentage = 0
-        twoPointShootingFraction = "0"
-        twoPointShootingPercentage = 0
-        threePointShootingFraction = "0"
-        threePointShootingPercentage = 0
+        totalPoints = ""
+        totalRebounds = ""
+        totalAssists = ""
+        totalSteals = ""
+        totalBlocks = ""
         
-        freeThrowFraction = "0"
-        turnovers = 0
-        score = "W: 1-0"
-        minutes = 0
+        totalShootingFraction = ""
+        totalShootingPercentage = ""
+        twoPointShootingFraction = ""
+        twoPointShootingPercentage = ""
+        threePointShootingFraction = ""
+        threePointShootingPercentage = ""
+        
+        freeThrowFraction = ""
+        turnovers = ""
+        minutes = ""
+        fouls = ""
+        
+        shotClose = ""
+        shotMedium = ""
+        
+        openMidrange = ""
+        semiContestedMidrange = ""
+        contestedMidrange = ""
+        open3PT = ""
+        semiContestedThree = ""
+        contestedThree = ""
+        
+        dunks = ""
+    }
+    
+    init(label: String) {
+        self.label = label
+        dateLocation = ""
+        gameNumber = ""
+        score = ""
+        
+        backgroundRed = 0
+        backgroundGreen = 0
+        backgroundBlue = 0
+        backgroundAlpha = 0
+        
+        totalPoints = ""
+        totalRebounds = ""
+        totalAssists = ""
+        totalSteals = ""
+        totalBlocks = ""
+        
+        totalShootingFraction = ""
+        totalShootingPercentage = ""
+        twoPointShootingFraction = ""
+        twoPointShootingPercentage = ""
+        threePointShootingFraction = ""
+        threePointShootingPercentage = ""
+        
+        freeThrowFraction = ""
+        turnovers = ""
+        minutes = ""
+        fouls = ""
+        
+        shotClose = ""
+        shotMedium = ""
+        
+        openMidrange = ""
+        semiContestedMidrange = ""
+        contestedMidrange = ""
+        open3PT = ""
+        semiContestedThree = ""
+        contestedThree = ""
+        
+        dunks = ""
+    }
+    
+    init(label: String, secondaryLabel: String, bgR: CGFloat, bgG: CGFloat, bgB: CGFloat, bgA: CGFloat) {
+        self.label = label
+        dateLocation = secondaryLabel
+        gameNumber = ""
+        score = ""
+        
+        backgroundRed = bgR
+        backgroundGreen = bgG
+        backgroundBlue = bgB
+        backgroundAlpha = bgA
+        
+        totalPoints = ""
+        totalRebounds = ""
+        totalAssists = ""
+        totalSteals = ""
+        totalBlocks = ""
+        
+        totalShootingFraction = ""
+        totalShootingPercentage = ""
+        twoPointShootingFraction = ""
+        twoPointShootingPercentage = ""
+        threePointShootingFraction = ""
+        threePointShootingPercentage = ""
+        
+        freeThrowFraction = ""
+        turnovers = ""
+        minutes = ""
+        fouls = ""
+        
+        shotClose = ""
+        shotMedium = ""
+        
+        openMidrange = ""
+        semiContestedMidrange = ""
+        contestedMidrange = ""
+        open3PT = ""
+        semiContestedThree = ""
+        contestedThree = ""
+        
+        dunks = ""
     }
 }

@@ -10,10 +10,12 @@ import UIKit
 
 class GameCell: UITableViewCell {
     @IBOutlet weak var gameInfoLabel: UILabel!
-    @IBOutlet weak var gameStatsLabel: UILabel!
+    @IBOutlet weak var gameMainStatsLabel: UILabel!
+    @IBOutlet weak var gameShootingFLabel: UILabel!
     
-    func configureCell(gameInfo: String, gameStats: String) {
+    func configureCell(gameInfo: String, gameMainStats: String, gameShootingF: String) {
         gameInfoLabel.text = gameInfo
-        gameStatsLabel.text = gameStats
+        gameMainStatsLabel.text = gameMainStats
+        gameShootingFLabel.text = gameShootingF
     }
 }

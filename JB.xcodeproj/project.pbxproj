@@ -12,13 +12,16 @@
 		5019B5D31D67EB6700423579 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5019B5CF1D67EB6700423579 /* TwitterKitResources.bundle */; };
 		5019B5D41D67EB6700423579 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5019B5D01D67EB6700423579 /* TwitterCore.framework */; };
 		5019B5D61D67EC7700423579 /* JBTwitterTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */; };
+		5019B5D81D68082C00423579 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5D71D68082C00423579 /* AchievementsViewController.swift */; };
+		5019B5DA1D68085F00423579 /* SeasonStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */; };
+		5019B5DC1D68F4CB00423579 /* DetailedGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5DB1D68F4CB00423579 /* DetailedGameVC.swift */; };
 		5026C2561D65716B0057D046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2551D65716B0057D046 /* AppDelegate.swift */; };
-		5026C2581D65716B0057D046 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2571D65716B0057D046 /* FirstViewController.swift */; };
+		5026C2581D65716B0057D046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2571D65716B0057D046 /* HomeViewController.swift */; };
 		5026C25D1D65716B0057D046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5026C25B1D65716B0057D046 /* Main.storyboard */; };
 		5026C25F1D65716B0057D046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5026C25E1D65716B0057D046 /* Assets.xcassets */; };
 		5026C2621D65716B0057D046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5026C2601D65716B0057D046 /* LaunchScreen.storyboard */; };
 		5026C26E1D65AF460057D046 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26D1D65AF460057D046 /* GameStats.swift */; };
-		5026C2701D65B4D80057D046 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26F1D65B4D80057D046 /* SecondViewController.swift */; };
+		5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26F1D65B4D80057D046 /* GameLogViewController.swift */; };
 		5026C2721D65B6590057D046 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2711D65B6590057D046 /* GameCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,15 +31,18 @@
 		5019B5CF1D67EB6700423579 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
 		5019B5D01D67EB6700423579 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
 		5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBTwitterTimeline.swift; sourceTree = "<group>"; };
+		5019B5D71D68082C00423579 /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonStatsViewController.swift; sourceTree = "<group>"; };
+		5019B5DB1D68F4CB00423579 /* DetailedGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedGameVC.swift; sourceTree = "<group>"; };
 		5026C2521D65716B0057D046 /* JB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5026C2551D65716B0057D046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5026C2571D65716B0057D046 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		5026C2571D65716B0057D046 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5026C25C1D65716B0057D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5026C25E1D65716B0057D046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5026C2611D65716B0057D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5026C2631D65716B0057D046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5026C26D1D65AF460057D046 /* GameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
-		5026C26F1D65B4D80057D046 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5026C26F1D65B4D80057D046 /* GameLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogViewController.swift; sourceTree = "<group>"; };
 		5026C2711D65B6590057D046 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +81,11 @@
 		5019B5CB1D67D1E200423579 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5026C2571D65716B0057D046 /* FirstViewController.swift */,
-				5026C26F1D65B4D80057D046 /* SecondViewController.swift */,
+				5026C2571D65716B0057D046 /* HomeViewController.swift */,
+				5026C26F1D65B4D80057D046 /* GameLogViewController.swift */,
+				5019B5DB1D68F4CB00423579 /* DetailedGameVC.swift */,
+				5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */,
+				5019B5D71D68082C00423579 /* AchievementsViewController.swift */,
 				5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */,
 				5026C2551D65716B0057D046 /* AppDelegate.swift */,
 			);
@@ -205,10 +214,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5026C2721D65B6590057D046 /* GameCell.swift in Sources */,
-				5026C2701D65B4D80057D046 /* SecondViewController.swift in Sources */,
+				5019B5DA1D68085F00423579 /* SeasonStatsViewController.swift in Sources */,
+				5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */,
 				5019B5D61D67EC7700423579 /* JBTwitterTimeline.swift in Sources */,
 				5026C2561D65716B0057D046 /* AppDelegate.swift in Sources */,
-				5026C2581D65716B0057D046 /* FirstViewController.swift in Sources */,
+				5019B5DC1D68F4CB00423579 /* DetailedGameVC.swift in Sources */,
+				5026C2581D65716B0057D046 /* HomeViewController.swift in Sources */,
+				5019B5D81D68082C00423579 /* AchievementsViewController.swift in Sources */,
 				5026C26E1D65AF460057D046 /* GameStats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
