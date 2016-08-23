@@ -17,10 +17,10 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
-        let season1Game2 = GameStats(label: "game", dl: "10/27/16 @ Bulls", gN: "2", scr: "W: 100-98", bgR: 0, bgG: 0.9, bgB: 0, bgA: 1, p: "10", r: "5", a: "3", s: "1", b: "2", tSF: "3/6", tSP: "0.5", tPSF: "2/3", tPSP: "0.66", thPSF: "1/3", thPSP: "0.33", fTF: "3/5", turn: "2", min: "18", foul: "2", shotClose: "", shotMedium: "", oMid: "", sMid: "", cMid: "", oThree: "", sThree: "", cThree: "", dunks: "")
+        let season1Game2 = GameStats(label: "game", dl: "10/27/16 @ Bulls", gN: "2", scr: "", bgR: 0, bgG: 0.9, bgB: 0, bgA: 1, p: "", r: "", a: "", s: "", b: "", tSF: "", tSP: "", tPSF: "", tPSP: "", thPSF: "", thPSP: "", fTF: "", turn: "", min: "", foul: "", shotClose: "", shotMedium: "", oMid: "", sMid: "", cMid: "", oThree: "", sThree: "", cThree: "", dunks: "")
         games.append(season1Game2)
 
-        let season1Game1 = GameStats(label: "game", dl: "10/26/16 vs. Nets", gN: "1", scr: "W: 90-83", bgR: 0, bgG: 0.9, bgB: 0, bgA: 1, p: "12", r: "2", a: "3", s: "4", b: "5", tSF: "6/10", tSP: "0.44", tPSF: "3/5", tPSP: "0.33", thPSF: "1/4", thPSP: "0.25", fTF: "10/11", turn: "3", min: "22", foul: "3", shotClose: "", shotMedium: "", oMid: "", sMid: "", cMid: "", oThree: "", sThree: "", cThree: "", dunks: "")
+        let season1Game1 = GameStats(label: "game", dl: "10/26/16 vs. Nets", gN: "1", scr: "", bgR: 0, bgG: 0.9, bgB: 0, bgA: 1, p: "", r: "", a: "", s: "", b: "", tSF: "", tSP: "", tPSF: "", tPSP: "", thPSF: "", thPSP: "", fTF: "", turn: "", min: "", foul: "", shotClose: "", shotMedium: "", oMid: "", sMid: "", cMid: "", oThree: "", sThree: "", cThree: "", dunks: "")
         games.append(season1Game1)
         
         let blankRow = GameStats()
