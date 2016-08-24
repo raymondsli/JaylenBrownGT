@@ -15,10 +15,10 @@
 		5019B5D81D68082C00423579 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5D71D68082C00423579 /* AchievementsViewController.swift */; };
 		5019B5DA1D68085F00423579 /* SeasonStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */; };
 		5019B5DC1D68F4CB00423579 /* DetailedGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5DB1D68F4CB00423579 /* DetailedGameVC.swift */; };
+		5019B5DD1D6D639000423579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5026C25E1D65716B0057D046 /* Assets.xcassets */; };
 		5026C2561D65716B0057D046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2551D65716B0057D046 /* AppDelegate.swift */; };
 		5026C2581D65716B0057D046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2571D65716B0057D046 /* HomeViewController.swift */; };
 		5026C25D1D65716B0057D046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5026C25B1D65716B0057D046 /* Main.storyboard */; };
-		5026C25F1D65716B0057D046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5026C25E1D65716B0057D046 /* Assets.xcassets */; };
 		5026C2621D65716B0057D046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5026C2601D65716B0057D046 /* LaunchScreen.storyboard */; };
 		5026C26E1D65AF460057D046 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26D1D65AF460057D046 /* GameStats.swift */; };
 		5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26F1D65B4D80057D046 /* GameLogViewController.swift */; };
@@ -185,7 +185,7 @@
 			files = (
 				5019B5D31D67EB6700423579 /* TwitterKitResources.bundle in Resources */,
 				5026C2621D65716B0057D046 /* LaunchScreen.storyboard in Resources */,
-				5026C25F1D65716B0057D046 /* Assets.xcassets in Resources */,
+				5019B5DD1D6D639000423579 /* Assets.xcassets in Resources */,
 				5026C25D1D65716B0057D046 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
