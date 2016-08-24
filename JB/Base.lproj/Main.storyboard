@@ -148,6 +148,10 @@
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-sp-cMv">
                                                         <rect key="frame" x="13" y="19" width="333" height="154"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="154" id="09w-Rf-3GH"/>
+                                                            <constraint firstAttribute="width" constant="333" id="Btg-lY-9ky"/>
+                                                        </constraints>
                                                         <string key="text">Full Name: Jaylen Brown
 Birthdate: October 24, 1996 (Age 19)
 Birthplace: Marietta, Georgia
@@ -158,20 +162,44 @@ Wingspan: 6'11.75"
 2016 Draft: 3rd Overall Pick by the Boston Celtics</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="09w-Rf-3GH"/>
+                                                                <exclude reference="Btg-lY-9ky"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <mask key="constraints">
+                                                                <include reference="09w-Rf-3GH"/>
+                                                                <include reference="Btg-lY-9ky"/>
+                                                            </mask>
+                                                        </variation>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.81609248292077763" green="0.9353359717484816" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="9dR-sp-cMv" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="top" constant="19" id="1bK-E7-M6u"/>
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="leading" secondItem="Rar-st-qzt" secondAttribute="leading" constant="13" id="7q9-d2-8dc"/>
+                                                    <constraint firstItem="9dR-sp-cMv" firstAttribute="leading" secondItem="Rar-st-qzt" secondAttribute="leading" constant="13" id="AXq-my-gf8"/>
+                                                    <constraint firstItem="9dR-sp-cMv" firstAttribute="centerX" secondItem="Rar-st-qzt" secondAttribute="centerX" id="EC7-A7-zwh"/>
                                                     <constraint firstAttribute="bottom" secondItem="9dR-sp-cMv" secondAttribute="bottom" constant="19" id="KHu-2r-nw6"/>
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="top" constant="19" id="Y8K-om-ur6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9dR-sp-cMv" secondAttribute="trailing" constant="13" id="dvw-PR-XtN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9dR-sp-cMv" secondAttribute="bottom" constant="19" id="s4v-4p-IV0"/>
+                                                    <constraint firstItem="9dR-sp-cMv" firstAttribute="centerY" secondItem="Rar-st-qzt" secondAttribute="centerY" id="xjU-bk-47P"/>
                                                     <constraint firstAttribute="trailing" secondItem="9dR-sp-cMv" secondAttribute="trailing" constant="13" id="ydE-4S-CLg"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="1bK-E7-M6u"/>
                                                         <exclude reference="7q9-d2-8dc"/>
+                                                        <exclude reference="AXq-my-gf8"/>
+                                                        <exclude reference="EC7-A7-zwh"/>
                                                         <exclude reference="KHu-2r-nw6"/>
                                                         <exclude reference="Y8K-om-ur6"/>
+                                                        <exclude reference="dvw-PR-XtN"/>
+                                                        <exclude reference="s4v-4p-IV0"/>
+                                                        <exclude reference="xjU-bk-47P"/>
                                                         <exclude reference="ydE-4S-CLg"/>
                                                     </mask>
                                                 </variation>
@@ -181,6 +209,16 @@ Wingspan: 6'11.75"
                                                         <include reference="KHu-2r-nw6"/>
                                                         <include reference="Y8K-om-ur6"/>
                                                         <include reference="ydE-4S-CLg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="1bK-E7-M6u"/>
+                                                        <exclude reference="AXq-my-gf8"/>
+                                                        <include reference="EC7-A7-zwh"/>
+                                                        <exclude reference="dvw-PR-XtN"/>
+                                                        <exclude reference="s4v-4p-IV0"/>
+                                                        <include reference="xjU-bk-47P"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -202,31 +240,47 @@ Wingspan: 6'11.75"
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.1390051679" green="0.83900523559999995" blue="0.234339149" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="6JU-Hm-zLX" secondAttribute="bottom" constant="20" id="0gB-Qv-OZg"/>
+                                                    <constraint firstItem="BoE-jb-2Xu" firstAttribute="top" secondItem="JzM-9B-35d" secondAttribute="top" constant="8" id="3jx-Yh-KrH"/>
                                                     <constraint firstItem="6JU-Hm-zLX" firstAttribute="top" secondItem="BoE-jb-2Xu" secondAttribute="bottom" id="BPt-2a-42j"/>
+                                                    <constraint firstItem="6JU-Hm-zLX" firstAttribute="top" secondItem="BoE-jb-2Xu" secondAttribute="bottom" id="EFV-y5-AgP"/>
+                                                    <constraint firstItem="6JU-Hm-zLX" firstAttribute="leading" secondItem="JzM-9B-35d" secondAttribute="leading" constant="14" id="LHw-aS-6kR"/>
                                                     <constraint firstAttribute="trailing" secondItem="6JU-Hm-zLX" secondAttribute="trailing" constant="23" id="McD-IK-LxV"/>
                                                     <constraint firstItem="6JU-Hm-zLX" firstAttribute="leading" secondItem="JzM-9B-35d" secondAttribute="leading" constant="14" id="Mqq-wY-eoT"/>
                                                     <constraint firstAttribute="bottom" secondItem="6JU-Hm-zLX" secondAttribute="bottom" constant="20" id="SIT-ke-exn"/>
+                                                    <constraint firstItem="BoE-jb-2Xu" firstAttribute="leading" secondItem="JzM-9B-35d" secondAttribute="leading" constant="14" id="VQw-OH-Dx7"/>
                                                     <constraint firstAttribute="trailing" secondItem="6JU-Hm-zLX" secondAttribute="trailing" constant="23" id="azY-w2-j8b"/>
+                                                    <constraint firstItem="6JU-Hm-zLX" firstAttribute="top" secondItem="BoE-jb-2Xu" secondAttribute="bottom" id="bW8-s8-yQM"/>
                                                     <constraint firstAttribute="bottom" secondItem="6JU-Hm-zLX" secondAttribute="bottom" constant="20" id="c5O-kD-dUc"/>
                                                     <constraint firstItem="6JU-Hm-zLX" firstAttribute="leading" secondItem="JzM-9B-35d" secondAttribute="leading" constant="14" id="eaD-3R-xHa"/>
                                                     <constraint firstAttribute="trailing" secondItem="BoE-jb-2Xu" secondAttribute="trailing" constant="67" id="gw6-LG-hdf"/>
                                                     <constraint firstItem="BoE-jb-2Xu" firstAttribute="top" secondItem="JzM-9B-35d" secondAttribute="top" constant="8" id="jUo-77-lUn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BoE-jb-2Xu" secondAttribute="trailing" constant="67" id="nXg-bh-wIy"/>
                                                     <constraint firstItem="6JU-Hm-zLX" firstAttribute="top" secondItem="BoE-jb-2Xu" secondAttribute="bottom" id="pHe-HS-gyy"/>
                                                     <constraint firstItem="BoE-jb-2Xu" firstAttribute="leading" secondItem="JzM-9B-35d" secondAttribute="leading" constant="14" id="unq-mp-rSg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6JU-Hm-zLX" secondAttribute="trailing" constant="23" id="y5y-w5-f4u"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="3jx-Yh-KrH"/>
+                                                        <exclude reference="VQw-OH-Dx7"/>
                                                         <exclude reference="gw6-LG-hdf"/>
                                                         <exclude reference="jUo-77-lUn"/>
+                                                        <exclude reference="nXg-bh-wIy"/>
                                                         <exclude reference="unq-mp-rSg"/>
+                                                        <exclude reference="0gB-Qv-OZg"/>
                                                         <exclude reference="BPt-2a-42j"/>
+                                                        <exclude reference="EFV-y5-AgP"/>
+                                                        <exclude reference="LHw-aS-6kR"/>
                                                         <exclude reference="McD-IK-LxV"/>
                                                         <exclude reference="Mqq-wY-eoT"/>
                                                         <exclude reference="SIT-ke-exn"/>
                                                         <exclude reference="azY-w2-j8b"/>
+                                                        <exclude reference="bW8-s8-yQM"/>
                                                         <exclude reference="c5O-kD-dUc"/>
                                                         <exclude reference="eaD-3R-xHa"/>
                                                         <exclude reference="pHe-HS-gyy"/>
+                                                        <exclude reference="y5y-w5-f4u"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -242,6 +296,18 @@ Wingspan: 6'11.75"
                                                         <exclude reference="c5O-kD-dUc"/>
                                                         <exclude reference="eaD-3R-xHa"/>
                                                         <exclude reference="pHe-HS-gyy"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="3jx-Yh-KrH"/>
+                                                        <include reference="VQw-OH-Dx7"/>
+                                                        <include reference="nXg-bh-wIy"/>
+                                                        <include reference="0gB-Qv-OZg"/>
+                                                        <include reference="EFV-y5-AgP"/>
+                                                        <include reference="LHw-aS-6kR"/>
+                                                        <include reference="bW8-s8-yQM"/>
+                                                        <include reference="y5y-w5-f4u"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -268,22 +334,38 @@ USBWA Freshman All-American Team
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="MI5-kg-H7t" secondAttribute="trailing" constant="48" id="1So-Qv-AXG"/>
                                                     <constraint firstAttribute="trailing" secondItem="f38-Mx-cyV" secondAttribute="trailing" constant="80" id="A0F-RX-QDT"/>
                                                     <constraint firstAttribute="bottom" secondItem="MI5-kg-H7t" secondAttribute="bottom" id="GdR-fJ-3tm"/>
                                                     <constraint firstItem="f38-Mx-cyV" firstAttribute="top" secondItem="v7a-1e-EJ4" secondAttribute="top" constant="8" id="GzW-VQ-Kob"/>
+                                                    <constraint firstItem="MI5-kg-H7t" firstAttribute="top" secondItem="f38-Mx-cyV" secondAttribute="bottom" constant="2" id="M8Y-pw-7ya"/>
+                                                    <constraint firstItem="MI5-kg-H7t" firstAttribute="leading" secondItem="v7a-1e-EJ4" secondAttribute="leading" constant="16" id="NUP-HY-7pi"/>
+                                                    <constraint firstItem="f38-Mx-cyV" firstAttribute="top" secondItem="v7a-1e-EJ4" secondAttribute="top" constant="8" id="Pmw-Is-9vq"/>
+                                                    <constraint firstItem="f38-Mx-cyV" firstAttribute="leading" secondItem="v7a-1e-EJ4" secondAttribute="leading" constant="16" id="b2Z-Md-CCr"/>
                                                     <constraint firstAttribute="trailing" secondItem="MI5-kg-H7t" secondAttribute="trailing" constant="48" id="cbY-0r-snz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MI5-kg-H7t" secondAttribute="bottom" id="dBE-7L-iSG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f38-Mx-cyV" secondAttribute="trailing" constant="80" id="dN5-6T-wGG"/>
                                                     <constraint firstItem="f38-Mx-cyV" firstAttribute="leading" secondItem="v7a-1e-EJ4" secondAttribute="leading" constant="16" id="eMt-uS-A3P"/>
                                                     <constraint firstItem="MI5-kg-H7t" firstAttribute="top" secondItem="f38-Mx-cyV" secondAttribute="bottom" constant="2" id="f3l-Ed-fvs"/>
+                                                    <constraint firstItem="MI5-kg-H7t" firstAttribute="top" secondItem="f38-Mx-cyV" secondAttribute="bottom" constant="2" id="kOI-7f-SX3"/>
                                                     <constraint firstItem="MI5-kg-H7t" firstAttribute="leading" secondItem="v7a-1e-EJ4" secondAttribute="leading" constant="16" id="uGb-SO-54l"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="A0F-RX-QDT"/>
                                                         <exclude reference="GzW-VQ-Kob"/>
+                                                        <exclude reference="Pmw-Is-9vq"/>
+                                                        <exclude reference="b2Z-Md-CCr"/>
+                                                        <exclude reference="dN5-6T-wGG"/>
                                                         <exclude reference="eMt-uS-A3P"/>
+                                                        <exclude reference="1So-Qv-AXG"/>
                                                         <exclude reference="GdR-fJ-3tm"/>
+                                                        <exclude reference="M8Y-pw-7ya"/>
+                                                        <exclude reference="NUP-HY-7pi"/>
                                                         <exclude reference="cbY-0r-snz"/>
+                                                        <exclude reference="dBE-7L-iSG"/>
                                                         <exclude reference="f3l-Ed-fvs"/>
+                                                        <exclude reference="kOI-7f-SX3"/>
                                                         <exclude reference="uGb-SO-54l"/>
                                                     </mask>
                                                 </variation>
@@ -296,6 +378,18 @@ USBWA Freshman All-American Team
                                                         <include reference="cbY-0r-snz"/>
                                                         <include reference="f3l-Ed-fvs"/>
                                                         <include reference="uGb-SO-54l"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="Pmw-Is-9vq"/>
+                                                        <include reference="b2Z-Md-CCr"/>
+                                                        <include reference="dN5-6T-wGG"/>
+                                                        <include reference="1So-Qv-AXG"/>
+                                                        <include reference="M8Y-pw-7ya"/>
+                                                        <include reference="NUP-HY-7pi"/>
+                                                        <include reference="dBE-7L-iSG"/>
+                                                        <include reference="kOI-7f-SX3"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -328,25 +422,41 @@ USBWA Freshman All-American Team
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.88764067599999996" blue="0.055743911260000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="y5A-cp-V4k" firstAttribute="leading" secondItem="A91-0E-UFJ" secondAttribute="leading" constant="8" id="3Sc-G5-dbZ"/>
                                                     <constraint firstItem="PnK-nA-I5M" firstAttribute="leading" secondItem="A91-0E-UFJ" secondAttribute="leading" constant="8" id="47r-BT-8g2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="PnK-nA-I5M" secondAttribute="bottom" constant="-5" id="A6W-8K-eCX"/>
                                                     <constraint firstAttribute="bottom" secondItem="PnK-nA-I5M" secondAttribute="bottom" constant="-5" id="BNF-o1-Zoh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="y5A-cp-V4k" secondAttribute="bottom" constant="265" id="Cza-Np-ZJ9"/>
+                                                    <constraint firstItem="PnK-nA-I5M" firstAttribute="leading" secondItem="A91-0E-UFJ" secondAttribute="leading" constant="8" id="Dl0-9Y-IBY"/>
+                                                    <constraint firstItem="PnK-nA-I5M" firstAttribute="top" secondItem="A91-0E-UFJ" secondAttribute="top" constant="45" id="LM0-Vq-9jX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="y5A-cp-V4k" secondAttribute="trailing" constant="28" id="dHp-Gr-1S3"/>
                                                     <constraint firstItem="PnK-nA-I5M" firstAttribute="top" secondItem="A91-0E-UFJ" secondAttribute="top" constant="45" id="fCv-uy-tTn"/>
                                                     <constraint firstAttribute="trailing" secondItem="PnK-nA-I5M" secondAttribute="trailing" constant="8" id="fkF-X5-3Mz"/>
                                                     <constraint firstItem="y5A-cp-V4k" firstAttribute="leading" secondItem="A91-0E-UFJ" secondAttribute="leading" constant="8" id="gAx-pQ-JSC"/>
                                                     <constraint firstAttribute="bottom" secondItem="y5A-cp-V4k" secondAttribute="bottom" constant="265" id="i9l-j2-Tiq"/>
+                                                    <constraint firstItem="y5A-cp-V4k" firstAttribute="top" secondItem="A91-0E-UFJ" secondAttribute="top" constant="8" id="n2q-T4-MCU"/>
                                                     <constraint firstItem="y5A-cp-V4k" firstAttribute="top" secondItem="A91-0E-UFJ" secondAttribute="top" constant="8" id="v1G-ye-JBA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PnK-nA-I5M" secondAttribute="trailing" constant="8" id="veZ-8D-YRO"/>
                                                     <constraint firstAttribute="trailing" secondItem="y5A-cp-V4k" secondAttribute="trailing" constant="28" id="xBi-Be-gVU"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="3Sc-G5-dbZ"/>
+                                                        <exclude reference="Cza-Np-ZJ9"/>
+                                                        <exclude reference="dHp-Gr-1S3"/>
                                                         <exclude reference="gAx-pQ-JSC"/>
                                                         <exclude reference="i9l-j2-Tiq"/>
+                                                        <exclude reference="n2q-T4-MCU"/>
                                                         <exclude reference="v1G-ye-JBA"/>
                                                         <exclude reference="xBi-Be-gVU"/>
                                                         <exclude reference="47r-BT-8g2"/>
+                                                        <exclude reference="A6W-8K-eCX"/>
                                                         <exclude reference="BNF-o1-Zoh"/>
+                                                        <exclude reference="Dl0-9Y-IBY"/>
+                                                        <exclude reference="LM0-Vq-9jX"/>
                                                         <exclude reference="fCv-uy-tTn"/>
                                                         <exclude reference="fkF-X5-3Mz"/>
+                                                        <exclude reference="veZ-8D-YRO"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -359,6 +469,18 @@ USBWA Freshman All-American Team
                                                         <include reference="BNF-o1-Zoh"/>
                                                         <include reference="fCv-uy-tTn"/>
                                                         <include reference="fkF-X5-3Mz"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="3Sc-G5-dbZ"/>
+                                                        <include reference="Cza-Np-ZJ9"/>
+                                                        <include reference="dHp-Gr-1S3"/>
+                                                        <include reference="n2q-T4-MCU"/>
+                                                        <include reference="A6W-8K-eCX"/>
+                                                        <include reference="Dl0-9Y-IBY"/>
+                                                        <include reference="LM0-Vq-9jX"/>
+                                                        <include reference="veZ-8D-YRO"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -389,22 +511,39 @@ USBWA Freshman All-American Team
                                         <constraints>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="457" id="0aa-vQ-hu2"/>
                                             <constraint firstAttribute="trailing" secondItem="Rar-st-qzt" secondAttribute="trailing" constant="8" id="2Z1-dw-uXH"/>
+                                            <constraint firstItem="JzM-9B-35d" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="bottom" constant="20" id="Aqf-0M-HPr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rar-st-qzt" secondAttribute="trailing" constant="8" id="BdK-jw-D1I"/>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="DDn-Wp-2M1"/>
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="628" id="Ix5-PC-BOd"/>
+                                            <constraint firstItem="A91-0E-UFJ" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="JPs-dp-hpR"/>
                                             <constraint firstAttribute="trailing" secondItem="A91-0E-UFJ" secondAttribute="trailing" constant="8" id="OfU-jh-cL1"/>
-                                            <constraint firstAttribute="height" constant="976" id="QI8-vm-kTs"/>
+                                            <constraint firstAttribute="height" constant="976" id="QI8-vm-kTs">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="1300"/>
+                                            </constraint>
                                             <constraint firstItem="qPq-8q-I2d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="37" id="S3F-r1-2nV"/>
                                             <constraint firstAttribute="trailing" secondItem="v7a-1e-EJ4" secondAttribute="trailing" constant="8" id="S6L-Bm-Krr"/>
+                                            <constraint firstAttribute="trailing" secondItem="JzM-9B-35d" secondAttribute="trailing" constant="8" id="SoM-e4-bQQ"/>
                                             <constraint firstItem="JzM-9B-35d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="301" id="UkV-eu-ylD"/>
+                                            <constraint firstAttribute="trailing" secondItem="A91-0E-UFJ" secondAttribute="trailing" constant="8" id="WCG-6R-0Il"/>
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="X89-R3-lMd"/>
                                             <constraint firstAttribute="bottom" secondItem="A91-0E-UFJ" secondAttribute="bottom" constant="36" id="XY9-eF-vYv"/>
                                             <constraint firstItem="Rar-st-qzt" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="Xct-G6-dDF"/>
                                             <constraint firstItem="Rar-st-qzt" firstAttribute="top" secondItem="qPq-8q-I2d" secondAttribute="bottom" constant="31.5" id="ZvT-b5-3H7"/>
+                                            <constraint firstItem="A91-0E-UFJ" firstAttribute="top" secondItem="v7a-1e-EJ4" secondAttribute="bottom" constant="26" id="a0v-qA-vNg"/>
                                             <constraint firstItem="JzM-9B-35d" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="b0f-K3-FjL"/>
+                                            <constraint firstAttribute="bottom" secondItem="A91-0E-UFJ" secondAttribute="bottom" constant="36" id="b33-UB-yAl"/>
                                             <constraint firstItem="JzM-9B-35d" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="bottom" constant="20" id="d7t-BW-Eom"/>
                                             <constraint firstItem="qPq-8q-I2d" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="66" id="efY-lr-IVh"/>
+                                            <constraint firstItem="Rar-st-qzt" firstAttribute="top" secondItem="qPq-8q-I2d" secondAttribute="bottom" constant="21" id="eh5-eW-81V"/>
+                                            <constraint firstItem="qPq-8q-I2d" firstAttribute="centerX" secondItem="qru-7M-aD3" secondAttribute="centerX" id="gUa-t3-Jev"/>
+                                            <constraint firstItem="qPq-8q-I2d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="16" id="k5h-vp-AM1"/>
                                             <constraint firstItem="qPq-8q-I2d" firstAttribute="centerX" secondItem="qru-7M-aD3" secondAttribute="centerX" id="l8d-t7-Rxg"/>
+                                            <constraint firstItem="v7a-1e-EJ4" firstAttribute="top" secondItem="JzM-9B-35d" secondAttribute="bottom" constant="27" id="lNT-nQ-VhA"/>
+                                            <constraint firstAttribute="trailing" secondItem="v7a-1e-EJ4" secondAttribute="trailing" constant="8" id="lxf-Z4-aHe"/>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="top" secondItem="JzM-9B-35d" secondAttribute="bottom" constant="27" id="mzz-cq-1jx"/>
+                                            <constraint firstItem="Rar-st-qzt" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="pYS-YP-q0b"/>
+                                            <constraint firstItem="v7a-1e-EJ4" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="vf6-1I-74J"/>
+                                            <constraint firstItem="JzM-9B-35d" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="wp5-IR-6eC"/>
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="top" secondItem="v7a-1e-EJ4" secondAttribute="bottom" constant="26" id="zev-JJ-hhc"/>
                                             <constraint firstAttribute="trailing" secondItem="JzM-9B-35d" secondAttribute="trailing" constant="8" id="ziq-hm-elJ"/>
                                         </constraints>
@@ -412,22 +551,37 @@ USBWA Freshman All-American Team
                                             <mask key="constraints">
                                                 <exclude reference="S3F-r1-2nV"/>
                                                 <exclude reference="efY-lr-IVh"/>
+                                                <exclude reference="gUa-t3-Jev"/>
+                                                <exclude reference="k5h-vp-AM1"/>
                                                 <exclude reference="l8d-t7-Rxg"/>
                                                 <exclude reference="2Z1-dw-uXH"/>
+                                                <exclude reference="BdK-jw-D1I"/>
                                                 <exclude reference="Xct-G6-dDF"/>
                                                 <exclude reference="ZvT-b5-3H7"/>
+                                                <exclude reference="eh5-eW-81V"/>
+                                                <exclude reference="pYS-YP-q0b"/>
+                                                <exclude reference="Aqf-0M-HPr"/>
+                                                <exclude reference="SoM-e4-bQQ"/>
                                                 <exclude reference="UkV-eu-ylD"/>
                                                 <exclude reference="b0f-K3-FjL"/>
                                                 <exclude reference="d7t-BW-Eom"/>
+                                                <exclude reference="wp5-IR-6eC"/>
                                                 <exclude reference="ziq-hm-elJ"/>
                                                 <exclude reference="0aa-vQ-hu2"/>
                                                 <exclude reference="DDn-Wp-2M1"/>
                                                 <exclude reference="S6L-Bm-Krr"/>
+                                                <exclude reference="lNT-nQ-VhA"/>
+                                                <exclude reference="lxf-Z4-aHe"/>
                                                 <exclude reference="mzz-cq-1jx"/>
+                                                <exclude reference="vf6-1I-74J"/>
                                                 <exclude reference="Ix5-PC-BOd"/>
+                                                <exclude reference="JPs-dp-hpR"/>
                                                 <exclude reference="OfU-jh-cL1"/>
+                                                <exclude reference="WCG-6R-0Il"/>
                                                 <exclude reference="X89-R3-lMd"/>
                                                 <exclude reference="XY9-eF-vYv"/>
+                                                <exclude reference="a0v-qA-vNg"/>
+                                                <exclude reference="b33-UB-yAl"/>
                                                 <exclude reference="zev-JJ-hhc"/>
                                             </mask>
                                         </variation>
@@ -452,6 +606,25 @@ USBWA Freshman All-American Team
                                                 <include reference="X89-R3-lMd"/>
                                                 <include reference="XY9-eF-vYv"/>
                                                 <include reference="zev-JJ-hhc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="gUa-t3-Jev"/>
+                                                <include reference="k5h-vp-AM1"/>
+                                                <include reference="BdK-jw-D1I"/>
+                                                <include reference="eh5-eW-81V"/>
+                                                <include reference="pYS-YP-q0b"/>
+                                                <include reference="Aqf-0M-HPr"/>
+                                                <include reference="SoM-e4-bQQ"/>
+                                                <include reference="wp5-IR-6eC"/>
+                                                <include reference="lNT-nQ-VhA"/>
+                                                <include reference="lxf-Z4-aHe"/>
+                                                <include reference="vf6-1I-74J"/>
+                                                <include reference="JPs-dp-hpR"/>
+                                                <include reference="WCG-6R-0Il"/>
+                                                <include reference="a0v-qA-vNg"/>
+                                                <include reference="b33-UB-yAl"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -862,11 +1035,11 @@ USBWA Freshman All-American Team
                         <viewControllerLayoutGuide type="bottom" id="E7f-pK-xZI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QTf-d2-sFU" userLabel="WholeScreen">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-VZ-2y9" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="92"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Game Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-ik-863">
                                         <rect key="frame" x="144" y="15" width="87" height="42"/>
@@ -988,17 +1161,17 @@ USBWA Freshman All-American Team
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIs-bR-KSm">
-                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
+                                <rect key="frame" x="0.0" y="92" width="768" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="535" id="Gdf-j1-Pdi"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GC" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" id="j3a-Xg-jP9" customClass="GameCell" customModule="JB" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j3a-Xg-jP9" id="PLi-2c-V19">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="758" ambiguous="YES" misplaced="YES" text="SF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-p4-ymI">
@@ -1266,6 +1439,9 @@ Score</string>
                                                         <include reference="l25-8N-AkT"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="13" y="0.0" width="354" height="92"/>
+                                                </variation>
                                             </label>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sbf-rx-8NF" userLabel="Main Stats">
                                                 <rect key="frame" x="8" y="97" width="359" height="217"/>
@@ -1289,16 +1465,24 @@ Blocks</string>
                                                 <color key="backgroundColor" red="1" green="0.95999583957403756" blue="0.035504757339337556" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="yxb-xs-NZO" secondAttribute="bottom" constant="13" id="4cS-bp-cS3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yxb-xs-NZO" secondAttribute="bottom" constant="13" id="8UV-Ki-bRZ"/>
                                                     <constraint firstItem="yxb-xs-NZO" firstAttribute="leading" secondItem="sbf-rx-8NF" secondAttribute="leading" constant="14" id="B0S-67-BcK"/>
                                                     <constraint firstItem="yxb-xs-NZO" firstAttribute="top" secondItem="sbf-rx-8NF" secondAttribute="top" constant="8" id="aQn-yO-pCK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yxb-xs-NZO" secondAttribute="trailing" constant="70" id="cp8-97-Nc0"/>
                                                     <constraint firstAttribute="trailing" secondItem="yxb-xs-NZO" secondAttribute="trailing" constant="70" id="o8E-Zh-FSK"/>
+                                                    <constraint firstItem="yxb-xs-NZO" firstAttribute="leading" secondItem="sbf-rx-8NF" secondAttribute="leading" constant="14" id="orx-MZ-6GU"/>
+                                                    <constraint firstItem="yxb-xs-NZO" firstAttribute="top" secondItem="sbf-rx-8NF" secondAttribute="top" constant="8" id="pX2-dT-bhA"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="4cS-bp-cS3"/>
+                                                        <exclude reference="8UV-Ki-bRZ"/>
                                                         <exclude reference="B0S-67-BcK"/>
                                                         <exclude reference="aQn-yO-pCK"/>
+                                                        <exclude reference="cp8-97-Nc0"/>
                                                         <exclude reference="o8E-Zh-FSK"/>
+                                                        <exclude reference="orx-MZ-6GU"/>
+                                                        <exclude reference="pX2-dT-bhA"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1307,6 +1491,14 @@ Blocks</string>
                                                         <include reference="B0S-67-BcK"/>
                                                         <include reference="aQn-yO-pCK"/>
                                                         <include reference="o8E-Zh-FSK"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="8UV-Ki-bRZ"/>
+                                                        <include reference="cp8-97-Nc0"/>
+                                                        <include reference="orx-MZ-6GU"/>
+                                                        <include reference="pX2-dT-bhA"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -1330,16 +1522,26 @@ Dunks</string>
                                                 <color key="backgroundColor" red="0.044665676293635936" green="1" blue="0.96023878653158623" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="vw0-NO-KEI" firstAttribute="top" secondItem="zDA-rN-Lrv" secondAttribute="top" constant="14" id="7DF-g5-sIK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vw0-NO-KEI" secondAttribute="trailing" constant="57" id="93M-ZR-gY3"/>
                                                     <constraint firstAttribute="bottom" secondItem="vw0-NO-KEI" secondAttribute="bottom" constant="14" id="GxW-ZV-Pnb"/>
+                                                    <constraint firstAttribute="height" constant="184" id="J0b-uV-f9l"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vw0-NO-KEI" secondAttribute="bottom" constant="14" id="b6c-tJ-oRk"/>
                                                     <constraint firstAttribute="trailing" secondItem="vw0-NO-KEI" secondAttribute="trailing" constant="57" id="dcV-Sy-SI7"/>
+                                                    <constraint firstItem="vw0-NO-KEI" firstAttribute="top" secondItem="zDA-rN-Lrv" secondAttribute="top" constant="14" id="jOS-AW-lsN"/>
                                                     <constraint firstItem="vw0-NO-KEI" firstAttribute="leading" secondItem="zDA-rN-Lrv" secondAttribute="leading" constant="17" id="yhK-Vp-ffF"/>
+                                                    <constraint firstItem="vw0-NO-KEI" firstAttribute="leading" secondItem="zDA-rN-Lrv" secondAttribute="leading" constant="17" id="zgG-Er-Pw5"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="J0b-uV-f9l"/>
                                                         <exclude reference="7DF-g5-sIK"/>
+                                                        <exclude reference="93M-ZR-gY3"/>
                                                         <exclude reference="GxW-ZV-Pnb"/>
+                                                        <exclude reference="b6c-tJ-oRk"/>
                                                         <exclude reference="dcV-Sy-SI7"/>
+                                                        <exclude reference="jOS-AW-lsN"/>
                                                         <exclude reference="yhK-Vp-ffF"/>
+                                                        <exclude reference="zgG-Er-Pw5"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1348,6 +1550,15 @@ Dunks</string>
                                                         <include reference="GxW-ZV-Pnb"/>
                                                         <include reference="dcV-Sy-SI7"/>
                                                         <include reference="yhK-Vp-ffF"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="J0b-uV-f9l"/>
+                                                        <include reference="93M-ZR-gY3"/>
+                                                        <include reference="b6c-tJ-oRk"/>
+                                                        <include reference="jOS-AW-lsN"/>
+                                                        <include reference="zgG-Er-Pw5"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -1384,17 +1595,25 @@ Contested Three Pointers</string>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.27681230666926437" green="1" blue="0.054324359221204155" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="0Zv-8B-syp" firstAttribute="top" secondItem="weU-S2-V6Y" secondAttribute="top" constant="13" id="18D-1T-Brp"/>
                                                     <constraint firstAttribute="bottom" secondItem="0Zv-8B-syp" secondAttribute="bottom" constant="6" id="1Je-Gt-tBj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0Zv-8B-syp" secondAttribute="bottom" constant="6" id="3Gz-CC-jip"/>
                                                     <constraint firstItem="0Zv-8B-syp" firstAttribute="top" secondItem="weU-S2-V6Y" secondAttribute="top" constant="13" id="Bra-iZ-IVR"/>
                                                     <constraint firstAttribute="trailing" secondItem="0Zv-8B-syp" secondAttribute="trailing" constant="17" id="Hiu-Hg-pb0"/>
+                                                    <constraint firstItem="0Zv-8B-syp" firstAttribute="leading" secondItem="weU-S2-V6Y" secondAttribute="leading" constant="13" id="Jmp-pH-Nrc"/>
                                                     <constraint firstItem="0Zv-8B-syp" firstAttribute="leading" secondItem="weU-S2-V6Y" secondAttribute="leading" constant="13" id="P3h-U5-ntP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0Zv-8B-syp" secondAttribute="trailing" constant="17" id="ZIX-Jm-ZMB"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
+                                                        <exclude reference="18D-1T-Brp"/>
                                                         <exclude reference="1Je-Gt-tBj"/>
+                                                        <exclude reference="3Gz-CC-jip"/>
                                                         <exclude reference="Bra-iZ-IVR"/>
                                                         <exclude reference="Hiu-Hg-pb0"/>
+                                                        <exclude reference="Jmp-pH-Nrc"/>
                                                         <exclude reference="P3h-U5-ntP"/>
+                                                        <exclude reference="ZIX-Jm-ZMB"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1405,42 +1624,84 @@ Contested Three Pointers</string>
                                                         <include reference="P3h-U5-ntP"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="18D-1T-Brp"/>
+                                                        <include reference="3Gz-CC-jip"/>
+                                                        <include reference="Jmp-pH-Nrc"/>
+                                                        <include reference="ZIX-Jm-ZMB"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.57647488015223358" green="0.66285939843397179" blue="0.9050706260907504" alpha="0.58718417553191493" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1031" id="AO7-Jj-5ns"/>
+                                            <constraint firstAttribute="trailing" secondItem="zDA-rN-Lrv" secondAttribute="trailing" constant="8" id="9rs-jS-zJ8"/>
+                                            <constraint firstAttribute="height" constant="1031" id="AO7-Jj-5ns">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="1300"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="sbf-rx-8NF" secondAttribute="trailing" constant="8" id="AR3-tx-MPE"/>
                                             <constraint firstItem="weU-S2-V6Y" firstAttribute="leading" secondItem="8Kh-6M-VeC" secondAttribute="leading" constant="8" id="FKk-xg-UrE"/>
+                                            <constraint firstItem="zDA-rN-Lrv" firstAttribute="leading" secondItem="8Kh-6M-VeC" secondAttribute="leading" constant="8" id="GVR-KQ-q1R"/>
                                             <constraint firstItem="zDA-rN-Lrv" firstAttribute="top" secondItem="8Kh-6M-VeC" secondAttribute="top" constant="334" id="HaT-43-zss"/>
                                             <constraint firstAttribute="trailing" secondItem="sbf-rx-8NF" secondAttribute="trailing" constant="8" id="JBh-cs-Dyx"/>
+                                            <constraint firstAttribute="trailing" secondItem="weU-S2-V6Y" secondAttribute="trailing" constant="8" id="JHm-xB-zQj"/>
                                             <constraint firstAttribute="bottom" secondItem="weU-S2-V6Y" secondAttribute="bottom" constant="25" id="JQN-0I-04M"/>
                                             <constraint firstAttribute="trailing" secondItem="zDA-rN-Lrv" secondAttribute="trailing" constant="8" id="KIh-2H-ZIq"/>
+                                            <constraint firstItem="3Td-em-E8O" firstAttribute="centerX" secondItem="8Kh-6M-VeC" secondAttribute="centerX" id="KKN-Gh-IMa"/>
                                             <constraint firstAttribute="trailing" secondItem="weU-S2-V6Y" secondAttribute="trailing" constant="8" id="MYF-ae-IcC"/>
                                             <constraint firstItem="3Td-em-E8O" firstAttribute="centerX" secondItem="8Kh-6M-VeC" secondAttribute="centerX" id="OZE-Je-XUU"/>
                                             <constraint firstItem="sbf-rx-8NF" firstAttribute="top" secondItem="3Td-em-E8O" secondAttribute="bottom" constant="5" id="Oqw-Iy-In0"/>
+                                            <constraint firstItem="3Td-em-E8O" firstAttribute="leading" secondItem="8Kh-6M-VeC" secondAttribute="leading" constant="8" id="RAZ-IZ-H9h"/>
+                                            <constraint firstItem="sbf-rx-8NF" firstAttribute="top" secondItem="3Td-em-E8O" secondAttribute="bottom" constant="5" id="U5B-QM-PMp"/>
                                             <constraint firstItem="sbf-rx-8NF" firstAttribute="leading" secondItem="8Kh-6M-VeC" secondAttribute="leading" constant="8" id="Xi9-kw-F4S"/>
+                                            <constraint firstItem="3Td-em-E8O" firstAttribute="top" secondItem="8Kh-6M-VeC" secondAttribute="top" id="Xwn-tN-fAo"/>
+                                            <constraint firstItem="weU-S2-V6Y" firstAttribute="top" secondItem="zDA-rN-Lrv" secondAttribute="bottom" constant="19" id="ZWf-Id-PrL"/>
+                                            <constraint firstItem="zDA-rN-Lrv" firstAttribute="top" secondItem="sbf-rx-8NF" secondAttribute="bottom" constant="20" id="Zeh-8q-3Mm"/>
+                                            <constraint firstItem="weU-S2-V6Y" firstAttribute="top" secondItem="zDA-rN-Lrv" secondAttribute="bottom" constant="19" id="c6j-iz-wvp"/>
+                                            <constraint firstItem="sbf-rx-8NF" firstAttribute="leading" secondItem="8Kh-6M-VeC" secondAttribute="leading" constant="8" id="cDh-ei-nsk"/>
+                                            <constraint firstItem="weU-S2-V6Y" firstAttribute="leading" secondItem="8Kh-6M-VeC" secondAttribute="leading" constant="8" id="ert-af-zMO"/>
                                             <constraint firstItem="weU-S2-V6Y" firstAttribute="top" secondItem="zDA-rN-Lrv" secondAttribute="bottom" constant="19" id="g4D-Na-N0X"/>
                                             <constraint firstAttribute="bottom" secondItem="zDA-rN-Lrv" secondAttribute="bottom" constant="513" id="if6-v6-ZQy"/>
+                                            <constraint firstAttribute="bottom" secondItem="weU-S2-V6Y" secondAttribute="bottom" constant="25" id="njl-LZ-fI5"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Td-em-E8O" secondAttribute="trailing" constant="8" id="qIq-xW-RDg"/>
+                                            <constraint firstItem="zDA-rN-Lrv" firstAttribute="top" secondItem="sbf-rx-8NF" secondAttribute="bottom" constant="20" id="rZj-om-YDi"/>
                                             <constraint firstItem="zDA-rN-Lrv" firstAttribute="leading" secondItem="8Kh-6M-VeC" secondAttribute="leading" constant="8" id="uA1-oM-Gw6"/>
                                             <constraint firstItem="3Td-em-E8O" firstAttribute="top" secondItem="8Kh-6M-VeC" secondAttribute="top" id="vEp-cV-WcT"/>
                                             <constraint firstItem="zDA-rN-Lrv" firstAttribute="top" secondItem="sbf-rx-8NF" secondAttribute="bottom" constant="20" id="wwx-RQ-Qmm"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="KKN-Gh-IMa"/>
                                                 <exclude reference="OZE-Je-XUU"/>
+                                                <exclude reference="RAZ-IZ-H9h"/>
+                                                <exclude reference="Xwn-tN-fAo"/>
+                                                <exclude reference="qIq-xW-RDg"/>
                                                 <exclude reference="vEp-cV-WcT"/>
+                                                <exclude reference="AR3-tx-MPE"/>
                                                 <exclude reference="JBh-cs-Dyx"/>
                                                 <exclude reference="Oqw-Iy-In0"/>
+                                                <exclude reference="U5B-QM-PMp"/>
                                                 <exclude reference="Xi9-kw-F4S"/>
+                                                <exclude reference="cDh-ei-nsk"/>
+                                                <exclude reference="9rs-jS-zJ8"/>
+                                                <exclude reference="GVR-KQ-q1R"/>
                                                 <exclude reference="HaT-43-zss"/>
                                                 <exclude reference="KIh-2H-ZIq"/>
+                                                <exclude reference="Zeh-8q-3Mm"/>
                                                 <exclude reference="if6-v6-ZQy"/>
+                                                <exclude reference="rZj-om-YDi"/>
                                                 <exclude reference="uA1-oM-Gw6"/>
                                                 <exclude reference="wwx-RQ-Qmm"/>
                                                 <exclude reference="FKk-xg-UrE"/>
+                                                <exclude reference="JHm-xB-zQj"/>
                                                 <exclude reference="JQN-0I-04M"/>
                                                 <exclude reference="MYF-ae-IcC"/>
+                                                <exclude reference="ZWf-Id-PrL"/>
+                                                <exclude reference="c6j-iz-wvp"/>
+                                                <exclude reference="ert-af-zMO"/>
                                                 <exclude reference="g4D-Na-N0X"/>
+                                                <exclude reference="njl-LZ-fI5"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -1459,6 +1720,26 @@ Contested Three Pointers</string>
                                                 <include reference="JQN-0I-04M"/>
                                                 <include reference="MYF-ae-IcC"/>
                                                 <include reference="g4D-Na-N0X"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="KKN-Gh-IMa"/>
+                                                <include reference="RAZ-IZ-H9h"/>
+                                                <include reference="Xwn-tN-fAo"/>
+                                                <include reference="qIq-xW-RDg"/>
+                                                <include reference="AR3-tx-MPE"/>
+                                                <include reference="U5B-QM-PMp"/>
+                                                <include reference="cDh-ei-nsk"/>
+                                                <include reference="9rs-jS-zJ8"/>
+                                                <include reference="GVR-KQ-q1R"/>
+                                                <include reference="Zeh-8q-3Mm"/>
+                                                <exclude reference="rZj-om-YDi"/>
+                                                <include reference="JHm-xB-zQj"/>
+                                                <include reference="ZWf-Id-PrL"/>
+                                                <exclude reference="c6j-iz-wvp"/>
+                                                <include reference="ert-af-zMO"/>
+                                                <include reference="njl-LZ-fI5"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1491,7 +1772,7 @@ Contested Three Pointers</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCD-IJ-Mbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300.25" y="-326.25"/>
+            <point key="canvasLocation" x="2299.875" y="-326.25"/>
         </scene>
         <!--Game Log-->
         <scene sceneID="mY2-Se-71X">
