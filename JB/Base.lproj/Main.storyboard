@@ -143,11 +143,11 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11.25" y="-610.5"/>
+            <point key="canvasLocation" x="-11.5" y="-821.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -731,7 +731,7 @@ USBWA Freshman All-American Team
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61W-P1-Qwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311.25" y="970.875"/>
+            <point key="canvasLocation" x="272.5" y="1022.5"/>
         </scene>
         <!--Season Stats-->
         <scene sceneID="SDF-Aw-ygE">
@@ -1305,7 +1305,7 @@ USBWA Freshman All-American Team
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61A-4w-lWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996.375" y="400.5"/>
+            <point key="canvasLocation" x="793.5" y="448"/>
         </scene>
         <!--Game Log View Controller-->
         <scene sceneID="az1-T0-Jna">
@@ -1316,11 +1316,11 @@ USBWA Freshman All-American Team
                         <viewControllerLayoutGuide type="bottom" id="E7f-pK-xZI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QTf-d2-sFU" userLabel="WholeScreen">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-VZ-2y9" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="92"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Game Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-ik-863">
                                         <rect key="frame" x="144" y="15" width="87" height="42"/>
@@ -1442,17 +1442,17 @@ USBWA Freshman All-American Team
                                 </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIs-bR-KSm">
-                                <rect key="frame" x="0.0" y="92" width="768" height="526"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="535" id="Gdf-j1-Pdi"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GC" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" id="j3a-Xg-jP9" customClass="GameCell" customModule="JB" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j3a-Xg-jP9" id="PLi-2c-V19">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="758" ambiguous="YES" misplaced="YES" text="SF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-p4-ymI">
@@ -1668,7 +1668,7 @@ USBWA Freshman All-American Team
                     </view>
                     <navigationItem key="navigationItem" id="Fbk-yJ-hsg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="UIs-bR-KSm" id="vyZ-FT-qXx"/>
                         <segue destination="Gc1-jf-V6f" kind="show" identifier="showDetailedGame" id="E1y-R5-wWT"/>
@@ -1676,7 +1676,7 @@ USBWA Freshman All-American Team
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfe-dx-2y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557.75" y="-327"/>
+            <point key="canvasLocation" x="1116.5" y="-544.5"/>
         </scene>
         <!--Detailed GameVC-->
         <scene sceneID="Y2w-xt-dKT">
@@ -2053,7 +2053,7 @@ Contested Three Pointers</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCD-IJ-Mbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299.875" y="-326.25"/>
+            <point key="canvasLocation" x="1647.5" y="-544"/>
         </scene>
         <!--Game Log-->
         <scene sceneID="mY2-Se-71X">
@@ -2072,7 +2072,7 @@ Contested Three Pointers</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9Q-az-Ve4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816.75" y="-330.375"/>
+            <point key="canvasLocation" x="550.5" y="-544.5"/>
         </scene>
     </scenes>
     <resources>
