@@ -24,8 +24,45 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Jaylen-Brown" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-8J-SFD">
                                 <rect key="frame" x="61" y="-14" width="253" height="126"/>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="554" y="44" width="259" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="14t-Sb-KvS"/>
+                                    <constraint firstAttribute="width" constant="259" id="945-vU-vxi"/>
+                                    <constraint firstAttribute="height" constant="130" id="K3Y-WG-trN"/>
+                                    <constraint firstAttribute="width" secondItem="6l7-8J-SFD" secondAttribute="height" multiplier="300:179" id="Zo1-n3-alK"/>
+                                    <constraint firstAttribute="width" constant="300" id="e37-dE-JPr"/>
+                                    <constraint firstAttribute="width" secondItem="6l7-8J-SFD" secondAttribute="height" multiplier="259:130" id="fZz-57-3Fj"/>
+                                    <constraint firstAttribute="width" constant="300" id="kE5-qn-3aL"/>
+                                    <constraint firstAttribute="height" constant="179" id="mji-96-PrU"/>
+                                    <constraint firstAttribute="height" constant="200" id="sNx-Dk-cFb"/>
+                                    <constraint firstAttribute="height" constant="179" id="vdO-rG-uGX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="14t-Sb-KvS"/>
+                                        <exclude reference="945-vU-vxi"/>
+                                        <exclude reference="K3Y-WG-trN"/>
+                                        <exclude reference="Zo1-n3-alK"/>
+                                        <exclude reference="e37-dE-JPr"/>
+                                        <exclude reference="fZz-57-3Fj"/>
+                                        <exclude reference="kE5-qn-3aL"/>
+                                        <exclude reference="mji-96-PrU"/>
+                                        <exclude reference="sNx-Dk-cFb"/>
+                                        <exclude reference="vdO-rG-uGX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="14t-Sb-KvS"/>
+                                        <exclude reference="945-vU-vxi"/>
+                                        <exclude reference="K3Y-WG-trN"/>
+                                        <exclude reference="Zo1-n3-alK"/>
+                                        <exclude reference="e37-dE-JPr"/>
+                                        <exclude reference="fZz-57-3Fj"/>
+                                        <include reference="kE5-qn-3aL"/>
+                                        <exclude reference="mji-96-PrU"/>
+                                        <exclude reference="sNx-Dk-cFb"/>
+                                        <include reference="vdO-rG-uGX"/>
+                                    </mask>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -33,44 +70,84 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6l7-8J-SFD" secondAttribute="trailing" constant="41" id="1dv-Uf-zMc"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="7dp-Nj-pPX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YOK-OL-eKz" secondAttribute="trailing" constant="66" id="BFI-6x-91m"/>
                             <constraint firstItem="YOK-OL-eKz" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-379" id="Dmu-3G-dTU"/>
                             <constraint firstItem="YOK-OL-eKz" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="-38" id="EYP-cJ-E94"/>
+                            <constraint firstItem="6l7-8J-SFD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="363" id="LSO-VK-uAg">
+                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="YOK-OL-eKz" secondAttribute="trailing" constant="-20" id="O2e-q8-FUp"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="-14" id="OBD-BF-bk0"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="6l7-8J-SFD" secondAttribute="bottom" constant="524" id="PeV-Ju-eXr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="YOK-OL-eKz" secondAttribute="bottom" constant="20" id="QoW-cy-c8H"/>
+                            <constraint firstItem="6l7-8J-SFD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="13" id="SeK-4v-fW4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6l7-8J-SFD" secondAttribute="trailing" constant="362" id="UWF-dr-ZeI">
+                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                            </constraint>
+                            <constraint firstItem="6l7-8J-SFD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bea-bv-oHk"/>
+                            <constraint firstItem="YOK-OL-eKz" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="-9" id="nYA-sk-npr"/>
+                            <constraint firstItem="6l7-8J-SFD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="45" id="o1e-EK-clt">
+                                <variation key="heightClass=regular-widthClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="YOK-OL-eKz" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="23" id="r99-ev-awI"/>
                             <constraint firstAttribute="bottomMargin" secondItem="YOK-OL-eKz" secondAttribute="bottom" constant="-52" id="txM-4y-SaR"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="41" id="yMk-UR-eN1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="1dv-Uf-zMc"/>
-                                <exclude reference="7dp-Nj-pPX"/>
-                                <exclude reference="OBD-BF-bk0"/>
-                                <exclude reference="yMk-UR-eN1"/>
+                                <exclude reference="BFI-6x-91m"/>
                                 <exclude reference="Dmu-3G-dTU"/>
                                 <exclude reference="EYP-cJ-E94"/>
                                 <exclude reference="O2e-q8-FUp"/>
+                                <exclude reference="QoW-cy-c8H"/>
+                                <exclude reference="nYA-sk-npr"/>
+                                <exclude reference="r99-ev-awI"/>
                                 <exclude reference="txM-4y-SaR"/>
+                                <exclude reference="1dv-Uf-zMc"/>
+                                <exclude reference="7dp-Nj-pPX"/>
+                                <exclude reference="LSO-VK-uAg"/>
+                                <exclude reference="OBD-BF-bk0"/>
+                                <exclude reference="SeK-4v-fW4"/>
+                                <exclude reference="UWF-dr-ZeI"/>
+                                <exclude reference="bea-bv-oHk"/>
+                                <exclude reference="o1e-EK-clt"/>
+                                <exclude reference="yMk-UR-eN1"/>
+                                <exclude reference="PeV-Ju-eXr"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="1dv-Uf-zMc"/>
-                                <include reference="7dp-Nj-pPX"/>
-                                <include reference="OBD-BF-bk0"/>
-                                <include reference="yMk-UR-eN1"/>
                                 <include reference="Dmu-3G-dTU"/>
                                 <include reference="EYP-cJ-E94"/>
                                 <include reference="O2e-q8-FUp"/>
                                 <include reference="txM-4y-SaR"/>
+                                <include reference="1dv-Uf-zMc"/>
+                                <include reference="7dp-Nj-pPX"/>
+                                <include reference="OBD-BF-bk0"/>
+                                <include reference="yMk-UR-eN1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="BFI-6x-91m"/>
+                                <include reference="QoW-cy-c8H"/>
+                                <include reference="nYA-sk-npr"/>
+                                <include reference="r99-ev-awI"/>
+                                <exclude reference="LSO-VK-uAg"/>
+                                <exclude reference="SeK-4v-fW4"/>
+                                <exclude reference="UWF-dr-ZeI"/>
+                                <include reference="bea-bv-oHk"/>
+                                <include reference="o1e-EK-clt"/>
+                                <exclude reference="PeV-Ju-eXr"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11.25" y="-610.125"/>
+            <point key="canvasLocation" x="-11.25" y="-610.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -519,7 +596,7 @@ USBWA Freshman All-American Team
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="JPs-dp-hpR"/>
                                             <constraint firstAttribute="trailing" secondItem="A91-0E-UFJ" secondAttribute="trailing" constant="8" id="OfU-jh-cL1"/>
                                             <constraint firstAttribute="height" constant="976" id="QI8-vm-kTs">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="1300"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="1350"/>
                                             </constraint>
                                             <constraint firstItem="qPq-8q-I2d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="37" id="S3F-r1-2nV"/>
                                             <constraint firstAttribute="trailing" secondItem="v7a-1e-EJ4" secondAttribute="trailing" constant="8" id="S6L-Bm-Krr"/>
@@ -682,12 +759,16 @@ USBWA Freshman All-American Team
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Jka-0q-y3B" secondAttribute="height" multiplier="27:26" id="5Fn-A0-kVb"/>
                                                             <constraint firstAttribute="height" constant="130" id="9iF-bJ-7cc"/>
+                                                            <constraint firstAttribute="height" constant="130" id="Iet-2V-ktI"/>
+                                                            <constraint firstAttribute="width" constant="135" id="K7c-T4-fVE"/>
                                                             <constraint firstAttribute="width" constant="135" id="lim-Vp-8xC"/>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
                                                                 <exclude reference="5Fn-A0-kVb"/>
                                                                 <exclude reference="9iF-bJ-7cc"/>
+                                                                <exclude reference="Iet-2V-ktI"/>
+                                                                <exclude reference="K7c-T4-fVE"/>
                                                                 <exclude reference="lim-Vp-8xC"/>
                                                             </mask>
                                                         </variation>
@@ -700,7 +781,9 @@ USBWA Freshman All-American Team
                                                         <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <rect key="frame" x="192" y="76" width="135" height="130"/>
                                                             <mask key="constraints">
-                                                                <include reference="5Fn-A0-kVb"/>
+                                                                <exclude reference="5Fn-A0-kVb"/>
+                                                                <include reference="Iet-2V-ktI"/>
+                                                                <include reference="K7c-T4-fVE"/>
                                                             </mask>
                                                         </variation>
                                                     </imageView>
@@ -758,6 +841,7 @@ USBWA Freshman All-American Team
                                                     <constraint firstAttribute="bottom" secondItem="Jka-0q-y3B" secondAttribute="bottom" constant="75" id="fwR-3L-7fo"/>
                                                     <constraint firstItem="MTV-1C-4Z6" firstAttribute="leading" secondItem="oGm-SY-PaM" secondAttribute="leading" constant="13" id="hRw-NN-0ia"/>
                                                     <constraint firstItem="Jka-0q-y3B" firstAttribute="top" secondItem="oGm-SY-PaM" secondAttribute="top" constant="59" id="o8E-Ue-zR4"/>
+                                                    <constraint firstItem="Jka-0q-y3B" firstAttribute="centerY" secondItem="oGm-SY-PaM" secondAttribute="centerY" id="uCz-Ln-41g"/>
                                                     <constraint firstItem="MTV-1C-4Z6" firstAttribute="top" secondItem="oGm-SY-PaM" secondAttribute="top" constant="8" id="xSR-si-qh8"/>
                                                 </constraints>
                                                 <variation key="default">
@@ -776,6 +860,7 @@ USBWA Freshman All-American Team
                                                         <exclude reference="dZa-h1-qcP"/>
                                                         <exclude reference="fwR-3L-7fo"/>
                                                         <exclude reference="o8E-Ue-zR4"/>
+                                                        <exclude reference="uCz-Ln-41g"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -797,8 +882,9 @@ USBWA Freshman All-American Team
                                                         <exclude reference="hRw-NN-0ia"/>
                                                         <include reference="xSR-si-qh8"/>
                                                         <include reference="13U-TV-Uf7"/>
-                                                        <include reference="MQc-IR-WWB"/>
-                                                        <include reference="fwR-3L-7fo"/>
+                                                        <exclude reference="MQc-IR-WWB"/>
+                                                        <exclude reference="fwR-3L-7fo"/>
+                                                        <include reference="uCz-Ln-41g"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -808,12 +894,16 @@ USBWA Freshman All-American Team
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="JaylenCeltics" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-Ag-hWI">
                                                         <rect key="frame" x="192" y="43" width="135" height="130"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" constant="135" id="5M2-8G-eD2"/>
+                                                            <constraint firstAttribute="height" constant="130" id="Vqn-KZ-Ub1"/>
                                                             <constraint firstAttribute="width" secondItem="xSb-Ag-hWI" secondAttribute="height" multiplier="27:26" id="cKS-j4-q0d"/>
                                                             <constraint firstAttribute="width" constant="135" id="kiU-y6-X4p"/>
                                                             <constraint firstAttribute="height" constant="130" id="l4D-62-wZr"/>
                                                         </constraints>
                                                         <variation key="default">
                                                             <mask key="constraints">
+                                                                <exclude reference="5M2-8G-eD2"/>
+                                                                <exclude reference="Vqn-KZ-Ub1"/>
                                                                 <exclude reference="cKS-j4-q0d"/>
                                                                 <exclude reference="kiU-y6-X4p"/>
                                                                 <exclude reference="l4D-62-wZr"/>
@@ -828,7 +918,9 @@ USBWA Freshman All-American Team
                                                         <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <rect key="frame" x="189" y="66" width="135" height="130"/>
                                                             <mask key="constraints">
-                                                                <include reference="cKS-j4-q0d"/>
+                                                                <include reference="5M2-8G-eD2"/>
+                                                                <include reference="Vqn-KZ-Ub1"/>
+                                                                <exclude reference="cKS-j4-q0d"/>
                                                             </mask>
                                                         </variation>
                                                     </imageView>
@@ -879,6 +971,7 @@ USBWA Freshman All-American Team
                                                     <constraint firstAttribute="bottom" secondItem="xSb-Ag-hWI" secondAttribute="bottom" constant="88" id="Vvj-ox-oj3"/>
                                                     <constraint firstItem="xSb-Ag-hWI" firstAttribute="top" secondItem="Iym-Vz-Qjb" secondAttribute="top" constant="50" id="ihj-bb-sQp"/>
                                                     <constraint firstItem="GGy-Nn-E4s" firstAttribute="leading" secondItem="Iym-Vz-Qjb" secondAttribute="leading" constant="20" id="iif-V3-K9P"/>
+                                                    <constraint firstItem="xSb-Ag-hWI" firstAttribute="centerY" secondItem="Iym-Vz-Qjb" secondAttribute="centerY" id="l18-XP-ryH"/>
                                                     <constraint firstAttribute="height" constant="299" id="mLT-9v-clf"/>
                                                     <constraint firstItem="GGy-Nn-E4s" firstAttribute="leading" secondItem="Iym-Vz-Qjb" secondAttribute="leading" constant="27" id="nvH-Rb-NdH"/>
                                                     <constraint firstItem="xSb-Ag-hWI" firstAttribute="top" secondItem="Iym-Vz-Qjb" secondAttribute="top" constant="66" id="oTQ-Bx-gS0"/>
@@ -896,6 +989,7 @@ USBWA Freshman All-American Team
                                                         <exclude reference="Iqk-s5-Xst"/>
                                                         <exclude reference="Vvj-ox-oj3"/>
                                                         <exclude reference="ihj-bb-sQp"/>
+                                                        <exclude reference="l18-XP-ryH"/>
                                                         <exclude reference="oTQ-Bx-gS0"/>
                                                         <exclude reference="ttJ-hU-Fal"/>
                                                     </mask>
@@ -915,8 +1009,9 @@ USBWA Freshman All-American Team
                                                         <include reference="G48-cL-7mj"/>
                                                         <include reference="nvH-Rb-NdH"/>
                                                         <include reference="Iqk-s5-Xst"/>
-                                                        <include reference="Vvj-ox-oj3"/>
-                                                        <include reference="oTQ-Bx-gS0"/>
+                                                        <exclude reference="Vvj-ox-oj3"/>
+                                                        <include reference="l18-XP-ryH"/>
+                                                        <exclude reference="oTQ-Bx-gS0"/>
                                                     </mask>
                                                 </variation>
                                             </view>
