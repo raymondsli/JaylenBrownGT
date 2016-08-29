@@ -134,7 +134,7 @@
 				5026C24E1D65716B0057D046 /* Sources */,
 				5026C24F1D65716B0057D046 /* Frameworks */,
 				5026C2501D65716B0057D046 /* Resources */,
-				5019B5CC1D67EB1E00423579 /* ShellScript */,
+				5019B5CC1D67EB1E00423579 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -157,6 +157,7 @@
 				TargetAttributes = {
 					5026C2511D65716B0057D046 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 267CUWQRU3;
 					};
 				};
 			};
@@ -193,13 +194,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5019B5CC1D67EB1E00423579 /* ShellScript */ = {
+		5019B5CC1D67EB1E00423579 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +336,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -342,6 +346,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devslopes.JB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dc1be0fe-4a83-4cd7-a503-553c20d36383";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -350,6 +355,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -358,6 +365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devslopes.JB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dc1be0fe-4a83-4cd7-a503-553c20d36383";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
