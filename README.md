@@ -1,4 +1,5 @@
 # JaylenBrownGT
+Created using XCode 7.3.1 and Swift 2.2.
 This is an iOS app compatible for iPhone 4,5,6,6+ and most iPads. 
 The app uses a tabbed interface with five tabs.
 Tab 1 is the homescreen.
