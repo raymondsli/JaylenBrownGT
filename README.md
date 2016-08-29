@@ -1,5 +1,5 @@
 # JaylenBrownGT
-This is an iOS app compatible for iPhone 4,5,6,6+ and all iPads. 
+This is an iOS app compatible for iPhone 4,5,6,6+ and most iPads. 
 The app uses a tabbed interface with five tabs.
 Tab 1 is the homescreen.
 Tab 2 has the game log. Clicking on a game takes you to a detailed view of the game.
