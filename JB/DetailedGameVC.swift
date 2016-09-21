@@ -31,6 +31,10 @@ class DetailedGameVC: UIViewController {
         shootingDetails.text = shootingDetailsString
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
