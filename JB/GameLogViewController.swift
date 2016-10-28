@@ -17,77 +17,79 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
-        getNBAJSON("http://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&PlayerID=1627759&Season=2016-17&SeasonType=Regular+Season")
+        getNBAJSON(gameLogURL: "http://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&PlayerID=1627759&Season=2016-17&SeasonType=Regular+Season")
 
         tableView.reloadData()
     }
     
     //Function that gets JSON data from the URL
     func getNBAJSON(gameLogURL: String) {
-        let mySession = NSURLSession.sharedSession()
-        let url: NSURL = NSURL(string: gameLogURL)!
+        let url = URL(string: gameLogURL)
         
-        mySession.dataTaskWithURL(url) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+        URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
             if let responseData = data {
                 do {
-                    let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.AllowFragments) as! NSMutableDictionary
+                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [String: Any]
                     //resultSets is a dictionary
-                    let resultSets: NSMutableDictionary = json["resultSets"]![0] as! NSMutableDictionary
+                    let resultSetsTemp: NSArray = json["resultSets"] as! NSArray
+                    print(resultSetsTemp)
+                    let resultSets = resultSetsTemp[0] as! [String: Any]
                     //rowSet is an array of arrays, where each subarray is a game
                     let rowSet: NSArray = resultSets["rowSet"] as! NSArray
                     
                     self.turnRowSetIntoGameStats(rowSet)
                     
-                    dispatch_async(dispatch_get_main_queue(), {
+                    DispatchQueue.main.async(execute: {
                         self.tableView!.reloadData()
                     })
                 } catch {
                     print("Could not serialize")
                 }
             }
-        }.resume()
+        }).resume()
     }
     
-    func turnRowSetIntoGameStats(rowSet: NSArray) {
+    func turnRowSetIntoGameStats(_ rowSet: NSArray) {
         //rowSet is an array of arrays, where each subarray is a game. Turn each game into a GameStats
         var i: Int = 0
         while i < rowSet.count {
             //Start at i = 0, so rowSet[0] is the first game array. Continue until last game.
-            let gameInfo = self.getGameInfo(rowSet[i][3] as! String, opponent: rowSet[i][4] as! String)
+            let currentGame: NSArray = rowSet[i] as! NSArray
+            let gameInfo = self.getGameInfo(currentGame[3] as! String, opponent: currentGame[4] as! String)
             let gameNumber = String(rowSet.count - i)
-            let score = String(rowSet[i][5])
-            let points = String(rowSet[i][24])
-            let rebounds = String(rowSet[i][18])
-            let assists = String(rowSet[i][19])
-            let steals = String(rowSet[i][20])
-            let blocks = String(rowSet[i][21])
+            let score = String(describing: currentGame[5])
+            let points = String(describing: currentGame[24])
+            let rebounds = String(describing: currentGame[18])
+            let assists = String(describing: currentGame[19])
+            let steals = String(describing: currentGame[20])
+            let blocks = String(describing: currentGame[21])
             
-            let FGM: String = String(rowSet[i][7])
-            let FGA: String = String(rowSet[i][8])
+            let FGM: String = String(describing: currentGame[7])
+            let FGA: String = String(describing: currentGame[8])
             
             let totalShoot = FGM + "/" + FGA
-            let totalShootP = String(rowSet[i][9])
+            let totalShootP = String(describing: currentGame[9])
             
             
-            let twoPointersMade =  (rowSet[i][7] as! Int) - (rowSet[i][10] as! Int)
-            let twoPointersAttempted = (rowSet[i][8] as! Int) - (rowSet[i][11] as! Int)
+            let twoPointersMade =  (currentGame[7] as! Int) - (currentGame[10] as! Int)
+            let twoPointersAttempted = (currentGame[8] as! Int) - (currentGame[11] as! Int)
             let twoF = String(twoPointersMade) + "/" + String(twoPointersAttempted)
             let twoPtDouble = Double(twoPointersMade) / Double(twoPointersAttempted)
             let twoPtRounded = Double(round(twoPtDouble * 1000) / 1000)
             let twoP = String(twoPtRounded)
             
-            let threeF = String(rowSet[i][10]) + "/" + String(rowSet[i][11])
-            let threeP = String(rowSet[i][12])
+            let threeF = String(describing: currentGame[10]) + "/" + String(describing: currentGame[11])
+            let threeP = String(describing: currentGame[12])
             
-            let fF = String(rowSet[i][13]) + "/" + String(rowSet[i][14])
-            let fP = String(rowSet[i][15])
+            let fF = String(describing: currentGame[13]) + "/" + String(describing: currentGame[14])
+            let fP = String(describing: currentGame[15])
             
-            let turnovers = String(rowSet[i][22])
-            let minutes = String(rowSet[i][6])
-            let fouls = String(rowSet[i][23])
-            let offensiveRebounds = String(rowSet[i][16])
-            let defensiveRebounds = String(rowSet[i][17])
-            let plus_minus = String(rowSet[i][25])
+            let turnovers = String(describing: currentGame[22])
+            let minutes = String(describing: currentGame[6])
+            let fouls = String(describing: currentGame[23])
+            let offensiveRebounds = String(describing: currentGame[16])
+            let defensiveRebounds = String(describing: currentGame[17])
+            let plus_minus = String(describing: currentGame[25])
             
             //Create a new GameStats and append it to games. So first element in games will be first element in rowSet, which is the most recent game.
             let newGame = GameStats(label: "game", dl: gameInfo, gN: gameNumber, scr: score, bgR: 0, bgG: 0.9, bgB: 0, bgA: 1, p: points, r: rebounds, a: assists, s: steals, b: blocks, tSF: totalShoot, tSP: totalShootP, tPSF: twoF, tPSP: twoP, thPSF: threeF, thPSP: threeP, fTF: fF, ftP: fP, turn: turnovers, min: minutes, foul: fouls, oReb: offensiveRebounds, dReb: defensiveRebounds, pM: plus_minus)
@@ -213,14 +215,14 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     //Function called in turnRowSetIntoGameStats that turns format FEB 09, 2016 GSW vs. DAL into form 2/9/16 vs. DAL through subsetting strings.
-    func getGameInfo(date: String, opponent: String) -> String {
-        let oppIndex = opponent.startIndex.advancedBy(4)
-        let trunOpp = opponent.substringFromIndex(oppIndex)
+    func getGameInfo(_ date: String, opponent: String) -> String {
+        let oppIndex = opponent.characters.index(opponent.startIndex, offsetBy: 4)
+        let trunOpp = opponent.substring(from: oppIndex)
         
-        let day = date.substringWithRange(Range<String.Index>(start: date.startIndex.advancedBy(4), end: date.endIndex.advancedBy(-6)))
-        let year = date.substringFromIndex(date.endIndex.advancedBy(-2))
+        let day = date.substring(with: (date.characters.index(date.startIndex, offsetBy: 4) ..< date.characters.index(date.endIndex, offsetBy: -6)))
+        let year = date.substring(from: date.characters.index(date.endIndex, offsetBy: -2))
         
-        let writtenMonth = date.substringToIndex(date.startIndex.advancedBy(3))
+        let writtenMonth = date.substring(to: date.characters.index(date.startIndex, offsetBy: 3))
         let numberMonth: String
         
         if writtenMonth == "JAN" {
@@ -257,13 +259,13 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     //Hides the navigation bar for the game log view.
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = true
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("GameCell") as? GameCell {
-            cell.accessoryView?.backgroundColor = UIColor.blackColor()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell") as? GameCell {
+            cell.accessoryView?.backgroundColor = UIColor.black
             //Check if cell needs to be game. If so, load labels with appropriate text.
             if games[indexPath.row].label == "game" {
                 let totalPoints = games[indexPath.row].totalPoints
@@ -275,11 +277,11 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
                 
                 let mainStats = totalPoints + "/" + totalRebounds + "/" + totalAssists + "/" + totalSteals + "/" + totalBlocks
                 
-                cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
                 
                 cell.configureCell(games[indexPath.row].dateLocation, gameMainStats: mainStats, gameShootingF: totalShootingFraction)
             } else {
-                cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.accessoryType = UITableViewCellAccessoryType.none
                 cell.configureCell(games[indexPath.row].label, gameMainStats: games[indexPath.row].dateLocation, gameShootingF: "")
             }
             
@@ -293,18 +295,18 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     //Called when user taps on a cell. Performs segue if the cell is a game. Otherwise do nothing.
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if games[indexPath.row].label == "game" {
-            self.performSegueWithIdentifier("showDetailedGame", sender: self)
+            self.performSegue(withIdentifier: "showDetailedGame", sender: self)
         } else {
-            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            self.tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     //Called before the segue is executed. Sets the labels of the detailed game view.
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetailedGame" {
-            let upcoming: DetailedGameVC = segue.destinationViewController as! DetailedGameVC
+            let upcoming: DetailedGameVC = segue.destination as! DetailedGameVC
             let indexPath = self.tableView.indexPathForSelectedRow!
             
             let dateLocation = games[indexPath.row].dateLocation
@@ -368,17 +370,17 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
             upcoming.additionalStatsString = additionalStatsLabel
             upcoming.shootingDetailsString = shootingDetailsLabel
             
-            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            self.tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
     //We are using a one column table.
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     //Number of rows is the length of the games array.
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return games.count
     }
     

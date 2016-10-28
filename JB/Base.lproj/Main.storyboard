@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -19,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Jaylen-Brown" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-8J-SFD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Jaylen-Brown" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-8J-SFD">
                                 <rect key="frame" x="61" y="197" width="253" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="14t-Sb-KvS"/>
@@ -63,7 +67,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.63977111049549917" green="1" blue="0.92992619007577848" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.63977111049549917" green="1" blue="0.92992619007577848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6l7-8J-SFD" secondAttribute="trailing" constant="41" id="1dv-Uf-zMc"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="7dp-Nj-pPX"/>
@@ -117,22 +121,20 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11.5" y="-821.5"/>
+            <point key="canvasLocation" x="-513" y="-709"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -150,15 +152,15 @@
             <objects>
                 <tableViewController id="ycL-Dg-lqW" customClass="JBTwitterTimeline" customModule="JB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qv0-hz-71U">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Rpz-Sk-NfY">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rpz-Sk-NfY" id="9N2-Tp-XhB">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -193,12 +195,12 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qru-7M-aD3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="976"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-st-qzt" userLabel="Personal Info View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-st-qzt" userLabel="Personal Info View">
                                                 <rect key="frame" x="8" y="89" width="359" height="192"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-sp-cMv">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-sp-cMv">
                                                         <rect key="frame" x="13" y="19" width="333" height="154"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="154" id="09w-Rf-3GH"/>
                                                             <constraint firstAttribute="width" constant="333" id="Btg-lY-9ky"/>
@@ -227,7 +229,7 @@ Wingspan: 6'11.75"
                                                         </variation>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.81609248292077763" green="0.9353359717484816" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.81609248292077763" green="0.9353359717484816" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="top" constant="19" id="1bK-E7-M6u"/>
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="leading" secondItem="Rar-st-qzt" secondAttribute="leading" constant="13" id="7q9-d2-8dc"/>
@@ -273,16 +275,16 @@ Wingspan: 6'11.75"
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7a-1e-EJ4" userLabel="College Achivements">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7a-1e-EJ4" userLabel="College Achivements">
                                                 <rect key="frame" x="8" y="457" width="359" height="145"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="College Achievements: California" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f38-Mx-cyV">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="College Achievements: California" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f38-Mx-cyV">
                                                         <rect key="frame" x="16" y="8" width="263" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="1" green="0.88764067599999996" blue="0.055743911260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="1" green="0.88764067599999996" blue="0.055743911260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MI5-kg-H7t">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MI5-kg-H7t">
                                                         <rect key="frame" x="16" y="34" width="295" height="111"/>
                                                         <string key="text">First Team All-Pac-12
 Pac-12 Freshman of the Year
@@ -290,11 +292,11 @@ Pac-12 All Freshman Team
 USBWA Freshman All-American Team
 </string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
-                                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="MI5-kg-H7t" secondAttribute="trailing" constant="48" id="1So-Qv-AXG"/>
                                                     <constraint firstAttribute="trailing" secondItem="f38-Mx-cyV" secondAttribute="trailing" constant="80" id="A0F-RX-QDT"/>
@@ -355,16 +357,16 @@ USBWA Freshman All-American Team
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A91-0E-UFJ" userLabel="HS Achievements">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A91-0E-UFJ" userLabel="HS Achievements">
                                                 <rect key="frame" x="8" y="628" width="359" height="312"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="High School Achievements: Wheeler HS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5A-cp-V4k">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Achievements: Wheeler HS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5A-cp-V4k">
                                                         <rect key="frame" x="8" y="8" width="323" height="39"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-nA-I5M">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-nA-I5M">
                                                         <rect key="frame" x="8" y="45" width="343" height="272"/>
                                                         <string key="text">- Senior Year Led Wheeler to Georgia 6A State Title
 - Consensus first-team All-American
@@ -378,11 +380,11 @@ USBWA Freshman All-American Team
 - Rivals Ranked #3 Overall Player
 </string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                        <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.88764067599999996" blue="0.055743911260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.88764067599999996" blue="0.055743911260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="y5A-cp-V4k" firstAttribute="leading" secondItem="A91-0E-UFJ" secondAttribute="leading" constant="8" id="3Sc-G5-dbZ"/>
                                                     <constraint firstItem="PnK-nA-I5M" firstAttribute="leading" secondItem="A91-0E-UFJ" secondAttribute="leading" constant="8" id="47r-BT-8g2"/>
@@ -446,14 +448,14 @@ USBWA Freshman All-American Team
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Personal Info and Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPq-8q-I2d">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Personal Info and Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPq-8q-I2d">
                                                 <rect key="frame" x="62" y="16" width="251" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="244.5" id="F5p-xX-FPe"/>
                                                     <constraint firstAttribute="height" constant="20.5" id="JeA-4I-3jO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -468,23 +470,23 @@ USBWA Freshman All-American Team
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-9B-35d" userLabel="NBA Achievements">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-9B-35d" userLabel="NBA Achievements">
                                                 <rect key="frame" x="8" y="301" width="359" height="129"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="- 2016 Samsung All-NBA Summer League Second Team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JU-Hm-zLX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="- 2016 Samsung All-NBA Summer League Second Team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JU-Hm-zLX">
                                                         <rect key="frame" x="14" y="46" width="322" height="63"/>
                                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NBA Achievements: Boston Celtics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-jb-2Xu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NBA Achievements: Boston Celtics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-jb-2Xu">
                                                         <rect key="frame" x="14" y="8" width="278" height="38"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.1390051679" green="0.83900523559999995" blue="0.234339149" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.1390051679" green="0.83900523559999995" blue="0.234339149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="6JU-Hm-zLX" secondAttribute="bottom" constant="20" id="0gB-Qv-OZg"/>
                                                     <constraint firstItem="BoE-jb-2Xu" firstAttribute="top" secondItem="JzM-9B-35d" secondAttribute="top" constant="8" id="3jx-Yh-KrH"/>
@@ -558,7 +560,7 @@ USBWA Freshman All-American Team
                                                 </variation>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.57213976035407166" blue="0.070031582334853959" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.57213976035407166" blue="0.070031582334853959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="457" id="0aa-vQ-hu2"/>
                                             <constraint firstAttribute="trailing" secondItem="Rar-st-qzt" secondAttribute="trailing" constant="8" id="2Z1-dw-uXH"/>
@@ -688,7 +690,7 @@ USBWA Freshman All-American Team
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NWJ-WO-TyX" firstAttribute="top" secondItem="9CY-aH-28D" secondAttribute="bottom" id="SqM-fY-lJd"/>
                             <constraint firstItem="9CY-aH-28D" firstAttribute="leading" secondItem="H2o-3V-TQW" secondAttribute="leading" id="W1A-ZQ-3tO"/>
@@ -704,7 +706,7 @@ USBWA Freshman All-American Team
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61W-P1-Qwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="272.5" y="1022.5"/>
+            <point key="canvasLocation" x="340" y="1004"/>
         </scene>
         <!--Season Stats-->
         <scene sceneID="SDF-Aw-ygE">
@@ -724,10 +726,10 @@ USBWA Freshman All-American Team
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOJ-Oj-ULd" userLabel="Background View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="951"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGm-SY-PaM" userLabel="Cal View">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGm-SY-PaM" userLabel="Cal View">
                                                 <rect key="frame" x="14" y="399" width="347" height="281"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-1C-4Z6">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-1C-4Z6">
                                                         <rect key="frame" x="4" y="-1" width="339" height="282"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="253.5" id="7zh-Nz-6nh"/>
@@ -747,7 +749,7 @@ Total FG: 4.8/11.1 = 0.431
 3PT FG: 0.9/3.0 = 0.294
 Free Throws: 4.2/6.4 = 0.654</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.2350892617" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.0" green="0.2350892617" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -761,12 +763,9 @@ Free Throws: 4.2/6.4 = 0.654</string>
                                                                 <include reference="Uqp-iM-RbG"/>
                                                             </mask>
                                                         </variation>
-                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                            <rect key="frame" x="13" y="8" width="280" height="277"/>
-                                                        </variation>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.88764067596158247" blue="0.055743911255134782" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.88764067596158247" blue="0.055743911255134782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300.5" id="1rV-vF-tkN"/>
                                                     <constraint firstItem="MTV-1C-4Z6" firstAttribute="top" secondItem="oGm-SY-PaM" secondAttribute="top" constant="-2" id="BN0-gb-BQ7"/>
@@ -799,8 +798,7 @@ Free Throws: 4.2/6.4 = 0.654</string>
                                                         <include reference="Msx-12-Din"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                    <rect key="frame" x="14" y="399" width="347" height="308"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
                                                     <mask key="constraints">
                                                         <include reference="Hrl-bt-bDp"/>
                                                         <exclude reference="KH0-5f-5Ep"/>
@@ -811,10 +809,10 @@ Free Throws: 4.2/6.4 = 0.654</string>
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-Vz-Qjb" userLabel="Celtics 2016-2017">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-Vz-Qjb" userLabel="Celtics 2016-2017">
                                                 <rect key="frame" x="14" y="70" width="347" height="284"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-Nn-E4s">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGy-Nn-E4s">
                                                         <rect key="frame" x="14" y="-2" width="308" height="287"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="282" id="LBi-te-MEH"/>
@@ -834,7 +832,7 @@ Total FG: 0/0 = ∞
 3PT FG: 0/0 = ∞
 Free Throws: 0/0 = ∞</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -848,12 +846,9 @@ Free Throws: 0/0 = ∞</string>
                                                                 <include reference="uK9-Kw-dfS"/>
                                                             </mask>
                                                         </variation>
-                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                            <rect key="frame" x="27" y="8" width="266" height="266"/>
-                                                        </variation>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.1390051679" green="0.83900523559999995" blue="0.234339149" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.1390051679" green="0.83900523559999995" blue="0.234339149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="GGy-Nn-E4s" secondAttribute="bottom" constant="10" id="7Ef-yh-hex"/>
                                                     <constraint firstItem="GGy-Nn-E4s" firstAttribute="top" secondItem="Iym-Vz-Qjb" secondAttribute="top" constant="8" id="G48-cL-7mj"/>
@@ -888,7 +883,7 @@ Free Throws: 0/0 = ∞</string>
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Season Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx3-iS-UiR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Season Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx3-iS-UiR">
                                                 <rect key="frame" x="120" y="13" width="134" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="134" id="6KZ-Xk-sBv"/>
@@ -897,7 +892,7 @@ Free Throws: 0/0 = ∞</string>
                                                     <constraint firstAttribute="width" constant="134" id="x2z-S8-YBO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -920,10 +915,10 @@ Free Throws: 0/0 = ∞</string>
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTK-kU-zqW" userLabel="Wheeler HS">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTK-kU-zqW" userLabel="Wheeler HS">
                                                 <rect key="frame" x="14" y="744" width="347" height="175"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-cX-DbD">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwl-cX-DbD">
                                                         <rect key="frame" x="95" y="21" width="157" height="114"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="115" id="JeK-44-qty"/>
@@ -937,7 +932,7 @@ Points: 28
 
 Rebounds: 12</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="1" green="0.88764067599999996" blue="0.055743911260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="1" green="0.88764067599999996" blue="0.055743911260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -961,7 +956,7 @@ Rebounds: 12</string>
                                                         </variation>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.068160814750000007" green="0.037174245680000002" blue="0.48676783379999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.068160814750000007" green="0.037174245680000002" blue="0.48676783379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="Xwl-cX-DbD" firstAttribute="top" secondItem="BTK-kU-zqW" secondAttribute="top" constant="25" id="Diy-kG-2TU"/>
                                                     <constraint firstAttribute="bottom" secondItem="Xwl-cX-DbD" secondAttribute="bottom" constant="30" id="I5K-HW-UJN"/>
@@ -1005,7 +1000,7 @@ Rebounds: 12</string>
                                                 </variation>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="BTK-kU-zqW" firstAttribute="top" secondItem="oGm-SY-PaM" secondAttribute="bottom" constant="64" id="2To-d8-9t7"/>
                                             <constraint firstAttribute="trailing" secondItem="oGm-SY-PaM" secondAttribute="trailing" constant="14" id="2fy-ug-UV1"/>
@@ -1117,7 +1112,7 @@ Rebounds: 12</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="i6v-iv-cXE" firstAttribute="leading" secondItem="Y4a-WI-C1U" secondAttribute="leading" id="6Uc-Bc-UAG"/>
                             <constraint firstAttribute="trailing" secondItem="i6v-iv-cXE" secondAttribute="trailing" id="Lte-Nt-LzO"/>
@@ -1136,7 +1131,7 @@ Rebounds: 12</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61A-4w-lWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793.5" y="448"/>
+            <point key="canvasLocation" x="1039" y="362"/>
         </scene>
         <!--Game Log View Controller-->
         <scene sceneID="az1-T0-Jna">
@@ -1150,17 +1145,17 @@ Rebounds: 12</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-VZ-2y9" userLabel="TopView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-VZ-2y9" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Game Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-ik-863">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-ik-863">
                                         <rect key="frame" x="144" y="15" width="87" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="VSh-47-rN2"/>
                                             <constraint firstAttribute="width" constant="87" id="y9l-NN-RXr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.098583028493870045" green="0.070316583668395882" blue="0.47592850130890052" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.098583028493870045" green="0.070316583668395882" blue="0.47592850130890052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1175,20 +1170,20 @@ Rebounds: 12</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="P/R/A/S/B   FGM/FGA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="459-R0-xpA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="P/R/A/S/B   FGM/FGA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="459-R0-xpA">
                                         <rect key="frame" x="175" y="52" width="172" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Game Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYu-HO-QWl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYu-HO-QWl">
                                         <rect key="frame" x="8" y="52" width="89" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="Z0o-eA-d4q"/>
                                             <constraint firstAttribute="width" constant="89" id="xcX-xc-7jM"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -1204,7 +1199,7 @@ Rebounds: 12</string>
                                         </variation>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.37723261990000001" blue="0.2774939756" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.37723261990000001" blue="0.2774939756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Nix-ik-863" firstAttribute="centerX" secondItem="zK4-VZ-2y9" secondAttribute="centerX" id="0XJ-W8-R8Q"/>
                                     <constraint firstItem="Nix-ik-863" firstAttribute="leading" secondItem="OYu-HO-QWl" secondAttribute="trailing" constant="47" id="GiT-w7-Ngs"/>
@@ -1272,9 +1267,9 @@ Rebounds: 12</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIs-bR-KSm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIs-bR-KSm">
                                 <rect key="frame" x="0.0" y="92" width="375" height="526"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="535" id="Gdf-j1-Pdi"/>
                                 </constraints>
@@ -1286,7 +1281,7 @@ Rebounds: 12</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="758" ambiguous="YES" misplaced="YES" text="SF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-p4-ymI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="758" misplaced="YES" text="SF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-p4-ymI">
                                                     <rect key="frame" x="301" y="3" width="52" height="28.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="52" id="VZM-xa-87G"/>
@@ -1294,7 +1289,7 @@ Rebounds: 12</string>
                                                         <constraint firstAttribute="width" constant="20" id="uea-j2-l68"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -1309,21 +1304,20 @@ Rebounds: 12</string>
                                                             <exclude reference="uea-j2-l68"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="960" y="3" width="52" height="37.5"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
                                                         <mask key="constraints">
                                                             <include reference="VZM-xa-87G"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" ambiguous="YES" misplaced="YES" text="Game Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epn-OB-HeE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" misplaced="YES" text="Game Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epn-OB-HeE">
                                                     <rect key="frame" x="177" y="0.0" width="103" height="35.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="GLZ-FN-cLy"/>
                                                         <constraint firstAttribute="width" constant="103" id="mQI-Mb-EEA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -1336,14 +1330,13 @@ Rebounds: 12</string>
                                                             <include reference="GLZ-FN-cLy"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="836" y="-1" width="103" height="45.5"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
                                                         <mask key="constraints">
                                                             <include reference="mQI-Mb-EEA"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Game Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-mj-e0h">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2c-mj-e0h">
                                                     <rect key="frame" x="8" y="0.0" width="183" height="35.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="183" id="Tpk-ml-8fX">
@@ -1352,7 +1345,7 @@ Rebounds: 12</string>
                                                         <constraint firstAttribute="height" constant="35.5" id="ix9-6S-dqQ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -1445,8 +1438,8 @@ Rebounds: 12</string>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.1390051679" green="0.83900523559999995" blue="0.234339149" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.1390051679" green="0.83900523559999995" blue="0.234339149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="gameInfoLabel" destination="D2c-mj-e0h" id="ncp-Hk-OkW"/>
                                             <outlet property="gameMainStatsLabel" destination="epn-OB-HeE" id="4jP-vI-kuP"/>
@@ -1466,7 +1459,7 @@ Rebounds: 12</string>
                                 </variation>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zK4-VZ-2y9" secondAttribute="trailing" id="7Jm-d2-poL"/>
                             <constraint firstItem="UIs-bR-KSm" firstAttribute="top" secondItem="zK4-VZ-2y9" secondAttribute="bottom" id="8N0-fL-Lmn"/>
@@ -1499,7 +1492,6 @@ Rebounds: 12</string>
                     </view>
                     <navigationItem key="navigationItem" id="Fbk-yJ-hsg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="UIs-bR-KSm" id="vyZ-FT-qXx"/>
                         <segue destination="Gc1-jf-V6f" kind="show" identifier="showDetailedGame" id="S12-Ou-DeN"/>
@@ -1507,7 +1499,7 @@ Rebounds: 12</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfe-dx-2y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155.5" y="-544.5"/>
+            <point key="canvasLocation" x="1441" y="-636"/>
         </scene>
         <!--Detailed GameVC-->
         <scene sceneID="Y2w-xt-dKT">
@@ -1536,14 +1528,8 @@ Rebounds: 12</string>
 Game Info
 Score</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="10.5" y="0.0" width="354" height="92"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                                    <rect key="frame" x="13" y="0.0" width="354" height="92"/>
-                                                </variation>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbf-rx-8NF" userLabel="Main Stats">
                                                 <rect key="frame" x="8" y="97" width="359" height="217"/>
@@ -1560,11 +1546,11 @@ Steals
 
 Blocks</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.95999583957403756" blue="0.035504757339337556" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.95999583957403756" blue="0.035504757339337556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="yxb-xs-NZO" firstAttribute="top" secondItem="sbf-rx-8NF" secondAttribute="top" constant="8" id="1eM-A0-9md"/>
                                                     <constraint firstItem="yxb-xs-NZO" firstAttribute="leading" secondItem="sbf-rx-8NF" secondAttribute="leading" constant="14" id="5SK-95-8I2"/>
@@ -1589,23 +1575,17 @@ Defensive Rebounds
 
 Plus Minus</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
-                                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="17" y="14" width="285" height="95"/>
-                                                        </variation>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.044665676293635936" green="1" blue="0.96023878653158623" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.044665676293635936" green="1" blue="0.96023878653158623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="vw0-NO-KEI" secondAttribute="bottom" constant="27" id="W93-Sy-Ikx"/>
                                                     <constraint firstAttribute="trailing" secondItem="vw0-NO-KEI" secondAttribute="trailing" constant="25" id="Xeq-ha-cT7"/>
                                                     <constraint firstItem="vw0-NO-KEI" firstAttribute="top" secondItem="zDA-rN-Lrv" secondAttribute="top" constant="8" id="mqx-8P-ctV"/>
                                                     <constraint firstItem="vw0-NO-KEI" firstAttribute="leading" secondItem="zDA-rN-Lrv" secondAttribute="leading" constant="15" id="yWV-qh-dtg"/>
                                                 </constraints>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="8" y="334" width="359" height="123"/>
-                                                </variation>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weU-S2-V6Y" userLabel="Shooting Stats">
                                                 <rect key="frame" x="8" y="629" width="359" height="315"/>
@@ -1624,26 +1604,20 @@ Two Point Shooting Percentage
 Three Point Shooting Fraction
 Three Point Shooting Percentage</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
-                                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="18" y="21" width="322" height="244"/>
-                                                        </variation>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.27681230666926437" green="1" blue="0.054324359221204155" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.27681230666926437" green="1" blue="0.054324359221204155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="0Zv-8B-syp" firstAttribute="leading" secondItem="weU-S2-V6Y" secondAttribute="leading" constant="8" id="5xO-Ic-t8C"/>
                                                     <constraint firstItem="0Zv-8B-syp" firstAttribute="top" secondItem="weU-S2-V6Y" secondAttribute="top" constant="20" id="9Vd-0w-0cd"/>
                                                     <constraint firstAttribute="bottom" secondItem="0Zv-8B-syp" secondAttribute="bottom" constant="20" id="Le3-st-3PM"/>
                                                     <constraint firstAttribute="trailing" secondItem="0Zv-8B-syp" secondAttribute="trailing" constant="13" id="M9e-yD-mZS"/>
                                                 </constraints>
-                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="8" y="476" width="359" height="364"/>
-                                                </variation>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.57647488015223358" green="0.66285939843397179" blue="0.9050706260907504" alpha="0.58718417553191493" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.57647488015223358" green="0.66285939843397179" blue="0.9050706260907504" alpha="0.58718417553191493" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="sbf-rx-8NF" firstAttribute="top" secondItem="3Td-em-E8O" secondAttribute="bottom" constant="8" id="2QB-Ll-b66"/>
                                             <constraint firstItem="weU-S2-V6Y" firstAttribute="top" secondItem="8Kh-6M-VeC" secondAttribute="top" constant="629" id="4fy-er-6yz"/>
@@ -1679,7 +1653,7 @@ Three Point Shooting Percentage</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="j8g-WK-iZM" secondAttribute="trailing" id="BTM-pX-ZD0"/>
                             <constraint firstItem="j8g-WK-iZM" firstAttribute="top" secondItem="b9P-5V-vME" secondAttribute="top" id="CF5-bK-FcF"/>
@@ -1705,7 +1679,7 @@ Three Point Shooting Percentage</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCD-IJ-Mbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710.5" y="-544"/>
+            <point key="canvasLocation" x="2233" y="-637"/>
         </scene>
         <!--Game Log-->
         <scene sceneID="mY2-Se-71X">
@@ -1724,15 +1698,15 @@ Three Point Shooting Percentage</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9Q-az-Ve4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550.5" y="-544.5"/>
+            <point key="canvasLocation" x="722" y="-635"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Basketball" width="29" height="29"/>
-        <image name="Home" width="29" height="29"/>
+        <image name="Basketball" width="25" height="25"/>
+        <image name="Home" width="25" height="25"/>
         <image name="Jaylen-Brown" width="703" height="96"/>
-        <image name="Medal" width="29" height="29"/>
-        <image name="News" width="29" height="29"/>
-        <image name="Twitter" width="29" height="29"/>
+        <image name="Medal" width="25" height="25"/>
+        <image name="News" width="25" height="25"/>
+        <image name="Twitter" width="25" height="25"/>
     </resources>
 </document>

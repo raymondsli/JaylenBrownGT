@@ -22,7 +22,7 @@ class DetailedGameVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.title = "Game Details"
         
         gameDetails.text = gameInfoString
@@ -31,8 +31,8 @@ class DetailedGameVC: UIViewController {
         shootingDetails.text = shootingDetailsString
     }
 
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func didReceiveMemoryWarning() {
