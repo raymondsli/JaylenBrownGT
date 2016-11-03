@@ -27,12 +27,11 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         let url = URL(string: gameLogURL)
         
         URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
-            if let responseData = data {
+            if data != nil {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [String: Any]
                     //resultSets is a dictionary
                     let resultSetsTemp: NSArray = json["resultSets"] as! NSArray
-                    print(resultSetsTemp)
                     let resultSets = resultSetsTemp[0] as! [String: Any]
                     //rowSet is an array of arrays, where each subarray is a game
                     let rowSet: NSArray = resultSets["rowSet"] as! NSArray

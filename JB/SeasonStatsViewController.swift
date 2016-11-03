@@ -29,23 +29,17 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getNBAJSON(gameLogURL: "http://stats.nba.com/stats/playercareerstats?LeagueID=00&PerMode=PerGame&PlayerID=1627759")
-        
-        //seasonStats.text = "Boston Celtics 2016-2017" + "\n\n" + "Games: " + gamesString + "\n" + "MPG: " + MPGString + "\n" + "Points: " + pointsString + "\n" + "Rebounds: " + reboundsString + "\n" + "Assists: " + assistsString + "\n" + "Steals: " + stealsString + "\n" + "Blocks: " + blocksString + "\n" + "Turnovers: " + turnoversString + "\n" + "Total FG: " + totalFGString + " = " + totalFGPerString + "\n" + "3PT FG: " + threePTString + " = " + threePTPerString + "\n" + "Free Throws: " + ftString + " = " + ftPerString
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        seasonStats.text = "Boston Celtics 2016-2017" + "\n\n" + "Games: " + gamesString + "\n" + "MPG: " + MPGString + "\n" + "Points: " + pointsString + "\n" + "Rebounds: " + reboundsString + "\n" + "Assists: " + assistsString + "\n" + "Steals: " + stealsString + "\n" + "Blocks: " + blocksString + "\n" + "Turnovers: " + turnoversString + "\n" + "Total FG: " + totalFGString + " = " + totalFGPerString + "\n" + "3PT FG: " + threePTString + " = " + threePTPerString + "\n" + "Free Throws: " + ftString + " = " + ftPerString
+        seasonStats.text = "Loading..."
+        getSeasonJSON(gameLogURL: "http://stats.nba.com/stats/playercareerstats?LeagueID=00&PerMode=PerGame&PlayerID=1627759")
     }
     
+    
     //Function that gets JSON data from the URL
-    func getNBAJSON(gameLogURL: String) {
+    func getSeasonJSON(gameLogURL: String) {
         let url = URL(string: gameLogURL)
         
         URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
-            if let responseData = data {
+            if data != nil {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [String: Any]
                     //resultSets is a dictionary
@@ -56,6 +50,10 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
                     let season: NSArray = rowSet[0] as! NSArray
                     
                     self.turnRowSetIntoSeasonStats(rowSet: season)
+                    
+                    DispatchQueue.main.async(execute: {
+                        self.seasonStats.text = "Boston Celtics 2016-2017" + "\n\n" + "Games: " + self.gamesString + "\n" + "MPG: " + self.MPGString + "\n" + "Points: " + self.pointsString + "\n" + "Rebounds: " + self.reboundsString + "\n" + "Assists: " + self.assistsString + "\n" + "Steals: " + self.stealsString + "\n" + "Blocks: " + self.blocksString + "\n" + "Turnovers: " + self.turnoversString + "\n" + "Total FG: " + self.totalFGString + " = " + self.totalFGPerString + "\n" + "3PT FG: " + self.threePTString + " = " + self.threePTPerString + "\n" + "Free Throws: " + self.ftString + " = " + self.ftPerString
+                    })
                 } catch {
                     print("Could not serialize")
                 }
@@ -63,35 +61,7 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         }).resume()
     }
     
-    //Function that gets JSON data from the URL
-    func getSeasonJSON(_ gameLogURL: String) {
-        let mySession = URLSession.shared
-        let url: URL = URL(string: gameLogURL)!
-        print("doob")
-        mySession.dataTask(with: url, completionHandler: { (data: Data?, response: URLResponse?, error: NSError?) -> Void in
-            print("chess")
-            if let responseData = data {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.allowFragments) as! NSMutableDictionary
-                    //resultSets is a dictionary
-                    let resultsSetsTemp: NSArray = json["resultsSets"] as! NSArray
-                    let resultSets: NSMutableDictionary = resultsSetsTemp[0] as! NSMutableDictionary
-                    //rowSet is an array of size 1 containing an array of size 1 of season stats
-                    let rowSet: NSArray = resultSets["rowSet"] as! NSArray
-                    let season: NSArray = rowSet[0] as! NSArray
-                    self.turnRowSetIntoSeasonStats(rowSet: season)
-                    
-                    DispatchQueue.main.async(execute: {
-                        self.reloadInputViews()
-                    })
-                    
-                } catch {
-                    print("Could not serialize")
-                }
-            }
-        } as! (Data?, URLResponse?, Error?) -> Void) .resume()
-    }
-    
+
     func turnRowSetIntoSeasonStats(rowSet: NSArray) {
         gamesString = String(describing: rowSet[6])
         MPGString = String(describing: rowSet[8])
