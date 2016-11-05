@@ -150,7 +150,6 @@ Time</string>
                         <segue destination="J7g-wv-9tT" kind="relationship" relationship="viewControllers" id="3Rb-Kr-5Y3"/>
                         <segue destination="ycx-nU-GkU" kind="relationship" relationship="viewControllers" id="XlC-0N-KpF"/>
                         <segue destination="R34-GC-ie8" kind="relationship" relationship="viewControllers" id="TA4-Ul-0UY"/>
-                        <segue destination="ycL-Dg-lqW" kind="relationship" relationship="viewControllers" id="hNB-Ip-HlU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -165,25 +164,6 @@ Time</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Rpz-Sk-NfY">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rpz-Sk-NfY" id="9N2-Tp-XhB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXm-EW-owl">
-                                            <rect key="frame" x="300" y="8" width="58" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="ycL-Dg-lqW" id="J09-5a-6PK"/>
                             <outlet property="delegate" destination="ycL-Dg-lqW" id="GHb-Iv-Prf"/>
@@ -214,11 +194,11 @@ Time</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qru-7M-aD3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="976"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-st-qzt" userLabel="Personal Info View">
-                                                <rect key="frame" x="8" y="89" width="359" height="192"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-st-qzt" userLabel="Personal Info View">
+                                                <rect key="frame" x="8" y="76" width="359" height="205"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-sp-cMv">
-                                                        <rect key="frame" x="13" y="19" width="333" height="154"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-sp-cMv">
+                                                        <rect key="frame" x="13" y="14" width="333" height="178"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="154" id="09w-Rf-3GH"/>
@@ -227,11 +207,13 @@ Time</string>
                                                         <string key="text">Full Name: Jaylen Brown
 Birthdate: October 24, 1996 (Age 20)
 Birthplace: Marietta, Georgia
-Hometown: Marietta, Georgia
+Hometown: Alpharetta, Georgia
 Height: 6'7"
 Weight: 225
 Wingspan: 6'11.75"
-2016 Draft: 3rd Overall Pick by the Boston Celtics</string>
+2016 Draft: 3rd Overall Pick by the Boston Celtics
+Jersey Number: 7
+Experience: Rookie</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         <variation key="default">
@@ -254,9 +236,9 @@ Wingspan: 6'11.75"
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="leading" secondItem="Rar-st-qzt" secondAttribute="leading" constant="13" id="7q9-d2-8dc"/>
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="leading" secondItem="Rar-st-qzt" secondAttribute="leading" constant="13" id="AXq-my-gf8"/>
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="centerX" secondItem="Rar-st-qzt" secondAttribute="centerX" id="EC7-A7-zwh"/>
-                                                    <constraint firstAttribute="bottom" secondItem="9dR-sp-cMv" secondAttribute="bottom" constant="19" id="KHu-2r-nw6"/>
-                                                    <constraint firstItem="9dR-sp-cMv" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="top" constant="19" id="Y8K-om-ur6"/>
+                                                    <constraint firstItem="9dR-sp-cMv" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="top" constant="14" id="WgV-rc-fNj"/>
                                                     <constraint firstAttribute="trailing" secondItem="9dR-sp-cMv" secondAttribute="trailing" constant="13" id="dvw-PR-XtN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9dR-sp-cMv" secondAttribute="bottom" constant="17" id="ijO-VV-ttD"/>
                                                     <constraint firstAttribute="bottom" secondItem="9dR-sp-cMv" secondAttribute="bottom" constant="19" id="s4v-4p-IV0"/>
                                                     <constraint firstItem="9dR-sp-cMv" firstAttribute="centerY" secondItem="Rar-st-qzt" secondAttribute="centerY" id="xjU-bk-47P"/>
                                                     <constraint firstAttribute="trailing" secondItem="9dR-sp-cMv" secondAttribute="trailing" constant="13" id="ydE-4S-CLg"/>
@@ -267,8 +249,6 @@ Wingspan: 6'11.75"
                                                         <exclude reference="7q9-d2-8dc"/>
                                                         <exclude reference="AXq-my-gf8"/>
                                                         <exclude reference="EC7-A7-zwh"/>
-                                                        <exclude reference="KHu-2r-nw6"/>
-                                                        <exclude reference="Y8K-om-ur6"/>
                                                         <exclude reference="dvw-PR-XtN"/>
                                                         <exclude reference="s4v-4p-IV0"/>
                                                         <exclude reference="xjU-bk-47P"/>
@@ -278,8 +258,6 @@ Wingspan: 6'11.75"
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="7q9-d2-8dc"/>
-                                                        <include reference="KHu-2r-nw6"/>
-                                                        <include reference="Y8K-om-ur6"/>
                                                         <include reference="ydE-4S-CLg"/>
                                                     </mask>
                                                 </variation>
@@ -467,28 +445,6 @@ USBWA Freshman All-American Team
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Personal Info and Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPq-8q-I2d">
-                                                <rect key="frame" x="62" y="16" width="251" height="52"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="244.5" id="F5p-xX-FPe"/>
-                                                    <constraint firstAttribute="height" constant="20.5" id="JeA-4I-3jO"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="F5p-xX-FPe"/>
-                                                        <exclude reference="JeA-4I-3jO"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <mask key="constraints">
-                                                        <include reference="F5p-xX-FPe"/>
-                                                        <include reference="JeA-4I-3jO"/>
-                                                    </mask>
-                                                </variation>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-9B-35d" userLabel="NBA Achievements">
                                                 <rect key="frame" x="8" y="301" width="359" height="129"/>
                                                 <subviews>
@@ -578,6 +534,12 @@ USBWA Freshman All-American Team
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Personal Info and Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPq-8q-I2d">
+                                                <rect key="frame" x="62" y="31" width="250" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.030797318760000001" green="0.023885856649999999" blue="0.75476521600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.57213976035407166" blue="0.070031582334853959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -586,13 +548,14 @@ USBWA Freshman All-American Team
                                             <constraint firstItem="JzM-9B-35d" firstAttribute="top" secondItem="Rar-st-qzt" secondAttribute="bottom" constant="20" id="Aqf-0M-HPr"/>
                                             <constraint firstAttribute="trailing" secondItem="Rar-st-qzt" secondAttribute="trailing" constant="8" id="BdK-jw-D1I"/>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="DDn-Wp-2M1"/>
+                                            <constraint firstItem="Rar-st-qzt" firstAttribute="top" secondItem="qPq-8q-I2d" secondAttribute="bottom" constant="8" id="H36-wT-AFe"/>
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="628" id="Ix5-PC-BOd"/>
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="JPs-dp-hpR"/>
+                                            <constraint firstItem="qPq-8q-I2d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="31" id="Lm0-99-YTk"/>
                                             <constraint firstAttribute="trailing" secondItem="A91-0E-UFJ" secondAttribute="trailing" constant="8" id="OfU-jh-cL1"/>
                                             <constraint firstAttribute="height" constant="976" id="QI8-vm-kTs">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="1350"/>
                                             </constraint>
-                                            <constraint firstItem="qPq-8q-I2d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="37" id="S3F-r1-2nV"/>
                                             <constraint firstAttribute="trailing" secondItem="v7a-1e-EJ4" secondAttribute="trailing" constant="8" id="S6L-Bm-Krr"/>
                                             <constraint firstAttribute="trailing" secondItem="JzM-9B-35d" secondAttribute="trailing" constant="8" id="SoM-e4-bQQ"/>
                                             <constraint firstItem="JzM-9B-35d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="301" id="UkV-eu-ylD"/>
@@ -600,7 +563,6 @@ USBWA Freshman All-American Team
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="X89-R3-lMd"/>
                                             <constraint firstAttribute="bottom" secondItem="A91-0E-UFJ" secondAttribute="bottom" constant="36" id="XY9-eF-vYv"/>
                                             <constraint firstItem="Rar-st-qzt" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="Xct-G6-dDF"/>
-                                            <constraint firstItem="Rar-st-qzt" firstAttribute="top" secondItem="qPq-8q-I2d" secondAttribute="bottom" constant="31.5" id="ZvT-b5-3H7"/>
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="top" secondItem="v7a-1e-EJ4" secondAttribute="bottom" constant="26" id="a0v-qA-vNg"/>
                                             <constraint firstItem="JzM-9B-35d" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="b0f-K3-FjL"/>
                                             <constraint firstAttribute="bottom" secondItem="A91-0E-UFJ" secondAttribute="bottom" constant="36" id="b33-UB-yAl"/>
@@ -609,11 +571,11 @@ USBWA Freshman All-American Team
                                             <constraint firstItem="Rar-st-qzt" firstAttribute="top" secondItem="qPq-8q-I2d" secondAttribute="bottom" constant="21" id="eh5-eW-81V"/>
                                             <constraint firstItem="qPq-8q-I2d" firstAttribute="centerX" secondItem="qru-7M-aD3" secondAttribute="centerX" id="gUa-t3-Jev"/>
                                             <constraint firstItem="qPq-8q-I2d" firstAttribute="top" secondItem="qru-7M-aD3" secondAttribute="top" constant="16" id="k5h-vp-AM1"/>
-                                            <constraint firstItem="qPq-8q-I2d" firstAttribute="centerX" secondItem="qru-7M-aD3" secondAttribute="centerX" id="l8d-t7-Rxg"/>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="top" secondItem="JzM-9B-35d" secondAttribute="bottom" constant="27" id="lNT-nQ-VhA"/>
                                             <constraint firstAttribute="trailing" secondItem="v7a-1e-EJ4" secondAttribute="trailing" constant="8" id="lxf-Z4-aHe"/>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="top" secondItem="JzM-9B-35d" secondAttribute="bottom" constant="27" id="mzz-cq-1jx"/>
                                             <constraint firstItem="Rar-st-qzt" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="pYS-YP-q0b"/>
+                                            <constraint firstItem="qPq-8q-I2d" firstAttribute="centerX" secondItem="qru-7M-aD3" secondAttribute="centerX" id="srk-G7-3Iq"/>
                                             <constraint firstItem="v7a-1e-EJ4" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="vf6-1I-74J"/>
                                             <constraint firstItem="JzM-9B-35d" firstAttribute="leading" secondItem="qru-7M-aD3" secondAttribute="leading" constant="8" id="wp5-IR-6eC"/>
                                             <constraint firstItem="A91-0E-UFJ" firstAttribute="top" secondItem="v7a-1e-EJ4" secondAttribute="bottom" constant="26" id="zev-JJ-hhc"/>
@@ -621,15 +583,12 @@ USBWA Freshman All-American Team
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="S3F-r1-2nV"/>
                                                 <exclude reference="efY-lr-IVh"/>
                                                 <exclude reference="gUa-t3-Jev"/>
                                                 <exclude reference="k5h-vp-AM1"/>
-                                                <exclude reference="l8d-t7-Rxg"/>
                                                 <exclude reference="2Z1-dw-uXH"/>
                                                 <exclude reference="BdK-jw-D1I"/>
                                                 <exclude reference="Xct-G6-dDF"/>
-                                                <exclude reference="ZvT-b5-3H7"/>
                                                 <exclude reference="eh5-eW-81V"/>
                                                 <exclude reference="pYS-YP-q0b"/>
                                                 <exclude reference="Aqf-0M-HPr"/>
@@ -659,12 +618,9 @@ USBWA Freshman All-American Team
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
-                                                <include reference="S3F-r1-2nV"/>
                                                 <exclude reference="efY-lr-IVh"/>
-                                                <include reference="l8d-t7-Rxg"/>
                                                 <include reference="2Z1-dw-uXH"/>
                                                 <include reference="Xct-G6-dDF"/>
-                                                <include reference="ZvT-b5-3H7"/>
                                                 <include reference="UkV-eu-ylD"/>
                                                 <include reference="b0f-K3-FjL"/>
                                                 <include reference="d7t-BW-Eom"/>
@@ -725,7 +681,7 @@ USBWA Freshman All-American Team
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61W-P1-Qwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="1004"/>
+            <point key="canvasLocation" x="340" y="1003.4482758620691"/>
         </scene>
         <!--Season Stats-->
         <scene sceneID="SDF-Aw-ygE">
