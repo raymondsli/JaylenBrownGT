@@ -63,9 +63,12 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
     
 
     func turnRowSetIntoSeasonStats(rowSet: NSArray) {
+        var pointsDouble: Double = rowSet[26] as! Double
+        pointsDouble = Double(round(1000 * pointsDouble) / 1000)
+        pointsString = String(describing: pointsDouble)
+        
         gamesString = String(describing: rowSet[6])
         MPGString = String(describing: rowSet[8])
-        pointsString = String(describing: rowSet[26])
         reboundsString = String(describing: rowSet[20])
         assistsString = String(describing: rowSet[21])
         stealsString = String(describing: rowSet[22])
