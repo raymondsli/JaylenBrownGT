@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,6 +75,17 @@ Time</string>
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wb3-7J-lIT">
+                                <rect key="frame" x="209" y="28" width="150" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="K7z-kd-tgF"/>
+                                    <constraint firstAttribute="width" constant="150" id="Tt1-rl-Yuw"/>
+                                </constraints>
+                                <state key="normal" title="Report Bug/Tweet"/>
+                                <connections>
+                                    <action selector="reportButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="GiI-wJ-SCA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63977111049549917" green="1" blue="0.92992619007577848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -83,6 +94,7 @@ Time</string>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="363" id="LSO-VK-uAg">
                                 <variation key="heightClass=regular-widthClass=regular" constant="300"/>
                             </constraint>
+                            <constraint firstItem="wb3-7J-lIT" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="MeP-6Y-rwT"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="6l7-8J-SFD" secondAttribute="bottom" constant="524" id="PeV-Ju-eXr"/>
                             <constraint firstItem="boB-7G-WOa" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="Qff-gz-eKk"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="13" id="SeK-4v-fW4"/>
@@ -96,6 +108,7 @@ Time</string>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="45" id="o1e-EK-clt">
                                 <variation key="heightClass=regular-widthClass=regular" constant="5"/>
                             </constraint>
+                            <constraint firstItem="wb3-7J-lIT" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="oKk-L8-XoC"/>
                             <constraint firstItem="boB-7G-WOa" firstAttribute="top" secondItem="6l7-8J-SFD" secondAttribute="bottom" constant="8" id="odR-Eh-XSA"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="boB-7G-WOa" secondAttribute="bottom" constant="189" id="uAp-kv-5fK"/>
                         </constraints>
@@ -170,7 +183,7 @@ Time</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kJK-Yx-6Ty" id="TRj-Yv-fgp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1119,6 +1132,31 @@ Rebounds: 12</string>
             </objects>
             <point key="canvasLocation" x="1039" y="362"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Daa-3P-Nnw">
+            <objects>
+                <viewController id="KzM-US-ynF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZDr-cB-l95"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dky-zE-0Ro"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lQu-W4-4QW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="480-TY-idu">
+                                <rect key="frame" x="0.0" y="70" width="375" height="562"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ad-MY-Yeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.2" y="212.74362818590706"/>
+        </scene>
         <!--Game Log View Controller-->
         <scene sceneID="az1-T0-Jna">
             <objects>
@@ -1264,7 +1302,7 @@ Rebounds: 12</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j3a-Xg-jP9" id="PLi-2c-V19">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="758" misplaced="YES" text="SF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM5-p4-ymI">

@@ -23,6 +23,7 @@
 		5026C26E1D65AF460057D046 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26D1D65AF460057D046 /* GameStats.swift */; };
 		5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26F1D65B4D80057D046 /* GameLogViewController.swift */; };
 		5026C2721D65B6590057D046 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2711D65B6590057D046 /* GameCell.swift */; };
+		50DBBB861DD17523000EE4E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DBBB851DD17523000EE4E4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5026C26D1D65AF460057D046 /* GameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
 		5026C26F1D65B4D80057D046 /* GameLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogViewController.swift; sourceTree = "<group>"; };
 		5026C2711D65B6590057D046 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		50DBBB851DD17523000EE4E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50DBBB861DD17523000EE4E4 /* MessageUI.framework in Frameworks */,
 				5019B5D11D67EB6700423579 /* Fabric.framework in Frameworks */,
 				5019B5D41D67EB6700423579 /* TwitterCore.framework in Frameworks */,
 				5019B5D21D67EB6700423579 /* TwitterKit.framework in Frameworks */,
@@ -97,6 +100,7 @@
 			children = (
 				5026C2541D65716B0057D046 /* JB */,
 				5026C2531D65716B0057D046 /* Products */,
+				50DBBB841DD17523000EE4E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +126,14 @@
 				5026C2631D65716B0057D046 /* Info.plist */,
 			);
 			path = JB;
+			sourceTree = "<group>";
+		};
+		50DBBB841DD17523000EE4E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50DBBB851DD17523000EE4E4 /* MessageUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
