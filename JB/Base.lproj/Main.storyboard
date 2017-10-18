@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ycx-nU-GkU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,16 +23,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boB-7G-WOa">
-                                <rect key="frame" x="16" y="289" width="343" height="140"/>
-                                <string key="text">Next Game
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJF-Mf-ZVt" userLabel="BackStrip">
+                                <rect key="frame" x="0.0" y="301" width="375" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boB-7G-WOa">
+                                        <rect key="frame" x="16" y="-6" width="343" height="140"/>
+                                        <string key="text">Next Game
 Date
 Time</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Jaylen-Brown" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-8J-SFD">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11361313608298286" green="0.36653742720103694" blue="0.93997464005235598" alpha="0.61607934397163122" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="boB-7G-WOa" firstAttribute="centerY" secondItem="PJF-Mf-ZVt" secondAttribute="centerY" id="4lK-RE-52N"/>
+                                    <constraint firstAttribute="height" constant="128" id="S5T-cF-vLn"/>
+                                    <constraint firstItem="boB-7G-WOa" firstAttribute="centerX" secondItem="PJF-Mf-ZVt" secondAttribute="centerX" id="j76-TC-LEx"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Jaylen-Brown" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-8J-SFD">
                                 <rect key="frame" x="61" y="155" width="253" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="14t-Sb-KvS"/>
@@ -96,21 +107,20 @@ Time</string>
                             </constraint>
                             <constraint firstItem="wb3-7J-lIT" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="MeP-6Y-rwT"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="6l7-8J-SFD" secondAttribute="bottom" constant="524" id="PeV-Ju-eXr"/>
-                            <constraint firstItem="boB-7G-WOa" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="Qff-gz-eKk"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="13" id="SeK-4v-fW4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6l7-8J-SFD" secondAttribute="trailing" constant="362" id="UWF-dr-ZeI">
                                 <variation key="heightClass=regular-widthClass=regular" constant="300"/>
                             </constraint>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bea-bv-oHk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6l7-8J-SFD" secondAttribute="trailing" constant="45" id="eQz-za-QSw"/>
-                            <constraint firstItem="boB-7G-WOa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="lx8-XS-IsF"/>
+                            <constraint firstItem="PJF-Mf-ZVt" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="ikT-W2-Fpg"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="45" id="nTA-CK-LUL"/>
                             <constraint firstItem="6l7-8J-SFD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="45" id="o1e-EK-clt">
                                 <variation key="heightClass=regular-widthClass=regular" constant="5"/>
                             </constraint>
                             <constraint firstItem="wb3-7J-lIT" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="oKk-L8-XoC"/>
-                            <constraint firstItem="boB-7G-WOa" firstAttribute="top" secondItem="6l7-8J-SFD" secondAttribute="bottom" constant="8" id="odR-Eh-XSA"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="boB-7G-WOa" secondAttribute="bottom" constant="189" id="uAp-kv-5fK"/>
+                            <constraint firstItem="PJF-Mf-ZVt" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qGG-85-TE7"/>
+                            <constraint firstItem="PJF-Mf-ZVt" firstAttribute="top" secondItem="6l7-8J-SFD" secondAttribute="bottom" constant="20" id="wR5-je-Fpa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -146,7 +156,7 @@ Time</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-668"/>
+            <point key="canvasLocation" x="4" y="-668.81559220389806"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -161,6 +171,7 @@ Time</string>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="J7g-wv-9tT" kind="relationship" relationship="viewControllers" id="3Rb-Kr-5Y3"/>
+                        <segue destination="ycx-nU-GkU" kind="relationship" relationship="viewControllers" id="ZPo-KS-U2L"/>
                         <segue destination="RLK-5P-RUN" kind="relationship" relationship="viewControllers" id="Bo6-Fh-cGU"/>
                     </connections>
                 </tabBarController>
@@ -385,7 +396,7 @@ Free Throws: 0/0 = ∞</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61A-4w-lWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="963.41829085457277"/>
+            <point key="canvasLocation" x="825" y="1054"/>
         </scene>
         <!--Game Log View Controller-->
         <scene sceneID="az1-T0-Jna">
@@ -527,6 +538,7 @@ Free Throws: 0/0 = ∞</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="535" id="Gdf-j1-Pdi"/>
                                 </constraints>
+                                <color key="sectionIndexBackgroundColor" red="0.192494474" green="0.87501032310000004" blue="0.11322397400000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GC" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" id="j3a-Xg-jP9" customClass="GameCell" customModule="JB" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -619,6 +631,7 @@ Free Throws: 0/0 = ∞</string>
                                                     </variation>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.19249447403466627" green="0.87501032313979055" blue="0.11322397396391982" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="DM5-p4-ymI" firstAttribute="leading" secondItem="epn-OB-HeE" secondAttribute="trailing" constant="10" id="2g0-gu-HW9"/>
                                                 <constraint firstItem="D2c-mj-e0h" firstAttribute="centerY" secondItem="PLi-2c-V19" secondAttribute="centerY" id="3be-Se-7GQ"/>

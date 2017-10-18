@@ -97,7 +97,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
             i = i + 1
         }
         //After adding NBA games, add all college games to games array.
-        addCollegeGames()
+        //addCollegeGames()
     }
     
     func addCollegeGames() {
