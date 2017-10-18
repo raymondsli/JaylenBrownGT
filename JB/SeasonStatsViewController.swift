@@ -43,12 +43,12 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
             if data != nil {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [String: Any]
-                    //resultSets is a dictionary
                     let resultSetsTemp: NSArray = json["resultSets"] as! NSArray
                     let resultSets = resultSetsTemp[0] as! [String: Any]
-                    //rowSet is an array of arrays, where each subarray is a game
+                    //resultSets is a dictionary
                     let rowSet: NSArray = resultSets["rowSet"] as! NSArray
-                    let season: NSArray = rowSet[0] as! NSArray
+                    //rowSet is an array of arrays, where each subarray is a season
+                    let season: NSArray = rowSet[1] as! NSArray
                     
                     self.turnRowSetIntoSeasonStats(rowSet: season)
                     
@@ -76,10 +76,13 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         blocksString = String(describing: rowSet[23])
         turnoversString = String(describing: rowSet[24])
         totalFGString = String(describing: rowSet[9]) + "/" + String(describing: rowSet[10])
-        totalFGPerString = String(describing: rowSet[11])
+        //totalFGPerString = String(describing: rowSet[11])
+        totalFGPerString = String(100*(rowSet[11] as! Double)) + "%"
         threePTString = String(describing: rowSet[12]) + "/" + String(describing: rowSet[13])
-        threePTPerString = String(describing: rowSet[14])
+        //threePTPerString = String(describing: rowSet[14])
+        threePTPerString = String(100*(rowSet[14] as! Double)) + "%"
         ftString = String(describing: rowSet[15]) + "/" + String(describing: rowSet[16])
-        ftPerString = String(describing: rowSet[17])
+        //ftPerString = String(describing: rowSet[17])
+        ftPerString = String(100*(rowSet[17] as! Double)) + "%"
     }
 }
