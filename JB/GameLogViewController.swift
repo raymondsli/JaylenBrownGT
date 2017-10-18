@@ -16,8 +16,8 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        getNBAJSON(gameLogURL: "http://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&PlayerID=1627759&Season=2016-17&SeasonType=Regular+Season")
+ 
+        getNBAJSON(gameLogURL: "http://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&PlayerID=1627759&Season=2017-18&SeasonType=Regular+Season")
 
         tableView.reloadData()
     }

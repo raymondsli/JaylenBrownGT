@@ -95,6 +95,8 @@ class SeasonTable: UIViewController, UITableViewDataSource, UITableViewDelegate,
     //Hides the navigation bar for the game log view.
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        //tableView.estimatedRowHeight = 100
+        //tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,6 +122,15 @@ class SeasonTable: UIViewController, UITableViewDataSource, UITableViewDelegate,
             return cell
         } else {
             return SeasonCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if seasons[indexPath.row].team == "Wheeler" {
+            return 250.0
+        } else {
+            return 310.0
         }
     }
     

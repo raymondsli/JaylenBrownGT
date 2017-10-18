@@ -23,9 +23,7 @@
 		5026C26E1D65AF460057D046 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26D1D65AF460057D046 /* GameStats.swift */; };
 		5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26F1D65B4D80057D046 /* GameLogViewController.swift */; };
 		5026C2721D65B6590057D046 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2711D65B6590057D046 /* GameCell.swift */; };
-		5030A4BE1F2DB71100717C78 /* DetailedSeasonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030A4BD1F2DB71100717C78 /* DetailedSeasonVC.swift */; };
 		5092B1461F2D8B5A0049EA26 /* SeasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092B1451F2D8B5A0049EA26 /* SeasonCell.swift */; };
-		5092B1481F2D8BE20049EA26 /* SeasonTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092B1471F2D8BE20049EA26 /* SeasonTable.swift */; };
 		5092B14A1F2D90630049EA26 /* SeasonStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092B1491F2D90630049EA26 /* SeasonStats.swift */; };
 		50DBBB861DD17523000EE4E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DBBB851DD17523000EE4E4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -49,9 +47,7 @@
 		5026C26D1D65AF460057D046 /* GameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
 		5026C26F1D65B4D80057D046 /* GameLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogViewController.swift; sourceTree = "<group>"; };
 		5026C2711D65B6590057D046 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
-		5030A4BD1F2DB71100717C78 /* DetailedSeasonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedSeasonVC.swift; sourceTree = "<group>"; };
 		5092B1451F2D8B5A0049EA26 /* SeasonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonCell.swift; sourceTree = "<group>"; };
-		5092B1471F2D8BE20049EA26 /* SeasonTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTable.swift; sourceTree = "<group>"; };
 		5092B1491F2D90630049EA26 /* SeasonStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonStats.swift; sourceTree = "<group>"; };
 		50DBBB851DD17523000EE4E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -98,8 +94,6 @@
 				5026C26F1D65B4D80057D046 /* GameLogViewController.swift */,
 				5019B5DB1D68F4CB00423579 /* DetailedGameVC.swift */,
 				5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */,
-				5092B1471F2D8BE20049EA26 /* SeasonTable.swift */,
-				5030A4BD1F2DB71100717C78 /* DetailedSeasonVC.swift */,
 				5019B5D71D68082C00423579 /* AchievementsViewController.swift */,
 				5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */,
 				5026C2551D65716B0057D046 /* AppDelegate.swift */,
@@ -242,7 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5026C2721D65B6590057D046 /* GameCell.swift in Sources */,
-				5092B1481F2D8BE20049EA26 /* SeasonTable.swift in Sources */,
 				5019B5DA1D68085F00423579 /* SeasonStatsViewController.swift in Sources */,
 				5092B1461F2D8B5A0049EA26 /* SeasonCell.swift in Sources */,
 				5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */,
@@ -251,7 +244,6 @@
 				5019B5DC1D68F4CB00423579 /* DetailedGameVC.swift in Sources */,
 				5092B14A1F2D90630049EA26 /* SeasonStats.swift in Sources */,
 				5026C2581D65716B0057D046 /* HomeViewController.swift in Sources */,
-				5030A4BE1F2DB71100717C78 /* DetailedSeasonVC.swift in Sources */,
 				5019B5D81D68082C00423579 /* AchievementsViewController.swift in Sources */,
 				5026C26E1D65AF460057D046 /* GameStats.swift in Sources */,
 			);

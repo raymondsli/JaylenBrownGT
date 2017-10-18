@@ -11,7 +11,7 @@ import UIKit
 class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
     
     @IBOutlet weak var seasonStats: UILabel!
-    
+
     var gamesString: String! = "0"
     var MPGString: String! = "0"
     var pointsString: String! = "0"
@@ -29,6 +29,7 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Calling")
         seasonStats.text = "Loading..."
         getSeasonJSON(gameLogURL: "http://stats.nba.com/stats/playercareerstats?LeagueID=00&PerMode=PerGame&PlayerID=1627759")
     }
@@ -52,7 +53,7 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
                     self.turnRowSetIntoSeasonStats(rowSet: season)
                     
                     DispatchQueue.main.async(execute: {
-                        self.seasonStats.text = "Boston Celtics 2016-2017" + "\n\n" + "Games: " + self.gamesString + "\n" + "MPG: " + self.MPGString + "\n" + "Points: " + self.pointsString + "\n" + "Rebounds: " + self.reboundsString + "\n" + "Assists: " + self.assistsString + "\n" + "Steals: " + self.stealsString + "\n" + "Blocks: " + self.blocksString + "\n" + "Turnovers: " + self.turnoversString + "\n" + "Total FG: " + self.totalFGString + " = " + self.totalFGPerString + "\n" + "3PT FG: " + self.threePTString + " = " + self.threePTPerString + "\n" + "Free Throws: " + self.ftString + " = " + self.ftPerString
+                        self.seasonStats.text = "Boston Celtics 2017-2018" + "\n\n" + "Games: " + self.gamesString + "\n" + "MPG: " + self.MPGString + "\n" + "Points: " + self.pointsString + "\n" + "Rebounds: " + self.reboundsString + "\n" + "Assists: " + self.assistsString + "\n" + "Steals: " + self.stealsString + "\n" + "Blocks: " + self.blocksString + "\n" + "Turnovers: " + self.turnoversString + "\n" + "Total FG: " + self.totalFGString + " = " + self.totalFGPerString + "\n" + "3PT FG: " + self.threePTString + " = " + self.threePTPerString + "\n" + "Free Throws: " + self.ftString + " = " + self.ftPerString
                     })
                 } catch {
                     print("Could not serialize")
