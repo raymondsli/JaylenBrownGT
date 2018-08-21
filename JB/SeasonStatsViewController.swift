@@ -75,14 +75,26 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         stealsString = String(describing: rowSet[22])
         blocksString = String(describing: rowSet[23])
         turnoversString = String(describing: rowSet[24])
-        totalFGString = String(describing: rowSet[9]) + "/" + String(describing: rowSet[10])
-        //totalFGPerString = String(describing: rowSet[11])
+        
+        var fgMDouble: Double = rowSet[9] as! Double
+        fgMDouble = Double(round(1000 * fgMDouble) / 1000)
+        var fgADouble: Double = rowSet[10] as! Double
+        fgADouble = Double(round(1000 * fgADouble) / 1000)
+        totalFGString = String(describing: fgMDouble) + "/" + String(describing: fgADouble)
         totalFGPerString = String(100*(rowSet[11] as! Double)) + "%"
-        threePTString = String(describing: rowSet[12]) + "/" + String(describing: rowSet[13])
-        //threePTPerString = String(describing: rowSet[14])
+        
+        var tPDouble: Double = rowSet[12] as! Double
+        tPDouble = Double(round(1000 * tPDouble) / 1000)
+        var tpADouble: Double = rowSet[13] as! Double
+        tpADouble = Double(round(1000 * tpADouble) / 1000)
+        threePTString = String(describing: tPDouble) + "/" + String(describing: tpADouble)
         threePTPerString = String(100*(rowSet[14] as! Double)) + "%"
-        ftString = String(describing: rowSet[15]) + "/" + String(describing: rowSet[16])
-        //ftPerString = String(describing: rowSet[17])
+        
+        var ftmDouble: Double = rowSet[15] as! Double
+        ftmDouble = Double(round(1000 * ftmDouble) / 1000)
+        var ftaDouble: Double = rowSet[16] as! Double
+        ftaDouble = Double(round(1000 * ftaDouble) / 1000)
+        ftString = String(describing: ftmDouble) + "/" + String(describing: ftaDouble)
         ftPerString = String(100*(rowSet[17] as! Double)) + "%"
     }
 }
