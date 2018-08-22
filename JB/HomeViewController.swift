@@ -205,7 +205,7 @@ class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailCompo
         self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
-    @IBAction func reportButton(_ sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: UIButton) {
         let mailComposeViewController = configuredMailComposeViewController()
         if (MFMailComposeViewController.canSendMail()) {
             self.present(mailComposeViewController, animated: true, completion: nil)
@@ -213,6 +213,7 @@ class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailCompo
             self.showSendMailErrorAlert()
             self.dismiss(animated: true, completion: nil)
         }
+
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

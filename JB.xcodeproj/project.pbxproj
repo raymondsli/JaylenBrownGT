@@ -28,6 +28,7 @@
 		502FA993212CE2EC0036FEDE /* StatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA992212CE2EC0036FEDE /* StatRow.swift */; };
 		502FA995212CE7560036FEDE /* PlayerOverviewHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA994212CE7560036FEDE /* PlayerOverviewHead.swift */; };
 		502FA997212CE7C80036FEDE /* PlayerPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA996212CE7C80036FEDE /* PlayerPersonal.swift */; };
+		50C2A0D6212D2CB200170840 /* TwitterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C2A0D5212D2CB200170840 /* TwitterVC.swift */; };
 		50DBBB861DD17523000EE4E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DBBB851DD17523000EE4E4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		502FA992212CE2EC0036FEDE /* StatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRow.swift; sourceTree = "<group>"; };
 		502FA994212CE7560036FEDE /* PlayerOverviewHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerOverviewHead.swift; sourceTree = "<group>"; };
 		502FA996212CE7C80036FEDE /* PlayerPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPersonal.swift; sourceTree = "<group>"; };
+		50C2A0D5212D2CB200170840 /* TwitterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterVC.swift; sourceTree = "<group>"; };
 		50DBBB851DD17523000EE4E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		732C46D6EDD1F0AB6A129A85 /* Pods_JB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAE4EF8EB2AA23AD45B75A2 /* Pods-JB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JB.release.xcconfig"; path = "Pods/Target Support Files/Pods-JB/Pods-JB.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				5026C2571D65716B0057D046 /* HomeViewController.swift */,
 				5026C26F1D65B4D80057D046 /* GameLogViewController.swift */,
 				5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */,
+				50C2A0D5212D2CB200170840 /* TwitterVC.swift */,
 				5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */,
 			);
 			name = Controllers;
@@ -305,6 +308,7 @@
 				502FA991212CE2DF0036FEDE /* AdvancedStatView.swift in Sources */,
 				502FA995212CE7560036FEDE /* PlayerOverviewHead.swift in Sources */,
 				5026C2561D65716B0057D046 /* AppDelegate.swift in Sources */,
+				50C2A0D6212D2CB200170840 /* TwitterVC.swift in Sources */,
 				5026C2581D65716B0057D046 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "dc1be0fe-4a83-4cd7-a503-553c20d36383";
@@ -408,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "dc1be0fe-4a83-4cd7-a503-553c20d36383";
 				SDKROOT = iphoneos;
