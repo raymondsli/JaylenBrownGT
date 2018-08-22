@@ -13,6 +13,7 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
     @IBOutlet weak var baseView: BaseStatView!
     @IBOutlet weak var advancedView: AdvancedStatView!
     
+    
     var baseStat: BaseStat = BaseStat()
     var advancedStat: AdvancedStat = AdvancedStat()
     

@@ -200,17 +200,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lu-g3-MLr" customClass="AdvancedStatView" customModule="JB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="368" width="375" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJd-y1-XCc" customClass="BaseStatView" customModule="JB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="296"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="296" id="M9s-eb-MNI"/>
-                                </constraints>
-                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L77-fR-TEo">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.17023329810000001" green="0.44011576740000002" blue="0.56438372459999997" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -226,34 +215,59 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqq-gM-xOL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLf-ED-nOl" userLabel="Gray View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9t9-zv-eBT" customClass="BaseStatView" customModule="JB" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIT-4T-EIF" customClass="AdvancedStatView" customModule="JB" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="308" width="375" height="230"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="554" id="ZQO-0N-yyq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aLf-ED-nOl" secondAttribute="trailing" id="3FH-3V-441"/>
+                                    <constraint firstItem="aLf-ED-nOl" firstAttribute="top" secondItem="bqq-gM-xOL" secondAttribute="top" id="aC1-eV-gNK"/>
+                                    <constraint firstAttribute="bottom" secondItem="aLf-ED-nOl" secondAttribute="bottom" id="iAe-eM-esg"/>
+                                    <constraint firstItem="aLf-ED-nOl" firstAttribute="leading" secondItem="bqq-gM-xOL" secondAttribute="leading" id="tdr-O0-0ku"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="raJ-3K-qns" firstAttribute="top" secondItem="6lu-g3-MLr" secondAttribute="bottom" constant="10" id="0jX-nH-0r5"/>
-                            <constraint firstItem="6lu-g3-MLr" firstAttribute="top" secondItem="SJd-y1-XCc" secondAttribute="bottom" constant="8" id="1qq-3K-eDz"/>
-                            <constraint firstItem="6lu-g3-MLr" firstAttribute="top" secondItem="SJd-y1-XCc" secondAttribute="bottom" constant="8" id="5ss-tQ-geo"/>
-                            <constraint firstAttribute="trailing" secondItem="SJd-y1-XCc" secondAttribute="trailing" id="9wK-RT-Hgg"/>
+                            <constraint firstItem="aLf-ED-nOl" firstAttribute="width" secondItem="Y4a-WI-C1U" secondAttribute="width" id="8W0-hR-ce9"/>
                             <constraint firstAttribute="trailing" secondItem="L77-fR-TEo" secondAttribute="trailing" id="FFF-LU-Jsv"/>
-                            <constraint firstItem="6lu-g3-MLr" firstAttribute="leading" secondItem="Y4a-WI-C1U" secondAttribute="leading" id="JE2-hx-yEp"/>
-                            <constraint firstItem="SJd-y1-XCc" firstAttribute="leading" secondItem="Y4a-WI-C1U" secondAttribute="leading" id="KdO-Bg-MQM"/>
-                            <constraint firstItem="SJd-y1-XCc" firstAttribute="top" secondItem="L77-fR-TEo" secondAttribute="bottom" id="OXW-6J-GS3"/>
+                            <constraint firstItem="raJ-3K-qns" firstAttribute="top" secondItem="bqq-gM-xOL" secondAttribute="bottom" id="FPu-XJ-aTG"/>
+                            <constraint firstItem="bqq-gM-xOL" firstAttribute="top" secondItem="L77-fR-TEo" secondAttribute="bottom" id="MUV-3T-hdi"/>
                             <constraint firstItem="L77-fR-TEo" firstAttribute="top" secondItem="tPk-uD-R3o" secondAttribute="bottom" id="PkI-Pq-OqD"/>
-                            <constraint firstItem="SJd-y1-XCc" firstAttribute="top" secondItem="L77-fR-TEo" secondAttribute="bottom" id="Ugq-i8-0Kh"/>
-                            <constraint firstAttribute="trailing" secondItem="6lu-g3-MLr" secondAttribute="trailing" id="inq-ER-C0O"/>
+                            <constraint firstItem="bqq-gM-xOL" firstAttribute="leading" secondItem="Y4a-WI-C1U" secondAttribute="leading" id="U0q-ID-ZhK"/>
+                            <constraint firstAttribute="trailing" secondItem="bqq-gM-xOL" secondAttribute="trailing" id="ZHh-SV-h9Q"/>
                             <constraint firstItem="L77-fR-TEo" firstAttribute="leading" secondItem="Y4a-WI-C1U" secondAttribute="leading" id="n4G-c1-HTh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Season Stats" image="Basketball" id="ddq-SF-Lc0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="advancedView" destination="6lu-g3-MLr" id="ODP-tb-X64"/>
-                        <outlet property="baseView" destination="SJd-y1-XCc" id="uDB-du-PnK"/>
+                        <outlet property="advancedView" destination="rIT-4T-EIF" id="vQ3-Mc-Mox"/>
+                        <outlet property="baseView" destination="9t9-zv-eBT" id="bhp-Xp-Iqf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61A-4w-lWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746" y="801"/>
+            <point key="canvasLocation" x="-746.39999999999998" y="800.14992503748135"/>
         </scene>
         <!--Game Log-->
         <scene sceneID="az1-T0-Jna">

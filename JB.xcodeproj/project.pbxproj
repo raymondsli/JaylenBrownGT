@@ -18,7 +18,6 @@
 		5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26F1D65B4D80057D046 /* GameLogViewController.swift */; };
 		5026C2721D65B6590057D046 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2711D65B6590057D046 /* GameCell.swift */; };
 		502FA983212CD8B90036FEDE /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502FA982212CD8B90036FEDE /* GameCell.xib */; };
-		502FA985212CDF2E0036FEDE /* AdvancedStatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502FA984212CDF2E0036FEDE /* AdvancedStatView.xib */; };
 		502FA987212CDF370036FEDE /* BaseStatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502FA986212CDF360036FEDE /* BaseStatView.xib */; };
 		502FA989212CDF3C0036FEDE /* StatRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502FA988212CDF3C0036FEDE /* StatRow.xib */; };
 		502FA98B212CDF430036FEDE /* PlayerOverviewHead.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502FA98A212CDF430036FEDE /* PlayerOverviewHead.xib */; };
@@ -29,6 +28,7 @@
 		502FA995212CE7560036FEDE /* PlayerOverviewHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA994212CE7560036FEDE /* PlayerOverviewHead.swift */; };
 		502FA997212CE7C80036FEDE /* PlayerPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA996212CE7C80036FEDE /* PlayerPersonal.swift */; };
 		50C2A0D6212D2CB200170840 /* TwitterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C2A0D5212D2CB200170840 /* TwitterVC.swift */; };
+		50C2A0D8212D446300170840 /* AdvancedStatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50C2A0D7212D446300170840 /* AdvancedStatView.xib */; };
 		50DBBB861DD17523000EE4E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DBBB851DD17523000EE4E4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		5026C26F1D65B4D80057D046 /* GameLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogViewController.swift; sourceTree = "<group>"; };
 		5026C2711D65B6590057D046 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		502FA982212CD8B90036FEDE /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
-		502FA984212CDF2E0036FEDE /* AdvancedStatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedStatView.xib; sourceTree = "<group>"; };
 		502FA986212CDF360036FEDE /* BaseStatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseStatView.xib; sourceTree = "<group>"; };
 		502FA988212CDF3C0036FEDE /* StatRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatRow.xib; sourceTree = "<group>"; };
 		502FA98A212CDF430036FEDE /* PlayerOverviewHead.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerOverviewHead.xib; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		502FA994212CE7560036FEDE /* PlayerOverviewHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerOverviewHead.swift; sourceTree = "<group>"; };
 		502FA996212CE7C80036FEDE /* PlayerPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPersonal.swift; sourceTree = "<group>"; };
 		50C2A0D5212D2CB200170840 /* TwitterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterVC.swift; sourceTree = "<group>"; };
+		50C2A0D7212D446300170840 /* AdvancedStatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedStatView.xib; sourceTree = "<group>"; };
 		50DBBB851DD17523000EE4E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		732C46D6EDD1F0AB6A129A85 /* Pods_JB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAE4EF8EB2AA23AD45B75A2 /* Pods-JB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JB.release.xcconfig"; path = "Pods/Target Support Files/Pods-JB/Pods-JB.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				5026C2711D65B6590057D046 /* GameCell.swift */,
 				502FA986212CDF360036FEDE /* BaseStatView.xib */,
 				502FA98E212CE2CE0036FEDE /* BaseStatView.swift */,
-				502FA984212CDF2E0036FEDE /* AdvancedStatView.xib */,
+				50C2A0D7212D446300170840 /* AdvancedStatView.xib */,
 				502FA990212CE2DF0036FEDE /* AdvancedStatView.swift */,
 				502FA988212CDF3C0036FEDE /* StatRow.xib */,
 				502FA992212CE2EC0036FEDE /* StatRow.swift */,
@@ -222,8 +222,8 @@
 			files = (
 				502FA98D212CDF490036FEDE /* PlayerPersonal.xib in Resources */,
 				502FA989212CDF3C0036FEDE /* StatRow.xib in Resources */,
-				502FA985212CDF2E0036FEDE /* AdvancedStatView.xib in Resources */,
 				502FA987212CDF370036FEDE /* BaseStatView.xib in Resources */,
+				50C2A0D8212D446300170840 /* AdvancedStatView.xib in Resources */,
 				502FA983212CD8B90036FEDE /* GameCell.xib in Resources */,
 				5026C2621D65716B0057D046 /* LaunchScreen.storyboard in Resources */,
 				5019B5DD1D6D639000423579 /* Assets.xcassets in Resources */,

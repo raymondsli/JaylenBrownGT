@@ -15,6 +15,7 @@ class AdvancedStatView: UIView {
     @IBOutlet weak var row2: StatRow!
     @IBOutlet weak var row3: StatRow!
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
