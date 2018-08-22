@@ -11,15 +11,10 @@ import MessageUI
 
 class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailComposeViewControllerDelegate {
     
-    @IBOutlet weak var nextGame: UILabel!
     
-    var nextGameString: String! = "0"
-    var nextGameDate: String! = "0"
-    var nextGameTime: String! = "0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextGame.text = " "
         getNextGameJSON(gameLogURL: "https://api.seatgeek.com/2/events?performers.id=2088&per_page=25&client_id=MTIwNzV8MTM2NTQ1MDQyMg")
     }
     
@@ -31,24 +26,13 @@ class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailCompo
         URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
             if data != nil {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [String: Any]
-                    //eventsList is an array of events
-                    let eventsList: NSArray = json["events"] as! NSArray
-                    if eventsList.count == 0 {
                         DispatchQueue.main.async(execute: {
                             self.nextGame.text = ""
                         })
                     } else{
-                        //nextGameEvent is a dictionary
-                        let nextGameEvent = eventsList[0] as! [String: Any]
-                    
-                        self.nextGameString = nextGameEvent["title"] as! String
-                        let unformattedGameDate: String = nextGameEvent["datetime_local"] as! String
-                        self.nextGameDate = self.formatGameDate(input: unformattedGameDate)
-                        self.nextGameTime = self.formatGameTime(input: unformattedGameDate)
-                    
+                        
                         DispatchQueue.main.async(execute: {
-                            self.nextGame.text = "Next Game\n" + self.nextGameString + "\n" + self.nextGameDate + "\n" + self.nextGameTime
+
                         })
                     }
                 } catch {

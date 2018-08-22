@@ -9,13 +9,13 @@
 import UIKit
 
 class GameCell: UITableViewCell {
-    @IBOutlet weak var gameInfoLabel: UILabel!
-    @IBOutlet weak var gameMainStatsLabel: UILabel!
-    @IBOutlet weak var gameShootingFLabel: UILabel!
+    @IBOutlet weak var gameNumber: UILabel!
+    @IBOutlet weak var gameDetails: UILabel!
+    @IBOutlet weak var winLoss: UILabel!
+    @IBOutlet weak var row1: StatRow!
+    @IBOutlet weak var row2: StatRow!
+    @IBOutlet weak var row3: StatRow!
+    @IBOutlet weak var row4: StatRow!
     
-    func configureCell(_ gameInfo: String, gameMainStats: String, gameShootingF: String) {
-        gameInfoLabel.text = gameInfo
-        gameMainStatsLabel.text = gameMainStats
-        gameShootingFLabel.text = gameShootingF
-    }
+    
 }
