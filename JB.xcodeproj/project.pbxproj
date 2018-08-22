@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5019B5D11D67EB6700423579 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5019B5CD1D67EB6700423579 /* Fabric.framework */; };
-		5019B5D21D67EB6700423579 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5019B5CE1D67EB6700423579 /* TwitterKit.framework */; };
-		5019B5D31D67EB6700423579 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5019B5CF1D67EB6700423579 /* TwitterKitResources.bundle */; };
-		5019B5D41D67EB6700423579 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5019B5D01D67EB6700423579 /* TwitterCore.framework */; };
+		26F4463E19FB79FCE1796D39 /* Pods_JB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732C46D6EDD1F0AB6A129A85 /* Pods_JB.framework */; };
 		5019B5D61D67EC7700423579 /* JBTwitterTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */; };
 		5019B5DA1D68085F00423579 /* SeasonStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */; };
 		5019B5DD1D6D639000423579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5026C25E1D65716B0057D046 /* Assets.xcassets */; };
@@ -18,7 +15,6 @@
 		5026C2581D65716B0057D046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2571D65716B0057D046 /* HomeViewController.swift */; };
 		5026C25D1D65716B0057D046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5026C25B1D65716B0057D046 /* Main.storyboard */; };
 		5026C2621D65716B0057D046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5026C2601D65716B0057D046 /* LaunchScreen.storyboard */; };
-		5026C26E1D65AF460057D046 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26D1D65AF460057D046 /* GameStats.swift */; };
 		5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C26F1D65B4D80057D046 /* GameLogViewController.swift */; };
 		5026C2721D65B6590057D046 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026C2711D65B6590057D046 /* GameCell.swift */; };
 		502FA983212CD8B90036FEDE /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502FA982212CD8B90036FEDE /* GameCell.xib */; };
@@ -30,16 +26,12 @@
 		502FA98F212CE2CE0036FEDE /* BaseStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA98E212CE2CE0036FEDE /* BaseStatView.swift */; };
 		502FA991212CE2DF0036FEDE /* AdvancedStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA990212CE2DF0036FEDE /* AdvancedStatView.swift */; };
 		502FA993212CE2EC0036FEDE /* StatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA992212CE2EC0036FEDE /* StatRow.swift */; };
-		5092B1461F2D8B5A0049EA26 /* SeasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092B1451F2D8B5A0049EA26 /* SeasonCell.swift */; };
-		5092B14A1F2D90630049EA26 /* SeasonStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092B1491F2D90630049EA26 /* SeasonStats.swift */; };
+		502FA995212CE7560036FEDE /* PlayerOverviewHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA994212CE7560036FEDE /* PlayerOverviewHead.swift */; };
+		502FA997212CE7C80036FEDE /* PlayerPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502FA996212CE7C80036FEDE /* PlayerPersonal.swift */; };
 		50DBBB861DD17523000EE4E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DBBB851DD17523000EE4E4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5019B5CD1D67EB6700423579 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
-		5019B5CE1D67EB6700423579 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
-		5019B5CF1D67EB6700423579 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
-		5019B5D01D67EB6700423579 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
 		5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBTwitterTimeline.swift; sourceTree = "<group>"; };
 		5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonStatsViewController.swift; sourceTree = "<group>"; };
 		5026C2521D65716B0057D046 /* JB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +41,6 @@
 		5026C25E1D65716B0057D046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5026C2611D65716B0057D046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5026C2631D65716B0057D046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5026C26D1D65AF460057D046 /* GameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
 		5026C26F1D65B4D80057D046 /* GameLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogViewController.swift; sourceTree = "<group>"; };
 		5026C2711D65B6590057D046 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		502FA982212CD8B90036FEDE /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
@@ -61,9 +52,12 @@
 		502FA98E212CE2CE0036FEDE /* BaseStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStatView.swift; sourceTree = "<group>"; };
 		502FA990212CE2DF0036FEDE /* AdvancedStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedStatView.swift; sourceTree = "<group>"; };
 		502FA992212CE2EC0036FEDE /* StatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRow.swift; sourceTree = "<group>"; };
-		5092B1451F2D8B5A0049EA26 /* SeasonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonCell.swift; sourceTree = "<group>"; };
-		5092B1491F2D90630049EA26 /* SeasonStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonStats.swift; sourceTree = "<group>"; };
+		502FA994212CE7560036FEDE /* PlayerOverviewHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerOverviewHead.swift; sourceTree = "<group>"; };
+		502FA996212CE7C80036FEDE /* PlayerPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPersonal.swift; sourceTree = "<group>"; };
 		50DBBB851DD17523000EE4E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		732C46D6EDD1F0AB6A129A85 /* Pods_JB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAE4EF8EB2AA23AD45B75A2 /* Pods-JB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JB.release.xcconfig"; path = "Pods/Target Support Files/Pods-JB/Pods-JB.release.xcconfig"; sourceTree = "<group>"; };
+		E1284844A198D696389592A7 /* Pods-JB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JB/Pods-JB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,25 +66,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				50DBBB861DD17523000EE4E4 /* MessageUI.framework in Frameworks */,
-				5019B5D11D67EB6700423579 /* Fabric.framework in Frameworks */,
-				5019B5D41D67EB6700423579 /* TwitterCore.framework in Frameworks */,
-				5019B5D21D67EB6700423579 /* TwitterKit.framework in Frameworks */,
+				26F4463E19FB79FCE1796D39 /* Pods_JB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5019B5C91D67D1D400423579 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5026C26D1D65AF460057D046 /* GameStats.swift */,
-				5092B1451F2D8B5A0049EA26 /* SeasonCell.swift */,
-				5092B1491F2D90630049EA26 /* SeasonStats.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		5019B5CA1D67D1DB00423579 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +85,9 @@
 				502FA988212CDF3C0036FEDE /* StatRow.xib */,
 				502FA992212CE2EC0036FEDE /* StatRow.swift */,
 				502FA98A212CDF430036FEDE /* PlayerOverviewHead.xib */,
+				502FA994212CE7560036FEDE /* PlayerOverviewHead.swift */,
 				502FA98C212CDF490036FEDE /* PlayerPersonal.xib */,
+				502FA996212CE7C80036FEDE /* PlayerPersonal.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -115,7 +99,6 @@
 				5026C26F1D65B4D80057D046 /* GameLogViewController.swift */,
 				5019B5D91D68085F00423579 /* SeasonStatsViewController.swift */,
 				5019B5D51D67EC7700423579 /* JBTwitterTimeline.swift */,
-				5026C2551D65716B0057D046 /* AppDelegate.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -126,6 +109,7 @@
 				5026C2541D65716B0057D046 /* JB */,
 				5026C2531D65716B0057D046 /* Products */,
 				50DBBB841DD17523000EE4E4 /* Frameworks */,
+				F7C40C9DB344B57748DC2F9A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,11 +126,7 @@
 			children = (
 				5026C25B1D65716B0057D046 /* Main.storyboard */,
 				5026C2601D65716B0057D046 /* LaunchScreen.storyboard */,
-				5019B5CD1D67EB6700423579 /* Fabric.framework */,
-				5019B5CE1D67EB6700423579 /* TwitterKit.framework */,
-				5019B5CF1D67EB6700423579 /* TwitterKitResources.bundle */,
-				5019B5D01D67EB6700423579 /* TwitterCore.framework */,
-				5019B5C91D67D1D400423579 /* Models */,
+				5026C2551D65716B0057D046 /* AppDelegate.swift */,
 				5019B5CA1D67D1DB00423579 /* Views */,
 				5019B5CB1D67D1E200423579 /* Controllers */,
 				5026C25E1D65716B0057D046 /* Assets.xcassets */,
@@ -159,8 +139,18 @@
 			isa = PBXGroup;
 			children = (
 				50DBBB851DD17523000EE4E4 /* MessageUI.framework */,
+				732C46D6EDD1F0AB6A129A85 /* Pods_JB.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7C40C9DB344B57748DC2F9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1284844A198D696389592A7 /* Pods-JB.debug.xcconfig */,
+				BFAE4EF8EB2AA23AD45B75A2 /* Pods-JB.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,10 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5026C2661D65716B0057D046 /* Build configuration list for PBXNativeTarget "JB" */;
 			buildPhases = (
+				D1D61554F8D3495F9443DE12 /* [CP] Check Pods Manifest.lock */,
 				5026C24E1D65716B0057D046 /* Sources */,
 				5026C24F1D65716B0057D046 /* Frameworks */,
 				5026C2501D65716B0057D046 /* Resources */,
-				5019B5CC1D67EB1E00423579 /* Run Script */,
+				1BFD574B7148D53AD395D2D9 /* [CP] Embed Pods Frameworks */,
+				D42FA6CCC8DDCBD4F8674921 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,7 +220,6 @@
 				502FA98D212CDF490036FEDE /* PlayerPersonal.xib in Resources */,
 				502FA989212CDF3C0036FEDE /* StatRow.xib in Resources */,
 				502FA985212CDF2E0036FEDE /* AdvancedStatView.xib in Resources */,
-				5019B5D31D67EB6700423579 /* TwitterKitResources.bundle in Resources */,
 				502FA987212CDF370036FEDE /* BaseStatView.xib in Resources */,
 				502FA983212CD8B90036FEDE /* GameCell.xib in Resources */,
 				5026C2621D65716B0057D046 /* LaunchScreen.storyboard in Resources */,
@@ -241,19 +232,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5019B5CC1D67EB1E00423579 /* Run Script */ = {
+		1BFD574B7148D53AD395D2D9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JB/Pods-JB-frameworks.sh",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
-			name = "Run Script";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 3a67eb94d8aea4791988827978c83137963db3b8 ae335c7ab34e3159dbc7898ba121b4b12b219c5a674a943a973e993858b67471";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JB/Pods-JB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D61554F8D3495F9443DE12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D42FA6CCC8DDCBD4F8674921 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JB/Pods-JB-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JB/Pods-JB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -262,18 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502FA997212CE7C80036FEDE /* PlayerPersonal.swift in Sources */,
 				502FA993212CE2EC0036FEDE /* StatRow.swift in Sources */,
 				5026C2721D65B6590057D046 /* GameCell.swift in Sources */,
 				5019B5DA1D68085F00423579 /* SeasonStatsViewController.swift in Sources */,
-				5092B1461F2D8B5A0049EA26 /* SeasonCell.swift in Sources */,
 				502FA98F212CE2CE0036FEDE /* BaseStatView.swift in Sources */,
 				5026C2701D65B4D80057D046 /* GameLogViewController.swift in Sources */,
 				5019B5D61D67EC7700423579 /* JBTwitterTimeline.swift in Sources */,
 				502FA991212CE2DF0036FEDE /* AdvancedStatView.swift in Sources */,
+				502FA995212CE7560036FEDE /* PlayerOverviewHead.swift in Sources */,
 				5026C2561D65716B0057D046 /* AppDelegate.swift in Sources */,
-				5092B14A1F2D90630049EA26 /* SeasonStats.swift in Sources */,
 				5026C2581D65716B0057D046 /* HomeViewController.swift in Sources */,
-				5026C26E1D65AF460057D046 /* GameStats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +418,7 @@
 		};
 		5026C2671D65716B0057D046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1284844A198D696389592A7 /* Pods-JB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -409,6 +442,7 @@
 		};
 		5026C2681D65716B0057D046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFAE4EF8EB2AA23AD45B75A2 /* Pods-JB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

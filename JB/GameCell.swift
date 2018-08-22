@@ -17,5 +17,7 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var row3: StatRow!
     @IBOutlet weak var row4: StatRow!
     
-    
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "GameCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+    }
 }

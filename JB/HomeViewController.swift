@@ -11,28 +11,56 @@ import MessageUI
 
 class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailComposeViewControllerDelegate {
     
-    
+    @IBOutlet weak var headerView: PlayerOverviewHead!
+    @IBOutlet weak var personalView: PlayerPersonal!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNextGameJSON(gameLogURL: "https://api.seatgeek.com/2/events?performers.id=2088&per_page=25&client_id=MTIwNzV8MTM2NTQ1MDQyMg")
+        
+        getNextGameJSON()
     }
     
-    
-    //Function that gets JSON data from the URL
-    func getNextGameJSON(gameLogURL: String) {
-        let url = URL(string: gameLogURL)
+    func getNextGameJSON() {
+        let urlString = "http://data.nba.net/data/10s/prod/v1/2018/teams/celtics/schedule.json"
+        let url = URL(string: urlString)
         
         URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
             if data != nil {
                 do {
-                        DispatchQueue.main.async(execute: {
-                            self.nextGame.text = ""
-                        })
-                    } else{
+                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [String: Any]
+                    let league = json["league"] as! [String: Any]
+                    let games: NSArray = league["standard"] as! NSArray
+                    
+                    if games.count == 0 {
+                        return
+                    } else {
+                        let nextGame = games[0] as! [String: Any]
+                        let startTime = nextGame["startTimeUTC"] as! String
+                        let startDate = nextGame["startDateEastern"] as! String
+                        let isHomeTeam = nextGame["isHomeTeam"] as! Bool
+                        
+                        var nextGameOpponent = ""
+                        var homeOAway = ""
+                        
+                        if isHomeTeam {
+                            let vTeam = nextGame["vTeam"] as! [String: String]
+                            let oppo = vTeam["teamId"]
+                            nextGameOpponent = self.getTeamFromId(teamId: oppo!)
+                            homeOAway = "vs. "
+                        } else {
+                            let hTeam = nextGame["hTeam"] as! [String: String]
+                            let oppo = hTeam["teamId"]
+                            nextGameOpponent = self.getTeamFromId(teamId: oppo!)
+                            homeOAway = "@"
+                        }
+                        
+                        let nextGameDate = self.formatDate(date: startDate)
+                        let nextGameTime = self.formatTime(time: startTime)
+                        let nextGameDetails = homeOAway + nextGameOpponent + " - " + nextGameTime
                         
                         DispatchQueue.main.async(execute: {
-
+                            self.headerView.nextGameDate.text = "Next Game: " + nextGameDate
+                            self.headerView.nextGameDetails.text = nextGameDetails
                         })
                     }
                 } catch {
@@ -42,47 +70,123 @@ class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailCompo
         }).resume()
     }
     
-    func formatGameDate(input: String) -> String{
-        let index1 = input.index(input.startIndex, offsetBy: 4)
-        let year: String = input.substring(to: index1)
+    
+    func formatDate(date: String) -> String {
+        let monthStartIndex = date.index(date.startIndex, offsetBy: 4)
+        let dayStartIndex = date.index(date.startIndex, offsetBy: 6)
         
-        let index2 = input.index(input.startIndex, offsetBy: 5)
-        let index3 = input.index(input.startIndex, offsetBy: 7)
-        let range1 = index2..<index3
-        let month: String = input.substring(with: range1)
+        let monthRange = monthStartIndex..<dayStartIndex
         
-        let index4 = input.index(input.startIndex, offsetBy: 8)
-        let index5 = input.index(input.startIndex, offsetBy: 10)
-        let range2 = index4..<index5
-        let date: String = input.substring(with: range2)
-        return month + "/" + date + "/" + year
+        let month = date[monthRange]
+        let day = date.suffix(from: dayStartIndex)
+        
+        return month + "/" + day
     }
     
-    func formatGameTime(input: String) -> String {
-        let index1 = input.index(input.startIndex, offsetBy: 14)
-        let index2 = input.index(input.startIndex, offsetBy: 16)
-        let range1 = index1..<index2
-        let minute = input.substring(with: range1)
+    func formatTime(time: String) -> String {
+        let hourStartIndex = time.index(time.startIndex, offsetBy: 11)
+        let hourEndIndex = time.index(time.startIndex, offsetBy: 13)
         
-        let index3 = input.index(input.startIndex, offsetBy: 11)
-        let index4 = input.index(input.startIndex, offsetBy: 13)
-        let range2 = index3..<index4
-        let hour1: String = input.substring(with: range2)
-        var intHour: Int = Int(hour1)!
-        var ampm: String = "AM"
+        let minuteStartIndex = time.index(time.startIndex, offsetBy: 14)
+        let minuteEndIndex = time.index(time.startIndex, offsetBy: 16)
         
-        //Convert to PST
-        intHour = intHour - 3
+        let hourRange = hourStartIndex..<hourEndIndex
+        let minuteRange = minuteStartIndex..<minuteEndIndex
         
-        if (intHour >= 12) {
-            ampm = "PM"
+        let utcHour = time[hourRange]
+        let minuteString = time[minuteRange]
+        
+        guard let intHour = Int(utcHour) else {
+            return "00:00"
         }
-        if (intHour >= 13) {
-            intHour = intHour - 12
-        }
-        let hour: String = String(describing: intHour)
         
-        return hour + ":" + minute + " "  + ampm + " PST"
+        var hourString = "00"
+        var timeHalf = "PM"
+        
+        if intHour <= 6 {
+            hourString = String(5 + intHour)
+            timeHalf = "PM"
+        } else if 7 <= intHour && intHour <= 18 {
+            hourString = String(intHour - 7)
+            timeHalf = "AM"
+        } else if intHour == 19 {
+            hourString = String(12)
+            timeHalf = "PM"
+        } else if 20 <= intHour && intHour <= 23 {
+            hourString = String(intHour - 19)
+            timeHalf = "PM"
+        }
+        
+        return hourString + ":" + minuteString + " " + timeHalf + " PST"
+    }
+
+    
+    
+    func getTeamFromId(teamId: String) -> String {
+        switch teamId {
+        case "1610612737":
+            return "ATL"
+        case "1610612751":
+            return "BKN"
+        case "1610612738":
+            return "BOS"
+        case "1610612766":
+            return "CHA"
+        case "1610612741":
+            return "CHI"
+        case "1610612739":
+            return "CLE"
+        case "1610612742":
+            return "DAL"
+        case "1610612743":
+            return "DEN"
+        case "1610612765":
+            return "DET"
+        case "1610612744":
+            return "GSW"
+        case "1610612745":
+            return "HOU"
+        case "1610612754":
+            return "IND"
+        case "1610612746":
+            return "LAC"
+        case "1610612747":
+            return "LAL"
+        case "1610612763":
+            return "MEM"
+        case "1610612748":
+            return "MIA"
+        case "1610612749":
+            return "MIL"
+        case "1610612750":
+            return "MIN"
+        case "1610612740":
+            return "NOP"
+        case "1610612752":
+            return "NYK"
+        case "1610612760":
+            return "OKC"
+        case "1610612753":
+            return "ORL"
+        case "1610612755":
+            return "PHI"
+        case "1610612756":
+            return "PHX"
+        case "1610612757":
+            return "POR"
+        case "1610612758":
+            return "SAC"
+        case "1610612759":
+            return "SAS"
+        case "1610612761":
+            return "TOR"
+        case "1610612762":
+            return "UTA"
+        case "1610612764":
+            return "WAS"
+        default:
+            return ""
+        }
     }
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
