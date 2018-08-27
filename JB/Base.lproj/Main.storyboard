@@ -22,27 +22,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-0o-81b">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="706"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="039-2N-3Qg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="039-2N-3Qg">
+                                        <rect key="frame" x="0.0" y="-44" width="375" height="665"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Kl-0Go" customClass="PlayerPersonal" customModule="JB" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Kl-0Go" customClass="PlayerPersonal" customModule="JB" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="429" width="375" height="225"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.54676507419999998" green="1" blue="0.36086696109999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="225" id="lQU-ng-CJv"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-MT-EmK" customClass="PlayerOverviewHead" customModule="JB" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-MT-EmK" customClass="PlayerOverviewHead" customModule="JB" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="129" width="375" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.1051056209" green="1" blue="0.91406075549999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="UC2-k1-PfO"/>
-                                                </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-TQ-ZdU">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-TQ-ZdU">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-nr-WKq">
                                                         <rect key="frame" x="127" y="79" width="120" height="30"/>
@@ -66,34 +63,24 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="OSq-Kl-0Go" secondAttribute="trailing" id="Elz-EP-Nde"/>
-                                            <constraint firstItem="lT5-MT-EmK" firstAttribute="leading" secondItem="039-2N-3Qg" secondAttribute="leading" id="HSt-J1-tKE"/>
-                                            <constraint firstItem="lT5-MT-EmK" firstAttribute="top" secondItem="bNT-TQ-ZdU" secondAttribute="bottom" id="IS7-9d-ROP"/>
-                                            <constraint firstAttribute="height" constant="662" id="Tnl-pB-skK"/>
-                                            <constraint firstAttribute="trailing" secondItem="lT5-MT-EmK" secondAttribute="trailing" id="VOo-9Q-t1I"/>
-                                            <constraint firstItem="OSq-Kl-0Go" firstAttribute="leading" secondItem="039-2N-3Qg" secondAttribute="leading" id="VoD-Cg-Z2J"/>
-                                            <constraint firstItem="OSq-Kl-0Go" firstAttribute="top" secondItem="lT5-MT-EmK" secondAttribute="bottom" id="Zie-Gz-8zl"/>
-                                            <constraint firstAttribute="trailing" secondItem="bNT-TQ-ZdU" secondAttribute="trailing" id="dXz-jO-AX1"/>
-                                            <constraint firstItem="bNT-TQ-ZdU" firstAttribute="top" secondItem="039-2N-3Qg" secondAttribute="top" id="eaT-hc-sNK"/>
-                                            <constraint firstItem="bNT-TQ-ZdU" firstAttribute="leading" secondItem="039-2N-3Qg" secondAttribute="leading" id="mPH-TZ-FPt"/>
-                                            <constraint firstAttribute="bottom" secondItem="OSq-Kl-0Go" secondAttribute="bottom" constant="8" id="xfS-6M-kLW"/>
+                                            <constraint firstAttribute="height" constant="665" id="Wll-QT-izZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="039-2N-3Qg" firstAttribute="leading" secondItem="xbp-0o-81b" secondAttribute="leading" id="5wj-aq-P3G"/>
-                                    <constraint firstItem="039-2N-3Qg" firstAttribute="top" secondItem="xbp-0o-81b" secondAttribute="top" id="8mx-Ss-qSM"/>
-                                    <constraint firstAttribute="trailing" secondItem="039-2N-3Qg" secondAttribute="trailing" id="Wfl-t2-tuR"/>
+                                    <constraint firstItem="039-2N-3Qg" firstAttribute="leading" secondItem="xbp-0o-81b" secondAttribute="leading" id="a0S-um-voD"/>
+                                    <constraint firstAttribute="height" constant="706" id="ain-qu-V8G"/>
+                                    <constraint firstAttribute="trailing" secondItem="039-2N-3Qg" secondAttribute="trailing" id="lun-6v-6Tq"/>
+                                    <constraint firstItem="039-2N-3Qg" firstAttribute="top" secondItem="xbp-0o-81b" secondAttribute="top" id="tos-K7-G8D"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xbp-0o-81b" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Dnp-xy-KgR"/>
-                            <constraint firstItem="039-2N-3Qg" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Qba-Ob-fDn"/>
-                            <constraint firstAttribute="trailing" secondItem="xbp-0o-81b" secondAttribute="trailing" id="iHu-8b-DSq"/>
-                            <constraint firstItem="xbp-0o-81b" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="sFy-bb-0jR"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xbp-0o-81b" secondAttribute="bottom" id="x8t-uw-T0K"/>
+                            <constraint firstItem="xbp-0o-81b" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="1MW-NY-2Z5"/>
+                            <constraint firstAttribute="trailing" secondItem="xbp-0o-81b" secondAttribute="trailing" id="Zuy-5z-nsy"/>
+                            <constraint firstItem="039-2N-3Qg" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="sfj-xj-vhm"/>
+                            <constraint firstItem="xbp-0o-81b" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yCN-1W-LOq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
