@@ -22,46 +22,83 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Game: 10/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m9-KU-DHI">
-                    <rect key="frame" x="117" y="237" width="135" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Game: 10/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9m9-KU-DHI">
+                    <rect key="frame" x="120" y="233" width="135" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="1LI-Ah-sEq"/>
+                        <constraint firstAttribute="width" constant="135" id="Qpc-kb-VWJ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
                     <color key="textColor" red="0.54676507419999998" green="1" blue="0.36086696109999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@ PHI - 5:00 PM PST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-X6-2kM">
-                    <rect key="frame" x="101" y="257" width="167" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
-                    <color key="textColor" red="0.54676507419999998" green="1" blue="0.36086696109999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EntranceCrop" translatesAutoresizingMaskIntoConstraints="NO" id="EAo-x5-bMx">
-                    <rect key="frame" x="247" y="12" width="110" height="110"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EntranceCrop" translatesAutoresizingMaskIntoConstraints="NO" id="EAo-x5-bMx">
+                    <rect key="frame" x="255" y="12" width="110" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="XZc-HK-klf"/>
+                        <constraint firstAttribute="height" constant="110" id="eL6-ys-Lpp"/>
+                    </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MetJaylenCrop" translatesAutoresizingMaskIntoConstraints="NO" id="v8w-3Q-JzP">
-                    <rect key="frame" x="129" y="12" width="110" height="110"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MetJaylenCrop" translatesAutoresizingMaskIntoConstraints="NO" id="v8w-3Q-JzP">
+                    <rect key="frame" x="132.5" y="12" width="110" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="NPw-qb-Amb"/>
+                        <constraint firstAttribute="height" constant="110" id="nsE-Tb-CCb"/>
+                    </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JaylenShotCropped" translatesAutoresizingMaskIntoConstraints="NO" id="zob-eX-vo6">
-                    <rect key="frame" x="11" y="12" width="110" height="110"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JaylenShotCropped" translatesAutoresizingMaskIntoConstraints="NO" id="zob-eX-vo6">
+                    <rect key="frame" x="10.5" y="12" width="110" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="adw-z0-62C"/>
+                        <constraint firstAttribute="height" constant="110" id="ofc-Fg-zvP"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BOS | #7 | G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-zE-v64">
-                    <rect key="frame" x="92" y="186" width="190" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOS | #7 | G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-zE-v64">
+                    <rect key="frame" x="92.5" y="195" width="190" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="T1d-Aa-pQm"/>
+                        <constraint firstAttribute="width" constant="190" id="r59-9d-fWp"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                     <color key="textColor" red="0.54676507419999998" green="1" blue="0.36086696109999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jaylen-Brown" translatesAutoresizingMaskIntoConstraints="NO" id="Dj9-Yo-Poz">
-                    <rect key="frame" x="39" y="121" width="297" height="90"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jaylen-Brown" translatesAutoresizingMaskIntoConstraints="NO" id="Dj9-Yo-Poz">
+                    <rect key="frame" x="37.5" y="130" width="300" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Cmd-yb-FKA"/>
+                        <constraint firstAttribute="width" constant="300" id="xDT-qr-RYb"/>
+                    </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ PHI - 5:00 PM PST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq6-X6-2kM">
+                    <rect key="frame" x="104" y="255" width="167" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="OBG-ad-iLv"/>
+                        <constraint firstAttribute="width" constant="167" id="h4a-0U-1kg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                    <color key="textColor" red="0.54676507419999998" green="1" blue="0.36086696109999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.17023329810000001" green="0.44011576740000002" blue="0.56438372459999997" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9m9-KU-DHI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="08y-RQ-hpZ"/>
+                <constraint firstItem="v8w-3Q-JzP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8aK-Na-8E2"/>
+                <constraint firstItem="9m9-KU-DHI" firstAttribute="top" secondItem="qdx-zE-v64" secondAttribute="bottom" constant="4" id="Hs2-Fg-Qg0"/>
+                <constraint firstItem="Dj9-Yo-Poz" firstAttribute="top" secondItem="EAo-x5-bMx" secondAttribute="bottom" constant="8" id="IaL-ae-Rfj"/>
+                <constraint firstItem="Dj9-Yo-Poz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="R06-aa-RLH"/>
+                <constraint firstItem="zob-eX-vo6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="Rph-PQ-Ov5"/>
+                <constraint firstItem="sq6-X6-2kM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="V7v-e7-PUm"/>
+                <constraint firstItem="qdx-zE-v64" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ciM-cO-Dc1"/>
+                <constraint firstItem="v8w-3Q-JzP" firstAttribute="leading" secondItem="zob-eX-vo6" secondAttribute="trailing" constant="12" id="d72-Y4-TNo"/>
+                <constraint firstItem="qdx-zE-v64" firstAttribute="top" secondItem="Dj9-Yo-Poz" secondAttribute="bottom" constant="5" id="gfl-Z5-Gso"/>
+                <constraint firstItem="EAo-x5-bMx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="he8-oX-l1t"/>
+                <constraint firstItem="sq6-X6-2kM" firstAttribute="top" secondItem="9m9-KU-DHI" secondAttribute="bottom" id="mXT-vP-qIJ"/>
+                <constraint firstItem="v8w-3Q-JzP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="o1J-Ty-H0r"/>
+                <constraint firstItem="EAo-x5-bMx" firstAttribute="leading" secondItem="v8w-3Q-JzP" secondAttribute="trailing" constant="12.5" id="yCg-60-EFn"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="138.40000000000001" y="153.82308845577214"/>
