@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,66 +21,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-0o-81b">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="706"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="039-2N-3Qg">
-                                        <rect key="frame" x="0.0" y="-44" width="375" height="665"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Kl-0Go" customClass="PlayerPersonal" customModule="JB" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="429" width="375" height="225"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.54676507419999998" green="1" blue="0.36086696109999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-MT-EmK" customClass="PlayerOverviewHead" customModule="JB" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="129" width="375" height="300"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.1051056209" green="1" blue="0.91406075549999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-TQ-ZdU">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-nr-WKq">
-                                                        <rect key="frame" x="127" y="79" width="120" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.1406885108" green="0.25676847450000001" blue="0.4277768334" alpha="0.55681359129999997" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" red="0.17023329810000001" green="0.44011576740000002" blue="0.56438372459999997" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="buttonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2t6-5P-TKB"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.17023329810000001" green="0.44011576740000002" blue="0.56438372459999997" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="665" id="Wll-QT-izZ"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-MT-EmK" customClass="PlayerOverviewHead" customModule="JB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="139" width="375" height="300"/>
+                                <color key="backgroundColor" red="0.1051056209" green="1" blue="0.91406075549999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="039-2N-3Qg" firstAttribute="leading" secondItem="xbp-0o-81b" secondAttribute="leading" id="a0S-um-voD"/>
-                                    <constraint firstAttribute="height" constant="706" id="ain-qu-V8G"/>
-                                    <constraint firstAttribute="trailing" secondItem="039-2N-3Qg" secondAttribute="trailing" id="lun-6v-6Tq"/>
-                                    <constraint firstItem="039-2N-3Qg" firstAttribute="top" secondItem="xbp-0o-81b" secondAttribute="top" id="tos-K7-G8D"/>
+                                    <constraint firstAttribute="height" constant="300" id="xcd-87-9Ao"/>
                                 </constraints>
-                            </scrollView>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-TQ-ZdU">
+                                <rect key="frame" x="0.0" y="44" width="375" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-nr-WKq">
+                                        <rect key="frame" x="127" y="57" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.1406885108" green="0.25676847450000001" blue="0.4277768334" alpha="0.55681359129999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.17023329810000001" green="0.44011576740000002" blue="0.56438372459999997" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2t6-5P-TKB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17023329810000001" green="0.44011576740000002" blue="0.56438372459999997" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="4XT-ay-eS1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Kl-0Go" customClass="PlayerPersonal" customModule="JB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="463" width="375" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54676507419999998" green="1" blue="0.36086696109999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xbp-0o-81b" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="1MW-NY-2Z5"/>
-                            <constraint firstAttribute="trailing" secondItem="xbp-0o-81b" secondAttribute="trailing" id="Zuy-5z-nsy"/>
-                            <constraint firstItem="039-2N-3Qg" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="sfj-xj-vhm"/>
-                            <constraint firstItem="xbp-0o-81b" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yCN-1W-LOq"/>
+                            <constraint firstItem="lT5-MT-EmK" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="28E-1M-wpX"/>
+                            <constraint firstAttribute="trailing" secondItem="lT5-MT-EmK" secondAttribute="trailing" id="8Nf-8p-Evx"/>
+                            <constraint firstItem="lT5-MT-EmK" firstAttribute="top" secondItem="bNT-TQ-ZdU" secondAttribute="bottom" id="LN9-g7-xWB"/>
+                            <constraint firstItem="bNT-TQ-ZdU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="MqZ-RH-Yo6"/>
+                            <constraint firstAttribute="trailing" secondItem="bNT-TQ-ZdU" secondAttribute="trailing" id="fBx-o7-zSJ"/>
+                            <constraint firstItem="bNT-TQ-ZdU" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="kD2-Q0-qg2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
@@ -314,8 +300,8 @@
                                 <items>
                                     <navigationItem id="Xmh-WE-T5W">
                                         <nil key="title"/>
-                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UPC-vf-ZDh">
-                                            <rect key="frame" x="112.66666666666669" y="5.6666666666666679" width="150" height="33"/>
+                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UPC-vf-ZDh">
+                                            <rect key="frame" x="146.66666666666666" y="5.6666666666666679" width="82" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                             <state key="normal" title="Game Log">
