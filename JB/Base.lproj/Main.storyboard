@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="364" width="375" height="254"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSP-He-zk7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Kl-0Go" customClass="PlayerPersonal" customModule="JB" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
@@ -38,7 +38,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="OSq-Kl-0Go" firstAttribute="top" secondItem="NSP-He-zk7" secondAttribute="top" id="BBw-la-odM"/>
-                                            <constraint firstAttribute="height" constant="250" id="CDg-uq-uha"/>
+                                            <constraint firstAttribute="height" constant="225" id="CDg-uq-uha"/>
                                             <constraint firstItem="OSq-Kl-0Go" firstAttribute="leading" secondItem="NSP-He-zk7" secondAttribute="leading" id="Ce7-WN-e7U"/>
                                             <constraint firstAttribute="trailing" secondItem="OSq-Kl-0Go" secondAttribute="trailing" id="axB-Ny-AbF"/>
                                         </constraints>
