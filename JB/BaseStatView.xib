@@ -24,35 +24,62 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPP-Ds-tWV" customClass="StatRow" customModule="JB" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPP-Ds-tWV" customClass="StatRow" customModule="JB" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="48" width="375" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="dwS-8G-HNs"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34D-WC-a1l" customClass="StatRow" customModule="JB" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34D-WC-a1l" customClass="StatRow" customModule="JB" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="109" width="375" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="pjr-C0-f0N"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9UF-cK-E5M" customClass="StatRow" customModule="JB" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UF-cK-E5M" customClass="StatRow" customModule="JB" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="172" width="375" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="gLo-Rz-OCU"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Djq-UE-PDk" customClass="StatRow" customModule="JB" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djq-UE-PDk" customClass="StatRow" customModule="JB" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="235" width="375" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="pHQ-Y8-CGY"/>
+                    </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Base Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpt-M3-3kG">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpt-M3-3kG">
                     <rect key="frame" x="16" y="0.0" width="176" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="44k-u5-UDR"/>
+                        <constraint firstAttribute="width" constant="176" id="4P5-GA-ukL"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
                     <color key="textColor" red="0.18487665040000001" green="0.3057227548" blue="0.55884440950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9UF-cK-E5M" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2iR-8G-anf"/>
+                <constraint firstItem="NPP-Ds-tWV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="4j1-EW-4ik"/>
+                <constraint firstItem="Xpt-M3-3kG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="BRT-Qj-gLX"/>
+                <constraint firstItem="Djq-UE-PDk" firstAttribute="top" secondItem="9UF-cK-E5M" secondAttribute="bottom" constant="18" id="FTv-6m-FV2"/>
+                <constraint firstItem="9UF-cK-E5M" firstAttribute="top" secondItem="34D-WC-a1l" secondAttribute="bottom" constant="18" id="Kqo-Ff-lZv"/>
+                <constraint firstItem="Xpt-M3-3kG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QV0-Zd-KRP"/>
+                <constraint firstItem="34D-WC-a1l" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="URA-ou-0cs"/>
+                <constraint firstItem="Djq-UE-PDk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bMd-zA-BfN"/>
+                <constraint firstItem="NPP-Ds-tWV" firstAttribute="top" secondItem="Xpt-M3-3kG" secondAttribute="bottom" constant="8" id="hOv-hj-KJ0"/>
+                <constraint firstItem="34D-WC-a1l" firstAttribute="top" secondItem="NPP-Ds-tWV" secondAttribute="bottom" constant="16" id="jX4-ka-GEY"/>
+                <constraint firstItem="NPP-Ds-tWV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="opB-Wh-YBn"/>
+                <constraint firstItem="9UF-cK-E5M" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qvY-ec-hpi"/>
+                <constraint firstItem="Djq-UE-PDk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="t1A-VP-JFk"/>
+                <constraint firstItem="34D-WC-a1l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uOB-OC-mkv"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="53.600000000000001" y="47.676161919040482"/>
