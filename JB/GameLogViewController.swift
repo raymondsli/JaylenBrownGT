@@ -27,7 +27,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let window = UIApplication.shared.keyWindow!
         
-        loadingView = UIView(frame: CGRect(x: window.frame.origin.x, y: window.frame.origin.y + 64, width: window.frame.width, height: window.frame.height - 49 - 64))
+        loadingView = UIView(frame: CGRect(x: window.frame.origin.x, y: window.frame.origin.y + 80, width: window.frame.width, height: window.frame.height - 200))
         loadingView.backgroundColor = .white
         
         activityIndicator.center = self.view.center
@@ -39,6 +39,13 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         activityIndicator.startAnimating()
         
         getGameLogJSON()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.activityIndicator.isAnimating {
+            self.activityIndicator.stopAnimating()
+            self.loadingView.removeFromSuperview()
+        }
     }
     
     func getGameLogJSON() {

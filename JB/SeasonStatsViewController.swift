@@ -39,6 +39,13 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         getSeasonJSON(type: "Advanced")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.activityIndicator.isAnimating {
+            self.activityIndicator.stopAnimating()
+            self.loadingView.removeFromSuperview()
+        }
+    }
+    
     func getSeasonJSON(type: String) {
         let urlString = "https://stats.nba.com/stats/playerdashboardbyyearoveryear?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlusMinus=N&Rank=N&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&Split=yoy&VsConference=&VsDivision=&MeasureType=" + type + "&PlayerID=1627759"
         let url = URL(string: urlString)
