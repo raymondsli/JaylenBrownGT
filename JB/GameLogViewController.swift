@@ -27,7 +27,13 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let window = UIApplication.shared.keyWindow!
         
-        loadingView = UIView(frame: CGRect(x: window.frame.origin.x, y: window.frame.origin.y, width: window.frame.width, height: window.frame.height))
+        var navBarHeight: CGFloat = 40
+        var tabBarHeight: CGFloat = 49
+        if #available(iOS 11.0, *) {
+            navBarHeight += window.safeAreaInsets.top
+            tabBarHeight += window.safeAreaInsets.bottom
+        }
+        loadingView = UIView(frame: CGRect(x: window.frame.origin.x, y: window.frame.origin.y + navBarHeight, width: window.frame.width, height: window.frame.height - navBarHeight - tabBarHeight))
         loadingView.backgroundColor = .white
         
         activityIndicator.center = self.view.center
