@@ -57,8 +57,8 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         let url = URL(string: urlString)
         
         let sessionConfig = URLSessionConfiguration.default
-        sessionConfig.timeoutIntervalForRequest = 15
-        sessionConfig.timeoutIntervalForResource = 15
+        sessionConfig.timeoutIntervalForRequest = 30
+        sessionConfig.timeoutIntervalForResource = 30
         let session = URLSession(configuration: sessionConfig)
         
         session.dataTask(with: url!, completionHandler: {(data, response, error) in
@@ -69,6 +69,15 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
                     let resultSets = resultSetsTemp[1] as! [String: Any]
                     let rowSetTemp: NSArray = resultSets["rowSet"] as! NSArray
                     let season: NSArray = rowSetTemp[0] as! NSArray
+                    
+                    if season[1] as! String != "2018-19" {
+                        DispatchQueue.main.async(execute: {
+                            self.setToNA(type: type)
+                            self.activityIndicator.stopAnimating()
+                            self.loadingView.removeFromSuperview()
+                        })
+                        return
+                    }
                     
                     if type == "Base" {
                         self.turnRowSetIntoBaseStat(rowSet: season)
@@ -262,6 +271,73 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         }
         
         return decString
+    }
+    
+    func setToNA(type: String) {
+        if type == "Base" {
+            self.baseView.row1.stat1.text = "GP"
+            self.baseView.row1.stat2.text = "MIN"
+            self.baseView.row1.stat3.text = "PTS"
+            self.baseView.row1.stat4.text = "REB"
+            self.baseView.row1.amount1.text = "NA"
+            self.baseView.row1.amount2.text = "NA"
+            self.baseView.row1.amount3.text = "NA"
+            self.baseView.row1.amount4.text = "NA"
+            
+            self.baseView.row2.stat1.text = "OREB"
+            self.baseView.row2.stat2.text = "DREB"
+            self.baseView.row2.stat3.text = "FG%"
+            self.baseView.row2.stat4.text = "FGM | FGA"
+            self.baseView.row2.amount1.text = "NA"
+            self.baseView.row2.amount2.text = "NA"
+            self.baseView.row2.amount3.text = "NA"
+            self.baseView.row2.amount4.text = "NA | NA"
+            
+            self.baseView.row3.stat1.text = "AST"
+            self.baseView.row3.stat2.text = "STL"
+            self.baseView.row3.stat3.text = "3P%"
+            self.baseView.row3.stat4.text = "3PM | 3PA"
+            self.baseView.row3.amount1.text = "NA"
+            self.baseView.row3.amount2.text = "NA"
+            self.baseView.row3.amount3.text = "NA"
+            self.baseView.row3.amount4.text = "NA | NA"
+            
+            self.baseView.row4.stat1.text = "BLK"
+            self.baseView.row4.stat2.text = "TOV"
+            self.baseView.row4.stat3.text = "FT%"
+            self.baseView.row4.stat4.text = "FTM | FTA"
+            self.baseView.row4.amount1.text = "NA"
+            self.baseView.row4.amount2.text = "NA"
+            self.baseView.row4.amount3.text = "NA"
+            self.baseView.row4.amount4.text = "NA | NA"
+        } else if type == "Advanced" {
+            self.advancedView.row1.stat1.text = "TPACE"
+            self.advancedView.row1.stat2.text = "USG"
+            self.advancedView.row1.stat3.text = "OREB%"
+            self.advancedView.row1.stat4.text = "OFFRAT"
+            self.advancedView.row1.amount1.text = "NA"
+            self.advancedView.row1.amount2.text = "NA"
+            self.advancedView.row1.amount3.text = "NA"
+            self.advancedView.row1.amount4.text = "NA"
+            
+            self.advancedView.row2.stat1.text = "EFG"
+            self.advancedView.row2.stat2.text = "TS%"
+            self.advancedView.row2.stat3.text = "DREB%"
+            self.advancedView.row2.stat4.text = "DRAT"
+            self.advancedView.row2.amount1.text = "NA"
+            self.advancedView.row2.amount2.text = "NA"
+            self.advancedView.row2.amount3.text = "NA"
+            self.advancedView.row2.amount4.text = "NA"
+            
+            self.advancedView.row3.stat1.text = "AST/TO"
+            self.advancedView.row3.stat2.text = "AST%"
+            self.advancedView.row3.stat3.text = "REB%"
+            self.advancedView.row3.stat4.text = "NETRAT"
+            self.advancedView.row3.amount1.text = "NA"
+            self.advancedView.row3.amount2.text = "NA"
+            self.advancedView.row3.amount3.text = "NA"
+            self.advancedView.row3.amount4.text = "NA"
+        }
     }
 }
 
