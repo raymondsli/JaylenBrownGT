@@ -55,11 +55,11 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func getGameLogJSON() {
-        let url = URL(string: "https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&SeasonType=Regular+Season&Season=2017-18&PlayerID=1627759")
+        let url = URL(string: "https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&SeasonType=Regular+Season&Season=2018-19&PlayerID=1627759")
         
         let sessionConfig = URLSessionConfiguration.default
-        sessionConfig.timeoutIntervalForRequest = 5
-        sessionConfig.timeoutIntervalForResource = 5
+        sessionConfig.timeoutIntervalForRequest = 15
+        sessionConfig.timeoutIntervalForResource = 15
         let session = URLSession(configuration: sessionConfig)
         
         session.dataTask(with: url!, completionHandler: {(data, response, error) in
