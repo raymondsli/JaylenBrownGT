@@ -49,13 +49,8 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         
         activityIndicator.startAnimating()
         
-        //navStarButton.tintColor = UIColor(red: 0.85, green: 0.65, blue: 0.13, alpha: 1)
-        //navStarButton.imageView?.image = UIImage(named: "Star")!
-        navStarButton.setImage(UIImage(named: "Star")!, for: .normal)
+        navStarButton.setImage(UIImage(named: "FilledStar")!, for: .normal)
         navStarButton.tintColor = UIColor(red: 0.85, green: 0.65, blue: 0.13, alpha: 1)
-        //navStarButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        //rightBarItem.image = UIImage(named: "FilledStar")!
-        //rightBarItem.tintColor = UIColor(red: 0.85, green: 0.65, blue: 0.13, alpha: 1)
         
         if let decoded = UserDefaults.standard.object(forKey: "FavoriteGames") as? Data {
             let favoriteGamesArray = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [String]
@@ -223,15 +218,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
             sender.setImage(UIImage(named: "Star")!, for: .normal)
             favoriteGames.remove(sender.game.date)
         }
-//        var favoriteGamesArray : [Game] = []
-//        for game in favoriteGames {
-//            favoriteGamesArray.append(game)
-//        }
-//
-//        let userDefaults = UserDefaults.standard
-//        let encodedPT: Data = NSKeyedArchiver.archivedData(withRootObject: favoriteGamesArray)
-//        userDefaults.set(encodedPT, forKey: "FavoriteGames")
-//        userDefaults.synchronize()
+        
         var favoriteGamesArray : [String] = []
         for gameDate in favoriteGames {
             favoriteGamesArray.append(gameDate)
@@ -337,21 +324,21 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-//    @IBAction func favButtonPressed(_ sender: Any) {
-//        if favButton.titleLabel?.text == "All" {
-//            showGames = games
-//            favButton.setTitle("Starred", for: .normal)
-//        } else {
-//            showGames = []
-//            for game in games {
-//                if favoriteGames.contains(game.date) {
-//                    showGames.append(game)
-//                }
-//            }
-//            favButton.setTitle("All", for: .normal)
-//        }
-//        tableView.reloadData()
-//    }
+    @IBAction func navStarButtonPressed(_ sender: Any) {
+            if navStarButton.imageView?.image == UIImage(named: "Star")! {
+                showGames = games
+                navStarButton.setImage(UIImage(named: "FilledStar")!, for: .normal)
+            } else if navStarButton.imageView?.image == UIImage(named: "FilledStar")!{
+                showGames = []
+                for game in games {
+                    if favoriteGames.contains(game.date) {
+                        showGames.append(game)
+                    }
+                }
+                navStarButton.setImage(UIImage(named: "Star")!, for: .normal)
+            }
+            tableView.reloadData()
+    }
     
 }
 

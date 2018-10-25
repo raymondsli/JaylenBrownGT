@@ -351,6 +351,9 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nRA-6b-TtJ">
                                                 <rect key="frame" x="329" y="5" width="30" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="navStarButtonPressed:" destination="9ea-Xs-TEb" eventType="touchUpInside" id="ApN-Ll-NMb"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
