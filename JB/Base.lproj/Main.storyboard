@@ -347,17 +347,10 @@
                                                 <action selector="gameLogPressed:" destination="9ea-Xs-TEb" eventType="touchUpInside" id="GCI-6M-txS"/>
                                             </connections>
                                         </button>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="MvY-IZ-HPS">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SJc-nw-28e">
-                                                <rect key="frame" x="255" y="6" width="104" height="32"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="M1q-ny-amy">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nRA-6b-TtJ">
+                                                <rect key="frame" x="329" y="5" width="30" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <state key="normal" title="Starred">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="favButtonPressed:" destination="9ea-Xs-TEb" eventType="touchUpInside" id="Mq6-NH-vcc"/>
-                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -385,7 +378,7 @@
                     <navigationItem key="navigationItem" id="Fbk-yJ-hsg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="favButton" destination="SJc-nw-28e" id="5wR-wT-apH"/>
+                        <outlet property="navStarButton" destination="nRA-6b-TtJ" id="GQR-Re-ulg"/>
                         <outlet property="tableView" destination="UIs-bR-KSm" id="vyZ-FT-qXx"/>
                     </connections>
                 </viewController>

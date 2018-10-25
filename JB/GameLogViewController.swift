@@ -14,7 +14,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     var showGames = [Game]()
     var favoriteGames = Set<String>()
     
-    @IBOutlet weak var favButton: UIButton!
+    @IBOutlet weak var navStarButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
@@ -49,7 +49,13 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         
         activityIndicator.startAnimating()
         
-        favButton.setTitle("Starred", for: .normal)
+        //navStarButton.tintColor = UIColor(red: 0.85, green: 0.65, blue: 0.13, alpha: 1)
+        //navStarButton.imageView?.image = UIImage(named: "Star")!
+        navStarButton.setImage(UIImage(named: "Star")!, for: .normal)
+        navStarButton.tintColor = UIColor(red: 0.85, green: 0.65, blue: 0.13, alpha: 1)
+        //navStarButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        //rightBarItem.image = UIImage(named: "FilledStar")!
+        //rightBarItem.tintColor = UIColor(red: 0.85, green: 0.65, blue: 0.13, alpha: 1)
         
         if let decoded = UserDefaults.standard.object(forKey: "FavoriteGames") as? Data {
             let favoriteGamesArray = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [String]
@@ -59,7 +65,6 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         
         getGameLogJSON()
-        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -332,21 +337,21 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-    @IBAction func favButtonPressed(_ sender: Any) {
-        if favButton.titleLabel?.text == "All" {
-            showGames = games
-            favButton.setTitle("Starred", for: .normal)
-        } else {
-            showGames = []
-            for game in games {
-                if favoriteGames.contains(game.date) {
-                    showGames.append(game)
-                }
-            }
-            favButton.setTitle("All", for: .normal)
-        }
-        tableView.reloadData()
-    }
+//    @IBAction func favButtonPressed(_ sender: Any) {
+//        if favButton.titleLabel?.text == "All" {
+//            showGames = games
+//            favButton.setTitle("Starred", for: .normal)
+//        } else {
+//            showGames = []
+//            for game in games {
+//                if favoriteGames.contains(game.date) {
+//                    showGames.append(game)
+//                }
+//            }
+//            favButton.setTitle("All", for: .normal)
+//        }
+//        tableView.reloadData()
+//    }
     
 }
 
