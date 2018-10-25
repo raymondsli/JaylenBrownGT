@@ -74,10 +74,13 @@
                     <color key="textColor" red="0.18487665040000001" green="0.3057227548" blue="0.55884440950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbw-4S-btQ" customClass="FavoriteGameButton" customModule="JB" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbw-4S-btQ" customClass="FavoriteGameButton" customModule="JB" customModuleProvider="target">
                     <rect key="frame" x="329" y="24" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Str"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Hsf-Tg-7Hk"/>
+                        <constraint firstAttribute="height" constant="30" id="bwn-Hv-3vm"/>
+                    </constraints>
+                    <state key="normal" title="S"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,6 +90,7 @@
                 <constraint firstItem="W58-16-02h" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1sb-gl-uTW"/>
                 <constraint firstItem="Ffg-y0-Inj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2nm-ky-UgL"/>
                 <constraint firstItem="x0g-X8-6N6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3HF-WR-SP3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gbw-4S-btQ" secondAttribute="trailing" constant="16" id="6aj-eU-VCR"/>
                 <constraint firstItem="x0g-X8-6N6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="6cg-pA-Cun"/>
                 <constraint firstItem="7Mp-oc-kqS" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="9FD-mm-5zi"/>
                 <constraint firstItem="eXC-4s-GBg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9cR-hV-3OW"/>
@@ -100,6 +104,7 @@
                 <constraint firstItem="Ffg-y0-Inj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dXy-Cf-4Zc"/>
                 <constraint firstItem="Ffg-y0-Inj" firstAttribute="top" secondItem="eXC-4s-GBg" secondAttribute="bottom" constant="8" id="i0f-VR-OC8"/>
                 <constraint firstItem="e2x-Pz-2KE" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="lTr-63-eh6"/>
+                <constraint firstItem="gbw-4S-btQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="vA9-Yv-jca"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

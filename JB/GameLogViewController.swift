@@ -9,9 +9,10 @@
 import UIKit
 class GameLogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     var games = [Game]()
     var showGames = [Game]()
-    var favoriteGames = Set<Game>()
+    var favoriteGames = Set<String>()
     
     @IBOutlet weak var favButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -50,7 +51,15 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         
         favButton.setTitle("Show Starred", for: .normal)
         
+        if let decoded = UserDefaults.standard.object(forKey: "FavoriteGames") as? Data {
+            let favoriteGamesArray = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [String]
+            for gameDate in favoriteGamesArray {
+                favoriteGames.insert(gameDate)
+            }
+        }
+        
         getGameLogJSON()
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -204,11 +213,29 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     @objc func handleMarkAsFavorite(sender: FavoriteGameButton) {
         if sender.currentImage == UIImage(named: "Star") {
             sender.setImage(UIImage(named: "FilledStar")!, for: .normal)
-            favoriteGames.insert(sender.game)
+            favoriteGames.insert(sender.game.date)
         } else {
             sender.setImage(UIImage(named: "Star")!, for: .normal)
-            favoriteGames.remove(sender.game)
+            favoriteGames.remove(sender.game.date)
         }
+//        var favoriteGamesArray : [Game] = []
+//        for game in favoriteGames {
+//            favoriteGamesArray.append(game)
+//        }
+//
+//        let userDefaults = UserDefaults.standard
+//        let encodedPT: Data = NSKeyedArchiver.archivedData(withRootObject: favoriteGamesArray)
+//        userDefaults.set(encodedPT, forKey: "FavoriteGames")
+//        userDefaults.synchronize()
+        var favoriteGamesArray : [String] = []
+        for gameDate in favoriteGames {
+            favoriteGamesArray.append(gameDate)
+        }
+        
+        let userDefaults = UserDefaults.standard
+        let encodedPT: Data = NSKeyedArchiver.archivedData(withRootObject: favoriteGamesArray)
+        userDefaults.set(encodedPT, forKey: "FavoriteGames")
+        userDefaults.synchronize()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -216,7 +243,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
             let game = showGames[indexPath.row]
             
             cell.star.game = game
-            if favoriteGames.contains(game) {
+            if favoriteGames.contains(game.date) {
                 cell.star.setImage(UIImage(named: "FilledStar")!, for: .normal)
             } else {
                 cell.star.setImage(UIImage(named: "Star")!, for: .normal)
@@ -312,7 +339,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         } else {
             showGames = []
             for game in games {
-                if favoriteGames.contains(game) {
+                if favoriteGames.contains(game.date) {
                     showGames.append(game)
                 }
             }
@@ -345,11 +372,7 @@ extension UITableView {
     
 }
 
-struct Game: Hashable, Codable {
-    var hashValue: Int {
-        return date.hashValue
-    }
-    
+class Game {
     var date: String
     var opponent: String
     var winLoss: String
@@ -381,10 +404,6 @@ struct Game: Hashable, Codable {
     var FTA: String
     var FTP: String
     
-    static func ==(lhs: Game, rhs: Game) -> Bool {
-        return lhs.date == rhs.date
-    }
-    
     init(date: String, opponent: String, gameNumber: Int, winLoss: String, MIN: String, PTS: String, OREB: String, DREB: String, REB: String, AST: String, STL: String, BLK: String, TOV: String, PF: String, PLUSMINUS: String, FGM: String, FGA: String, FGP: String, FG3M: String, FG3A: String, FG3P: String, FTM: String, FTA: String, FTP: String) {
         self.date = date
         self.opponent = opponent
@@ -410,67 +429,6 @@ struct Game: Hashable, Codable {
         self.FTM = FTM
         self.FTA = FTA
         self.FTP = FTP
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case date
-        case opponent
-        case gameNumber
-        case winLoss
-        case MIN
-        case PTS
-        case OREB
-        case DREB
-        case REB
-        case AST
-        case STL
-        case BLK
-        case TOV
-        case PF
-        case PLUSMINUS
-        case FGM
-        case FGA
-        case FGP
-        case FG3M
-        case FG3A
-        case FG3P
-        case FTM
-        case FTA
-        case FTP
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(date, forKey: .date)
-        try container.encode(opponent, forKey: .opponent)
-        try container.encode(winLoss, forKey: .winLoss)
-        try container.encode(MIN, forKey: .MIN)
-        try container.encode(PTS, forKey: .PTS)
-        try container.encode(OREB, forKey: .OREB)
-        try container.encode(DREB, forKey: .DREB)
-        try container.encode(REB, forKey: .REB)
-        try container.encode(AST, forKey: .AST)
-        try container.encode(STL, forKey: .STL)
-        try container.encode(BLK, forKey: .BLK)
-        try container.encode(TOV, forKey: .TOV)
-        try container.encode(PF, forKey: .PF)
-        try container.encode(PLUSMINUS, forKey: .PLUSMINUS)
-        try container.encode(FGM, forKey: .FGM)
-        try container.encode(FGA, forKey: .FGA)
-        try container.encode(FGP, forKey: .FGP)
-        try container.encode(FG3M, forKey: .FG3M)
-        try container.encode(FG3A, forKey: .FG3A)
-        try container.encode(FG3P, forKey: .FG3P)
-        try container.encode(FTM, forKey: .FTM)
-        try container.encode(FTA, forKey: .FTA)
-        try container.encode(FTP, forKey: .FTP)
-    }
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        date = try container.decode(String.self, forKey: .date)
-        opponent = try container.decode(String.self, forKey: .opponent)
-        gameNumber = try container.decode(Int.self, forKey: .winLoss)
-        
     }
 }
 
