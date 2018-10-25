@@ -49,7 +49,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         
         activityIndicator.startAnimating()
         
-        favButton.setTitle("Show Starred", for: .normal)
+        favButton.setTitle("Starred", for: .normal)
         
         if let decoded = UserDefaults.standard.object(forKey: "FavoriteGames") as? Data {
             let favoriteGamesArray = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [String]
@@ -333,9 +333,9 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func favButtonPressed(_ sender: Any) {
-        if favButton.titleLabel?.text == "Show All" {
+        if favButton.titleLabel?.text == "All" {
             showGames = games
-            favButton.setTitle("Show Starred", for: .normal)
+            favButton.setTitle("Starred", for: .normal)
         } else {
             showGames = []
             for game in games {
@@ -343,7 +343,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
                     showGames.append(game)
                 }
             }
-            favButton.setTitle("Show All", for: .normal)
+            favButton.setTitle("All", for: .normal)
         }
         tableView.reloadData()
     }
