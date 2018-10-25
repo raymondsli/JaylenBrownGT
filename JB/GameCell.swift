@@ -9,6 +9,7 @@
 import UIKit
 
 class GameCell: UITableViewCell {
+    @IBOutlet weak var star: FavoriteGameButton!
     @IBOutlet weak var gameNumber: UILabel!
     @IBOutlet weak var gameDetails: UILabel!
     @IBOutlet weak var winLoss: UILabel!
