@@ -213,10 +213,10 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     @objc func handleMarkAsFavorite(sender: FavoriteGameButton) {
         if sender.currentImage == UIImage(named: "Star") {
             sender.setImage(UIImage(named: "FilledStar")!, for: .normal)
-            favoriteGames.insert(sender.game.date)
+            favoriteGames.insert(sender.gameDate)
         } else {
             sender.setImage(UIImage(named: "Star")!, for: .normal)
-            favoriteGames.remove(sender.game.date)
+            favoriteGames.remove(sender.gameDate)
         }
         
         var favoriteGamesArray : [String] = []
@@ -234,7 +234,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
         if let cell = self.tableView.dequeueReusableCell(withIdentifier: "GameCell") as? GameCell {
             let game = showGames[indexPath.row]
             
-            cell.star.game = game
+            cell.star.gameDate = game.date
             if favoriteGames.contains(game.date) {
                 cell.star.setImage(UIImage(named: "FilledStar")!, for: .normal)
             } else {
@@ -425,5 +425,6 @@ class Game {
 }
 
 class FavoriteGameButton : UIButton {
-    var game = Game(date: "", opponent: "", gameNumber: 0, winLoss: "", MIN: "", PTS: "", OREB: "", DREB: "", REB: "", AST: "", STL: "", BLK: "", TOV: "", PF: "", PLUSMINUS: "", FGM: "", FGA: "", FGP: "", FG3M: "", FG3A: "", FG3P: "", FTM: "", FTA: "", FTP: "")
+//    var game = Game(date: "", opponent: "", gameNumber: 0, winLoss: "", MIN: "", PTS: "", OREB: "", DREB: "", REB: "", AST: "", STL: "", BLK: "", TOV: "", PF: "", PLUSMINUS: "", FGM: "", FGA: "", FGP: "", FG3M: "", FG3A: "", FG3P: "", FTM: "", FTA: "", FTP: "")
+    var gameDate = ""
 }

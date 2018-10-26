@@ -80,6 +80,7 @@
                         <constraint firstAttribute="width" constant="30" id="Hsf-Tg-7Hk"/>
                         <constraint firstAttribute="height" constant="30" id="bwn-Hv-3vm"/>
                     </constraints>
+                    <state key="normal" image="Star"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,4 +121,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
         </view>
     </objects>
+    <resources>
+        <image name="Star" width="25" height="25"/>
+    </resources>
 </document>
