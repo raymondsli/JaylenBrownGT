@@ -351,7 +351,7 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nRA-6b-TtJ">
                                                 <rect key="frame" x="334" y="9.5" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="FilledStar"/>
+                                                <state key="normal" image="Star"/>
                                                 <connections>
                                                     <action selector="navStarButtonPressed:" destination="9ea-Xs-TEb" eventType="touchUpInside" id="ApN-Ll-NMb"/>
                                                 </connections>
@@ -417,9 +417,9 @@
     </scenes>
     <resources>
         <image name="Basketball" width="25" height="25"/>
-        <image name="FilledStar" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
         <image name="News" width="25" height="25"/>
+        <image name="Star" width="25" height="25"/>
         <image name="Twitter" width="25" height="25"/>
     </resources>
 </document>
