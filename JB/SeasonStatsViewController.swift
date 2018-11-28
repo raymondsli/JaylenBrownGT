@@ -16,6 +16,7 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
     
     var baseStat: BaseStat = BaseStat()
     var advancedStat: AdvancedStat = AdvancedStat()
+    var currentSeason: String = ""
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var loadingView: UIView = UIView()
@@ -41,6 +42,17 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         
         activityIndicator.startAnimating()
         
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let curYear = calendar.component(.year, from: currentDate)
+        let curMonth = calendar.component(.month, from: currentDate)
+        
+        if curMonth >= 10 {
+            currentSeason = String(curYear) + "-" + String(curYear - 2000 + 1)
+        } else {
+            currentSeason = String(curYear - 1) + "-" + String(curYear - 2000)
+        }
+        
         getSeasonJSON(type: "Base")
         getSeasonJSON(type: "Advanced")
     }
@@ -53,7 +65,7 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
     }
     
     func getSeasonJSON(type: String) {
-        let urlString = "https://stats.nba.com/stats/playerdashboardbyyearoveryear?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlusMinus=N&Rank=N&Season=2018-19&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&Split=yoy&VsConference=&VsDivision=&MeasureType=" + type + "&PlayerID=1627759"
+        let urlString = "https://stats.nba.com/stats/playerdashboardbyyearoveryear?DateFrom=&DateTo=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlusMinus=N&Rank=N&Season=" + currentSeason + "SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&Split=yoy&VsConference=&VsDivision=&MeasureType=" + type + "&PlayerID=1627759"
         let url = URL(string: urlString)
         
         let sessionConfig = URLSessionConfiguration.default

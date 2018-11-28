@@ -13,15 +13,30 @@ class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailCompo
     
     @IBOutlet weak var headerView: PlayerOverviewHead!
     @IBOutlet weak var personalView: PlayerPersonal!
+    var currentSeason: String = ""
+    var currentYear: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let curYear = calendar.component(.year, from: currentDate)
+        let curMonth = calendar.component(.month, from: currentDate)
+        
+        currentYear = String(curYear)
+        
+        if curMonth >= 10 {
+            currentSeason = String(curYear) + "-" + String(curYear - 2000 + 1)
+        } else {
+            currentSeason = String(curYear - 1) + "-" + String(curYear - 2000)
+        }
         
         getNextGameJSON()
     }
     
     func getNextGameJSON() {
-        let urlString = "http://data.nba.net/data/10s/prod/v1/2018/teams/celtics/schedule.json"
+        let urlString = "http://data.nba.net/data/10s/prod/v1/" + currentYear + "/teams/celtics/schedule.json"
         let url = URL(string: urlString)
         
         URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in

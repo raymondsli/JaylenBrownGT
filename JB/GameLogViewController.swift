@@ -13,6 +13,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     var games = [Game]()
     var showGames = [Game]()
     var favoriteGames = Set<String>()
+    var currentSeason: String = ""
     
     @IBOutlet weak var navStarButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -59,6 +60,17 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
         
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let curYear = calendar.component(.year, from: currentDate)
+        let curMonth = calendar.component(.month, from: currentDate)
+        
+        if curMonth >= 10 {
+            currentSeason = String(curYear) + "-" + String(curYear - 2000 + 1)
+        } else {
+            currentSeason = String(curYear - 1) + "-" + String(curYear - 2000)
+        }
+        
         getGameLogJSON()
     }
     
@@ -70,7 +82,7 @@ class GameLogViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func getGameLogJSON() {
-        let url = URL(string: "https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&SeasonType=Regular+Season&Season=2018-19&PlayerID=1627759")
+        let url = URL(string: "https://stats.nba.com/stats/playergamelog?DateFrom=&DateTo=&LeagueID=00&SeasonType=Regular+Season&Season=" + currentSeason + "&PlayerID=1627759")
         
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 30
