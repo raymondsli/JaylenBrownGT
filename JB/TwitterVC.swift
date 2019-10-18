@@ -14,7 +14,7 @@ class TwitterVC: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func twitterPressed(_ sender: Any) {
-        let childTwitter = self.childViewControllers.last as! JBTwitterTimeline
+        let childTwitter = self.children.last as! JBTwitterTimeline
         if childTwitter.tableView.numberOfRows(inSection: 0) > 0 {
             childTwitter.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }

@@ -36,7 +36,7 @@ class SeasonStatsViewController: UIViewController, NSURLConnectionDelegate {
         
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = .gray
+        activityIndicator.style = .gray
         loadingView.addSubview(activityIndicator)
         window.addSubview(loadingView)
         

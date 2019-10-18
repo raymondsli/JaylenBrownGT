@@ -11,6 +11,11 @@ import UIKit
 class PlayerPersonal: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var dob: UILabel!
+    @IBOutlet weak var draftPick: UILabel!
+    @IBOutlet weak var school: UILabel!
+    @IBOutlet weak var exp: UILabel!
+    @IBOutlet weak var heightWeight: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

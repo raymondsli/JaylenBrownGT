@@ -23,16 +23,43 @@ class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailCompo
         let calendar = Calendar.current
         let curYear = calendar.component(.year, from: currentDate)
         let curMonth = calendar.component(.month, from: currentDate)
+        let curDate = calendar.component(.day, from: currentDate)
         
         currentYear = String(curYear)
+        let age = getAge(curYear: curYear, curMonth: curMonth, curDate: curDate)
         
         if curMonth >= 10 {
+            formatPlayerPersonal(age: age, exp: curYear - 2016)
             currentSeason = String(curYear) + "-" + String(curYear - 2000 + 1)
         } else {
+            formatPlayerPersonal(age: age, exp: curYear - 1 - 2016)
             currentSeason = String(curYear - 1) + "-" + String(curYear - 2000)
         }
         
         getNextGameJSON()
+    }
+    
+    func getAge(curYear: Int, curMonth: Int, curDate: Int) -> String {
+        var age = curYear - 1996
+        if curMonth < 10 {
+            age = age - 1
+        } else if curMonth == 10 && curDate < 24 {
+            age = age - 1
+        }
+        return String(age)
+    }
+    
+    func formatPlayerPersonal(age: String, exp: Int) {
+        personalView.dob.text = "Oct 24, 1996 (Age: " + age + ")"
+        personalView.draftPick.text = "2016: Rd 1, 3rd Pick"
+        personalView.school.text = "California"
+        personalView.exp.text = String(exp)
+        personalView.heightWeight.text = "6'6\", 223 lbs"
+        personalView.dob.textColor = .black
+        personalView.draftPick.textColor = .black
+        personalView.school.textColor = .black
+        personalView.exp.textColor = .black
+        personalView.heightWeight.textColor = .black
     }
     
     func getNextGameJSON() {
