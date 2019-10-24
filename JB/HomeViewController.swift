@@ -113,6 +113,7 @@ class HomeViewController: UIViewController, NSURLConnectionDelegate, MFMailCompo
         }).resume()
     }
     
+    
     func findNextGame(games: NSArray) -> [String: Any]? {
         
         for i in 0..<games.count {
